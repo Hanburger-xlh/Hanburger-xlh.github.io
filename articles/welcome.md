@@ -36,7 +36,7 @@ function sayHello(name) {
 
 下面是画廊里的一张图片：
 
-![示例图片](pic/Firefly/GGWWvZFaMAAsQL8.jfif)
+![示例图片](pic/Firefly/GGWWvZFaMAAsQL8.webp)
 
 ## 结尾
 
