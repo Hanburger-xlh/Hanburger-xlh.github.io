@@ -595,9 +595,14 @@
     `).join('');
 
     galleryEl.querySelectorAll('img').forEach(img => {
-      if (img.complete) { img.classList.add('loaded'); }
-      else { img.addEventListener('load', () => img.classList.add('loaded')); }
-    });
+  const onReady = () => {
+    img.classList.add('loaded');
+    const ph = img.closest('.card').querySelector('.placeholder');
+    if (ph) ph.remove();
+  };
+  if (img.complete) onReady();
+  else img.addEventListener('load', onReady);
+});
 
     galleryEl.querySelectorAll('.card').forEach(card => {
       card.addEventListener('click', () => openLightbox(parseInt(card.dataset.index, 10)));
