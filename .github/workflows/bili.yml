@@ -1,10 +1,12 @@
 name: Fetch Bilibili Dynamics
 
 on:
-  # 每小时整点运行一次。注意：GitHub 的 schedule 只有仓库近 60 天有活动才会执行，
-  # 且实际触发可能延后几分钟。想立刻手动跑一次点仓库 Actions -> 该工作流 -> Run workflow。
-  schedule:
-    - cron: '0 * * * *'
+  # 已停用自动定时：GitHub 托管 runner 的机房 IP 会被 B 站风控(HTTP 412)拦截，
+  # 抓不到数据。现在改为：本机注册 ONLOGON 计划任务每天抓一次(bili-daily/run-bili.ps1)，
+  # 抓完自动 git push 更新 bili.json。此处仅保留手动触发，方便需要时在网页端点一下。
+  # 如需恢复定时，可改回：
+  #   schedule:
+  #     - cron: '0 0 * * *'
   workflow_dispatch:
 
 permissions:

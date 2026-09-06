@@ -1,0 +1,88 @@
+﻿# run-bili.ps1
+# 每天(开机登录时)由计划任务 BiliCrawlDaily 调用：
+#   1. 与远端 main 快进同步（仅在仓库干净时，避免覆盖本地未提交改动）
+#   2. 运行 .github/scripts/crawl-bili.js 抓取 B 站动态
+#   3. 把运行过程写入日志  <仓库>/logs/bili-crawl.log
+#   4. 若 bili.json 有更新则自动 git 提交并 push 到 GitHub
+# 任何一步失败都不抛错中断，而是记入日志，保证计划任务总是“成功结束”。
+$ErrorActionPreference = 'Continue'
+
+# ---- 路径 ----
+$here = Split-Path -Parent $MyInvocation.MyCommand.Path      # ...\bili-daily
+$repo = Split-Path -Parent $here                              # 仓库根目录
+$logDir = Join-Path $repo 'logs'
+$logFile = Join-Path $logDir 'bili-crawl.log'
+New-Item -ItemType Directory -Force -Path $logDir | Out-Null
+
+function Write-Log {
+    param([string]$msg)
+    $line = "[{0}] {1}" -f (Get-Date -Format 'yyyy-MM-dd HH:mm:ss'), $msg
+    Write-Host $line
+    Add-Content -Path $logFile -Value $line -Encoding utf8
+}
+
+function Resolve-Node {
+    $c = Get-Command node -ErrorAction SilentlyContinue
+    if ($c) { return $c.Source }
+    $fallback = 'H:\Program Files\nodejs\node.exe'
+    if (Test-Path $fallback) { return $fallback }
+    return $null
+}
+
+Write-Log "==== 开始每日 B 站动态抓取 ===="
+Write-Log "仓库: $repo"
+
+Set-Location $repo
+
+# 确认在 git 仓库且分支为 main
+$branch = git rev-parse --abbrev-ref HEAD 2>$null
+if ($LASTEXITCODE -ne 0) { Write-Log "错误: 不是 git 仓库，退出"; exit 0 }
+Write-Log "分支: $branch"
+
+# ---- 1) 尝试快进同步到远端（保持本地为最新）----
+Write-Log "--- 尝试同步远端 (git pull --ff-only) ---"
+$pullOut = git pull --ff-only origin main 2>&1 | Out-String
+Write-Log ($pullOut.Trim())
+if ($LASTEXITCODE -ne 0) {
+    Write-Log "提示: 无法快进同步(可能本地有未提交改动或非 main)。继续用当前本地副本抓取。"
+}
+
+# ---- 2) 定位 node 并跑爬虫 ----
+$nodeExe = Resolve-Node
+if (-not $nodeExe) {
+    Write-Log "错误: 找不到 node.exe，跳过抓取。请在任务环境安装 Node.js。"
+    exit 0
+}
+Write-Log "node: $nodeExe"
+Write-Log "--- 运行 crawl-bili.js ---"
+$crawlOut = & $nodeExe (Join-Path $repo '.github\scripts\crawl-bili.js') 2>&1 | Out-String
+Write-Log ($crawlOut.Trim())
+Write-Log "crawl 退出码: $LASTEXITCODE"
+
+# ---- 3) 判断 bili.json 是否有变化 ----
+git diff --quiet -- bili.json
+$dirty = $LASTEXITCODE -ne 0
+if (-not $dirty) {
+    Write-Log "bili.json 无变化，无需提交。"
+    Write-Log "==== 结束(无更新) ===="
+    exit 0
+}
+Write-Log "bili.json 有变化，开始提交并推送..."
+
+# ---- 4) 提交 + 推送（失败只记日志，不中断）----
+git add -- bili.json 2>&1 | Out-Null
+git commit -m "chore(bili): 每日动态更新" 2>&1 | Out-String | ForEach-Object { Write-Log $_.Trim() }
+
+# push 前先尝试再次同步(rebase 只影响本文件分支冲突很罕见)
+git pull --rebase origin main 2>&1 | Out-String | ForEach-Object { Write-Log $_.Trim() }
+
+$pushOut = git push origin main 2>&1 | Out-String
+Write-Log ($pushOut.Trim())
+if ($LASTEXITCODE -ne 0) {
+    Write-Log "注意: push 失败。常见原因是没有缓存的推送凭据——请在本机手动执行一次 'git push' 让它记住凭据，之后即可自动推送。"
+} else {
+    Write-Log "推送成功，网站 bili.json 已更新。"
+}
+
+Write-Log "==== 结束 ===="
+exit 0

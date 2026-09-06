@@ -2,76 +2,69 @@
 
 个人网站（GitHub Pages），包含 **文章 / 常用网址 / 图片 / B站动态** 四个板块。
 
-## B站动态自动抓取
+## B站动态自动抓取（本地每日方案）
 
-网站新增“动态”Tab：通过 **GitHub Actions 每小时** 抓取你关注的 B 站 UP 主动态，
-结果写入 `bili.json`，前端读取展示。由于 GitHub Pages 是纯静态站，爬取必须在服务端
-（GitHub Actions）完成，浏览器里无法定时爬 B 站。
+网站“动态”Tab 展示你关注的 B 站 UP 主动态。数据来自仓库里的 `bili.json`，
+由脚本抓取生成并提交到仓库。
 
-### 工作原理
+> 为什么不用 GitHub Actions 定时抓？
+> GitHub 托管 runner 的机房 IP 会被 B 站反爬风控（返回 HTTP 412），**抓不到数据**。
+> 因此改为：在本机注册一个“开机登录即运行”的计划任务，**每天开机（约 7 点，配合电脑
+> 自动开机跑游戏日常）时抓一次**，抓完写日志并自动 `git push` 更新 `bili.json`。
 
-```
-GitHub Actions(cron 每小时)
-      │  node .github/scripts/crawl-bili.js
-      ▼
-B站空间动态接口(带 WBI 签名) ──► 合并去重 ──► 写回 bili.json ──(自动 commit)──► 仓库
-                                                                              │
-网站首页 JS 读取 bili.json ◄─────────────────────────────────────────────────┘
-```
-
-涉及文件：
+### 文件说明
 
 | 文件 | 作用 |
 | --- | --- |
-| `.github/workflows/bili.yml` | 每小时定时触发 + 手动触发，跑爬虫并提交 |
-| `.github/scripts/crawl-bili.js` | 爬虫脚本：WBI 签名请求、抓取/去重/写入 |
-| `bili-config.json` | 要追踪的 UP 主 UID 列表（在这里增删） |
+| `.github/scripts/crawl-bili.js` | 爬虫：WBI 签名抓取 UP 主动态，去重合并写入 `bili.json` |
+| `bili-config.json` | 要追踪的 UP 主 UID 列表（在此增删） |
 | `bili.json` | 抓取结果（自动生成，勿手改） |
-| `index.html` | 新增“动态”Tab 与渲染/筛选逻辑 |
+| `bili-daily/run-bili.ps1` | 每日运行入口：同步→抓取→写日志→有更新自动 git push |
+| `bili-daily/install-bili-task.bat` | 把 `run-bili.ps1` 注册成开机计划任务 |
+| `logs/bili-crawl.log` | 运行日志（自动生成，已被 `.gitignore` 排除，不入库） |
+| `index.html` | “动态”Tab 与渲染/筛选逻辑 |
 
-### 配置要追踪的 UP 主
+### 一次性配置（只需做一次）
 
-编辑仓库根目录的 `bili-config.json`，把想关注的 UP 主 UID 填进 `users`：
+1. **配置要追踪的 UP 主**：编辑根目录 `bili-config.json` 的 `users`，填 UID。
+   例：
+   ```json
+   {
+     "users": [
+       { "uid": "2127596945", "name": "（可选，不填自动取昵称）" }
+     ],
+     "perUserLimit": 20
+   }
+   ```
+   UID 数字在对应 UP 主空间主页网址的 `/数字` 里能看到。
 
-```json
-{
-  "users": [
-    { "uid": "2127596945", "name": "（可选，不填会自动取昵称）" }
-  ],
-  "perUserLimit": 20
-}
-```
+2. **注册每日计划任务**：右键 `bili-daily/install-bili-task.bat` → **以管理员身份运行**。
+   它注册一个 `BiliCrawlDaily` 任务（`ONLOGON`，开机登录即触发）。
 
-UID 数字在对应 UP 主空间主页网址的 `/数字` 里能找到。
+3. **确保 git 推送凭据已缓存**：在本仓库目录手动执行一次 `git push`，让它记住凭据，
+   之后计划任务才能自动推送。
 
-### 首次部署步骤
+4. **手动测试一次**：
+   ```
+   powershell -NoProfile -ExecutionPolicy Bypass -File "bili-daily\run-bili.ps1"
+   ```
+   再打开 `logs/bili-crawl.log`，应看到 `[ok] uid=... 抓取 N 条`。
 
-1. 把本仓库改动提交并 `git push` 到 GitHub（默认分支 `main`）。
-2. 到仓库 **Actions** 页面，手动运行一次 **Fetch Bilibili Dynamics**
-   （右侧 *Run workflow*），确认日志显示 `[ok]` 且自动 commit 生成 `bili.json`。
-3. 之后会每小时整点自动跑一次；无新动态时不产生空提交。
+### 之后每天
 
-### 关于 B 站风控（重要）
+电脑开机自动登录时，计划任务会自动：拉取最新 → 抓 B 站动态 → 有新动态就提交并推送，
+网站随之更新。运行过程都记在 `logs/bili-crawl.log`。
 
-B 站会拦截匿名/机房 IP（返回 `-352`/`412`）。脚本已用 **WBI 签名**处理，绝大多数情况下
-匿名也能抓到（本仓库就是匿名测试成功的）。但若某个账号持续返回 `-352`、抓不到数据，
-推荐添加两个 **仓库 Secrets**（`Settings → Secrets and variables → Actions`），用你自己
-浏览器登录 bilibili.com 后的 cookie 值：
+- 查看任务：`schtasks /Query /TN BiliCrawlDaily /V /FO LIST`
+- 卸载任务：管理员运行 `bili-daily\install-bili-task.bat uninstall`，
+  或 `schtasks /Delete /TN BiliCrawlDaily /F`
 
-- `BILI_SESSDATA`：cookie 里的 `SESSDATA` 值（最关键）
-- `BILI_BUVID3`：cookie 里的 `buvid3`（可选，不填会自动申请）
+> 提示：B 站按 IP 风控，本机偶尔某账号返回 0 条属正常波动，多跑会收敛；脚本只在
+> 真正抓到新动态时才提交，不会产生无意义的空提交。
 
-> 隐私提示：`SESSDATA` 等同你账号的登录凭证，仅存进 GitHub Secret 即可，不要写进代码或
-> `bili.json`。建议用一个不太重要的账号。此实现不依赖登录也能跑，加它是为更稳。
-
-### 抓取频率
-
-`cron: '0 * * * *'` 表示每小时整点一次。注意 GitHub 只对“近 60 天有活动”的仓库执行定时任务；
-平时页面有人访问即算活动，正常不会停。想临时改频，编辑 `.github/workflows/bili.yml` 里的
-`schedule` 即可（GitHub 定时最小间隔约 5 分钟）。
-
-## 本地开发
+## 手动抓一次
 
 ```bash
-node .github/scripts/crawl-bili.js   # 本地手动抓一次（会自动更新 bili.json）
+node .github/scripts/crawl-bili.js          # 只抓取，写 bili.json
+powershell -File "bili-daily\run-bili.ps1"  # 抓取 + 写日志 + 自动同步推送
 ```
