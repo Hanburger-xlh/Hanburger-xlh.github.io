@@ -9,8 +9,9 @@
 
 > 为什么不用 GitHub Actions 定时抓？
 > GitHub 托管 runner 的机房 IP 会被 B 站反爬风控（返回 HTTP 412），**抓不到数据**。
-> 因此改为：在本机注册一个“开机登录即运行”的计划任务，**每天开机（约 7 点，配合电脑
-> 自动开机跑游戏日常）时抓一次**，抓完写日志并自动 `git push` 更新 `bili.json`。
+> 因此改为：在本机放一个“开机登录自动运行”的启动项，**电脑每天自动开机（约 7 点，配合
+> 游戏日常）登录那一刻抓一次**（几秒完成），抓完写日志并自动 `git push` 更新 `bili.json`。
+> 之后关机即可，不需要电脑一直开着。
 
 ### 文件说明
 
@@ -20,7 +21,8 @@
 | `bili-config.json` | 要追踪的 UP 主 UID 列表（在此增删） |
 | `bili.json` | 抓取结果（自动生成，勿手改） |
 | `bili-daily/run-bili.ps1` | 每日运行入口：同步→抓取→写日志→有更新自动 git push |
-| `bili-daily/install-bili-task.bat` | 把 `run-bili.ps1` 注册成开机计划任务 |
+| `bili-daily/install-startup.cmd` | 一键把 `run-bili.ps1` 加进“启动”文件夹（**无需管理员/UAC**） |
+| `bili-daily/install-startup.ps1` | 被上面的 .cmd 调用的建自启脚本 |
 | `logs/bili-crawl.log` | 运行日志（自动生成，已被 `.gitignore` 排除，不入库） |
 | `index.html` | “动态”Tab 与渲染/筛选逻辑 |
 
@@ -38,11 +40,12 @@
    ```
    UID 数字在对应 UP 主空间主页网址的 `/数字` 里能看到。
 
-2. **注册每日计划任务**：右键 `bili-daily/install-bili-task.bat` → **以管理员身份运行**。
-   它注册一个 `BiliCrawlDaily` 任务（`ONLOGON`，开机登录即触发）。
+2. **注册开机自启（不用管理员，不用管 UAC）**：双击 `bili-daily\install-startup.cmd`。
+   它把 `run-bili.ps1` 加入当前用户的**启动文件夹**，之后每次开机登录自动运行。
+   验证：启动文件夹里出现 `B站动态每日抓取.lnk`。
 
 3. **确保 git 推送凭据已缓存**：在本仓库目录手动执行一次 `git push`，让它记住凭据，
-   之后计划任务才能自动推送。
+   之后自启脚本才能自动推送。
 
 4. **手动测试一次**：
    ```
@@ -52,12 +55,11 @@
 
 ### 之后每天
 
-电脑开机自动登录时，计划任务会自动：拉取最新 → 抓 B 站动态 → 有新动态就提交并推送，
-网站随之更新。运行过程都记在 `logs/bili-crawl.log`。
+电脑自动开机登录时，启动项会自动：拉取最新 → 抓 B 站动态 → 有新动态就提交并推送，
+网站随之更新。运行过程都记在 `logs/bili-crawl.log`（无需电脑常开，跑完即关机）。
 
-- 查看任务：`schtasks /Query /TN BiliCrawlDaily /V /FO LIST`
-- 卸载任务：管理员运行 `bili-daily\install-bili-task.bat uninstall`，
-  或 `schtasks /Delete /TN BiliCrawlDaily /F`
+- 卸载：删除启动文件夹里的 `B站动态每日抓取.lnk`
+  （启动文件夹：`%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup`）
 
 > 提示：B 站按 IP 风控，本机偶尔某账号返回 0 条属正常波动，多跑会收敛；脚本只在
 > 真正抓到新动态时才提交，不会产生无意义的空提交。
