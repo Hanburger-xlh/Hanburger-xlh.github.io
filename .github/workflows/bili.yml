@@ -1,0 +1,47 @@
+name: Fetch Bilibili Dynamics
+
+on:
+  # 每小时整点运行一次。注意：GitHub 的 schedule 只有仓库近 60 天有活动才会执行，
+  # 且实际触发可能延后几分钟。想立刻手动跑一次点仓库 Actions -> 该工作流 -> Run workflow。
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# 防止上一个还没跑完时又叠加触发（每小时跑一次通常不会撞上，这里保险起见）
+concurrency:
+  group: bili-fetch
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run Bilibili crawler
+        run: node .github/scripts/crawl-bili.js
+        env:
+          # 可选。B 站风控对机房/匿名 IP 很严(-352/412)，
+          # 在仓库 Settings -> Secrets and variables -> Actions 添加这两个 Secret 最稳妥：
+          #   BILI_SESSDATA : 你自己浏览器登录 bilibili.com 后复制 cookie 里的 SESSDATA 值
+          #   BILI_BUVID3   : (可选) cookie 里的 buvid3；不填脚本会自动向官方接口申请
+          BILI_SESSDATA: ${{ secrets.BILI_SESSDATA }}
+          BILI_BUVID3: ${{ secrets.BILI_BUVID3 }}
+
+      - name: Commit updated bili.json
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          # 没有变化时该 action 会自动跳过提交，不会产生空 commit
+          commit_message: 'chore(bili): 每小时动态更新'
+          file_pattern: bili.json
+          skip_dirty_check: false

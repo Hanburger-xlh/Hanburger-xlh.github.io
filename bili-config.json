@@ -1,0 +1,12 @@
+{
+  "source": "bilibili",
+  "users": [
+    { "uid": "2127596945", "name": "" },
+    { "uid": "1340190821", "name": "" },
+    { "uid": "414149787",  "name": "" },
+    { "uid": "373076765",  "name": "" },
+    { "uid": "1636034895", "name": "" }
+  ],
+  "perUserLimit": 20,
+  "output": "bili.json"
+}

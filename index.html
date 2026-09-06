@@ -407,6 +407,65 @@
     white-space: nowrap;
   }
 
+  /* ---------- B站动态页 ---------- */
+  .bili-status {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4px 20px 16px;
+    color: var(--text-dim);
+    font-size: 12px;
+    letter-spacing: .5px;
+    text-align: center;
+  }
+  .bili-wrap { max-width: 900px; margin: 0 auto; padding: 4px 20px 60px; }
+  .bili-list { display: flex; flex-direction: column; gap: 14px; }
+
+  .bili-card {
+    display: flex;
+    gap: 16px;
+    background: var(--panel);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 14px;
+    padding: 18px 20px;
+    cursor: pointer;
+    transition: all .2s ease;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .bili-card:hover { border-color: rgba(124,156,255,.5); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0,0,0,.35); }
+
+  .bili-avatar {
+    flex: 0 0 44px; width: 44px; height: 44px; border-radius: 50%;
+    background: var(--panel-2); overflow: hidden;
+  }
+  .bili-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .bili-main { flex: 1; min-width: 0; }
+  .bili-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .bili-author { font-size: 14px; font-weight: 600; }
+  .bili-kind {
+    font-size: 11px; color: var(--accent-2); background: rgba(180,140,255,.12);
+    padding: 2px 8px; border-radius: 999px;
+  }
+  .bili-time { font-size: 11px; color: var(--text-dim); margin-left: auto; white-space: nowrap; }
+
+  .bili-text {
+    margin-top: 8px; font-size: 14px; line-height: 1.6; color: var(--text);
+    white-space: pre-wrap; word-break: break-word;
+    display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .bili-cover {
+    margin-top: 10px; max-width: 100%; max-height: 220px; width: auto; height: auto;
+    border-radius: 8px; display: block; object-fit: cover;
+    border: 1px solid rgba(255,255,255,.06);
+  }
+  .bili-empty { color: var(--text-dim); text-align: center; padding: 60px 20px; line-height: 2; }
+
+  @media (max-width: 640px) {
+    .bili-card { flex-direction: column; gap: 12px; }
+    .bili-cover { width: 100%; max-height: none; }
+  }
+
   footer {
     text-align: center;
     padding: 20px;
@@ -424,7 +483,8 @@
 </header>
 
 <nav class="tabs">
-  <button data-view="articles" class="active">文章</button>
+  <button data-view="bili">动态</button>
+  <button data-view="articles">文章</button>
   <button data-view="links">常用网址</button>
   <button data-view="gallery">图片</button>
 </nav>
@@ -446,6 +506,13 @@
 <section class="view" id="view-gallery">
   <nav class="filters" id="filters"></nav>
   <main class="gallery" id="gallery"></main>
+</section>
+
+<!-- B站动态 -->
+<section class="view" id="view-bili">
+  <nav class="filters" id="bili-filters"></nav>
+  <div class="bili-status" id="bili-status"></div>
+  <main class="bili-wrap" id="bili-wrap"></main>
 </section>
 
 <footer>Powered by GitHub Pages</footer>
@@ -475,6 +542,7 @@
       articleLoaded = true;
       loadArticle(ARTICLES[0]);
     }
+    if (name === 'bili' && !biliLoaded) loadBili();
   }
 
   document.querySelectorAll('.tabs button').forEach(btn => {
@@ -485,7 +553,7 @@
     });
   });
 
-  const VALID_VIEWS = ['articles', 'links', 'gallery'];
+  const VALID_VIEWS = ['articles', 'links', 'gallery', 'bili'];
   function viewFromHash() {
     const h = location.hash.replace('#', '');
     return VALID_VIEWS.includes(h) ? h : 'gallery';
@@ -652,6 +720,98 @@
     if (e.key === 'ArrowLeft') step(-1);
     if (e.key === 'ArrowRight') step(1);
   });
+
+  /* ========== B站动态 ========== */
+  let biliLoaded = false;
+  const BILI = { all: [], authors: [], active: 'all' };
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, c => (
+      { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+    ));
+  }
+
+  function fmtTime(ts) {
+    if (!ts) return '';
+    const d = new Date(ts * 1000);
+    const diff = (Date.now() - d.getTime()) / 1000;
+    if (diff < 0) return d.toLocaleString('zh-CN', { hour12: false });
+    if (diff < 60) return '刚刚';
+    if (diff < 3600) return Math.floor(diff / 60) + ' 分钟前';
+    if (diff < 86400) return Math.floor(diff / 3600) + ' 小时前';
+    if (diff < 86400 * 7) return Math.floor(diff / 86400) + ' 天前';
+    return d.toLocaleDateString('zh-CN');
+  }
+  function fmtFull(ts) {
+    if (!ts) return '';
+    return new Date(ts * 1000).toLocaleString('zh-CN', { hour12: false });
+  }
+
+  function renderBiliFilters() {
+    const el = document.getElementById('bili-filters');
+    let html = `<button data-bili-filter="all" class="${BILI.active==='all'?'active':''}">全部 <span class="count">${BILI.all.length}</span></button>`;
+    BILI.authors.forEach(a => {
+      html += `<button data-bili-filter="${a.uid}" class="${BILI.active===a.uid?'active':''}">${esc(a.name)} <span class="count">${a.count}</span></button>`;
+    });
+    el.innerHTML = html;
+    el.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => { BILI.active = btn.dataset.biliFilter; renderBiliFilters(); renderBiliFeed(); });
+    });
+  }
+
+  function renderBiliFeed() {
+    const wrap = document.getElementById('bili-wrap');
+    const items = BILI.active === 'all' ? BILI.all : BILI.all.filter(i => i.uid === BILI.active);
+    wrap.innerHTML = items.map(it => `
+      <a class="bili-card" href="${esc(it.url)}" target="_blank" rel="noopener">
+        <div class="bili-avatar">
+          ${it.avatar ? `<img src="${esc(it.avatar)}" alt="" loading="lazy" onerror="this.style.display='none'">` : ''}
+        </div>
+        <div class="bili-main">
+          <div class="bili-head">
+            <span class="bili-author">${esc(it.author || 'UP' + esc(it.uid))}</span>
+            ${it.kind ? `<span class="bili-kind">${esc(it.kind)}</span>` : ''}
+            <span class="bili-time" title="${fmtFull(it.ts)}">${fmtTime(it.ts)}</span>
+          </div>
+          <div class="bili-text">${esc(it.text)}</div>
+          ${it.cover ? `<img class="bili-cover" src="${esc(it.cover)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">` : ''}
+        </div>
+      </a>
+    `).join('');
+    if (!items.length) {
+      wrap.innerHTML = '<div class="bili-empty">暂无动态记录。<br>运行一次 “Fetch Bilibili Dynamics” 工作流后会自动填充。</div>';
+    }
+  }
+
+  async function loadBili() {
+    const status = document.getElementById('bili-status');
+    status.textContent = '加载动态中…';
+    try {
+      const res = await fetch('bili.json', { cache: 'no-store' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      const items = (data.items || []).slice();
+      items.sort((a, b) => b.ts - a.ts);
+      BILI.all = items;
+
+      const authorMap = {};
+      items.forEach(i => {
+        const key = i.uid || i.author || 'unknown';
+        if (!authorMap[key]) authorMap[key] = { uid: key, name: i.author || 'UP' + key, count: 0 };
+        authorMap[key].count++;
+      });
+      BILI.authors = Object.values(authorMap);
+
+      renderBiliFilters();
+      renderBiliFeed();
+      const upd = data.updatedAt ? '最后更新：' + new Date(data.updatedAt).toLocaleString('zh-CN', { hour12: false }) : '尚未抓取到数据';
+      status.textContent = `来源：B站 · 由 GitHub Actions 每小时自动抓取 · ${upd}`;
+    } catch (e) {
+      status.textContent = '动态加载失败：' + e.message;
+      document.getElementById('bili-wrap').innerHTML =
+        '<div class="bili-empty">动态数据加载失败。<br>确认 bili.json 已存在，且已运行 “Fetch Bilibili Dynamics” 工作流。</div>';
+    }
+  }
 
   /* ========== 初始化 ========== */
   renderFilters();
