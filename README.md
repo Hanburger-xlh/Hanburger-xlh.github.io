@@ -24,7 +24,9 @@
 | `bili-daily/install-startup.cmd` | 一键把 `run-bili.ps1` 加进“启动”文件夹（**无需管理员/UAC**） |
 | `bili-daily/install-startup.ps1` | 被上面的 .cmd 调用的建自启脚本 |
 | `logs/bili-crawl.log` | 运行日志（自动生成，已被 `.gitignore` 排除，不入库） |
-| `index.html` | “动态”Tab 与渲染/筛选逻辑 |
+| `assistant-logs/parse-and-publish.js` | 解析三月七小助手日常日志，生成精简摘要写 `daily-log.json` |
+| `daily-log.json` | 日常结果摘要（自动生成，账号 UID 已打码，保留最近 30 天） |
+| `index.html` | “动态”“日常”Tab 与渲染逻辑 |
 
 ### 一次性配置（只需做一次）
 
@@ -63,6 +65,19 @@
 
 > 提示：B 站按 IP 风控，本机偶尔某账号返回 0 条属正常波动，多跑会收敛；脚本只在
 > 真正抓到新动态时才提交，不会产生无意义的空提交。
+
+## 日常日志（三月七小助手）
+
+网站“日常”Tab 展示三月七小助手每天跑游戏日常的结果，数据来自 `daily-log.json`。
+
+- 每天早晨的 `run-bili.ps1` 会顺带解析**昨天**跑完的
+  `daily_loop_YYYYMMDD.log`（三月七小助手 logs 目录，见脚本顶部 `ASSISTANT_LOGS_DIR`），
+  生成精简摘要：日期 + 每个账号成功/失败（**账号 UID 打码**，如 `109***660`）+ 耗时，
+  并提交推送。只保留最近 30 天，避免仓库膨胀。
+- 哪天电脑没开机/没跑就没有当天记录，属正常。
+- 想手动处理某天：`node assistant-logs\parse-and-publish.js --date 2026-09-05`
+
+> 隐私：网站是公开的，因此只上传打码摘要，不上传含完整账号/密码的原始日志。
 
 ## 手动抓一次
 

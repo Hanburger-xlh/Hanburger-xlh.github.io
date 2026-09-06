@@ -59,21 +59,26 @@ $crawlOut = & $nodeExe (Join-Path $repo '.github\scripts\crawl-bili.js') 2>&1 | 
 Write-Log ($crawlOut.Trim())
 Write-Log "crawl 退出码: $LASTEXITCODE"
 
-# ---- 3) 判断 bili.json 是否有变化 ----
-git diff --quiet -- bili.json
-$dirty = $LASTEXITCODE -ne 0
-if (-not $dirty) {
-    Write-Log "bili.json 无变化，无需提交。"
+# ---- 3) 发布"昨天"的日常日志摘要（三月七小助手），生成 daily-log.json ----
+Write-Log "--- 运行 assistant-logs\parse-and-publish.js ---"
+$pubOut = & $nodeExe (Join-Path $repo 'assistant-logs\parse-and-publish.js') 2>&1 | Out-String
+Write-Log ($pubOut.Trim())
+Write-Log "publish 退出码: $LASTEXITCODE"
+
+# ---- 4) 若有 bili.json 或 daily-log.json 变化则提交并推送 ----
+git add -- bili.json daily-log.json 2>&1 | Out-Null
+git diff --cached --quiet
+if ($LASTEXITCODE -eq 0) {
+    Write-Log "无内容更新，无需提交。"
     Write-Log "==== 结束(无更新) ===="
     exit 0
 }
-Write-Log "bili.json 有变化，开始提交并推送..."
+Write-Log "检测到更新(bili.json / daily-log.json)，开始提交并推送..."
 
-# ---- 4) 提交 + 推送（失败只记日志，不中断）----
-git add -- bili.json 2>&1 | Out-Null
-git commit -m "chore(bili): 每日动态更新" 2>&1 | Out-String | ForEach-Object { Write-Log $_.Trim() }
+$commitOut = git commit -m "chore(update): 每日B站动态/日常日志" 2>&1 | Out-String
+Write-Log ($commitOut.Trim())
 
-# push 前先尝试再次同步(rebase 只影响本文件分支冲突很罕见)
+# push 前先尝试与远端同步(rebase 本机刚提交的这条，冲突很罕见)
 git pull --rebase origin main 2>&1 | Out-String | ForEach-Object { Write-Log $_.Trim() }
 
 $pushOut = git push origin main 2>&1 | Out-String
@@ -81,7 +86,7 @@ Write-Log ($pushOut.Trim())
 if ($LASTEXITCODE -ne 0) {
     Write-Log "注意: push 失败。常见原因是没有缓存的推送凭据——请在本机手动执行一次 'git push' 让它记住凭据，之后即可自动推送。"
 } else {
-    Write-Log "推送成功，网站 bili.json 已更新。"
+    Write-Log "推送成功，网站数据已更新。"
 }
 
 Write-Log "==== 结束 ===="

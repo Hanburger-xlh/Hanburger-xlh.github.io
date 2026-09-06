@@ -466,6 +466,39 @@
     .bili-cover { width: 100%; max-height: none; }
   }
 
+  /* ---------- 日常日志页 ---------- */
+  .daily-status {
+    max-width: 760px; margin: 0 auto; padding: 4px 20px 14px;
+    color: var(--text-dim); font-size: 12px; letter-spacing: .5px; text-align: center;
+  }
+  .daily-wrap { max-width: 760px; margin: 0 auto; padding: 4px 20px 60px; }
+  .daily-list { display: flex; flex-direction: column; gap: 12px; }
+
+  .daily-card {
+    background: var(--panel); border: 1px solid rgba(255,255,255,.08);
+    border-radius: 14px; padding: 16px 18px;
+  }
+  .daily-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .daily-date { font-size: 15px; font-weight: 700; letter-spacing: .5px; }
+  .daily-badge {
+    font-size: 11px; padding: 2px 10px; border-radius: 999px; letter-spacing: .5px;
+  }
+  .daily-badge.ok { color: #6ee7b7; background: rgba(110,231,183,.12); }
+  .daily-badge.bad { color: #fda4af; background: rgba(253,164,175,.12); }
+
+  .daily-accts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .acct-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; padding: 4px 10px; border-radius: 999px; letter-spacing: .3px;
+  }
+  .acct-chip.ok   { color: var(--text);    background: rgba(110,231,183,.14); }
+  .acct-chip.fail { color: #fda4af;         background: rgba(253,164,175,.14); }
+  .acct-chip .dot { width: 7px; height: 7px; border-radius: 50%; }
+  .acct-chip.ok .dot   { background: #34d399; }
+  .acct-chip.fail .dot { background: #f87171; }
+  .acct-chip .dur { color: var(--text-dim); font-size: 11px; }
+  .daily-empty { color: var(--text-dim); text-align: center; padding: 60px 20px; line-height: 2; }
+
   footer {
     text-align: center;
     padding: 20px;
@@ -484,6 +517,7 @@
 
 <nav class="tabs">
   <button data-view="bili">动态</button>
+  <button data-view="daily">日常</button>
   <button data-view="articles">文章</button>
   <button data-view="links">常用网址</button>
   <button data-view="gallery">图片</button>
@@ -515,6 +549,12 @@
   <main class="bili-wrap" id="bili-wrap"></main>
 </section>
 
+<!-- 日常 -->
+<section class="view" id="view-daily">
+  <div class="daily-status" id="daily-status"></div>
+  <main class="daily-wrap" id="daily-wrap"></main>
+</section>
+
 <footer>Powered by GitHub Pages</footer>
 
 <!-- 灯箱 -->
@@ -543,6 +583,7 @@
       loadArticle(ARTICLES[0]);
     }
     if (name === 'bili' && !biliLoaded) loadBili();
+    if (name === 'daily' && !dailyLoaded) loadDaily();
   }
 
   document.querySelectorAll('.tabs button').forEach(btn => {
@@ -553,7 +594,7 @@
     });
   });
 
-  const VALID_VIEWS = ['articles', 'links', 'gallery', 'bili'];
+  const VALID_VIEWS = ['articles', 'links', 'gallery', 'bili', 'daily'];
   function viewFromHash() {
     const h = location.hash.replace('#', '');
     return VALID_VIEWS.includes(h) ? h : 'gallery';
@@ -810,6 +851,60 @@
       status.textContent = '动态加载失败：' + e.message;
       document.getElementById('bili-wrap').innerHTML =
         '<div class="bili-empty">动态数据加载失败。<br>确认 bili.json 已存在，且已运行 “Fetch Bilibili Dynamics” 工作流。</div>';
+    }
+  }
+
+  /* ========== 日常日志 ========== */
+  let dailyLoaded = false;
+
+  function fmtDur(sec) {
+    if (sec == null) return '';
+    if (sec < 60) return sec + 's';
+    const m = Math.floor(sec / 60), s = sec % 60;
+    return s ? m + 'm' + s + 's' : m + 'm';
+  }
+  function fmtLocal(iso) {
+    if (!iso) return '';
+    const d = new Date(iso);
+    const p = (n) => String(n).padStart(2, '0');
+    return `${p(d.getMonth() + 1)}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`;
+  }
+
+  async function loadDaily() {
+    const status = document.getElementById('daily-status');
+    status.textContent = '加载日常日志中…';
+    try {
+      const res = await fetch('daily-log.json', { cache: 'no-store' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      const logs = (data.logs || []).slice().sort((a, b) => (a.date < b.date ? 1 : -1));
+      const wrap = document.getElementById('daily-wrap');
+
+      if (!logs.length) {
+        wrap.innerHTML = '<div class="daily-empty">暂无日常日志记录。<br>跑过三月七小助手日常后会自动生成。</div>';
+      } else {
+        wrap.innerHTML = logs.map(d => `
+          <div class="daily-card">
+            <div class="daily-head">
+              <span class="daily-date">${esc(d.date)}</span>
+              <span class="daily-badge ok">成功 ${d.success || 0}</span>
+              ${(d.fail || 0) > 0 ? `<span class="daily-badge bad">失败 ${d.fail}</span>` : ''}
+            </div>
+            <div class="daily-accts">
+              ${(d.accounts || []).map(a => `
+                <span class="acct-chip ${a.ok ? 'ok' : 'fail'}">
+                  <span class="dot"></span>${esc(a.uid)}
+                  ${a.durSec != null ? `<span class="dur">${fmtDur(a.durSec)}</span>` : ''}
+                </span>`).join('')}
+            </div>
+          </div>`).join('');
+      }
+      const upd = data.updatedAt ? ' · 更新于 ' + new Date(data.updatedAt).toLocaleString('zh-CN', { hour12: false }) : '';
+      status.textContent = '三月七小助手 · 每日日常自动记录 · 保留最近 ' + (data.keepDays || 30) + ' 天' + upd;
+    } catch (e) {
+      status.textContent = '日常日志加载失败：' + e.message;
+      document.getElementById('daily-wrap').innerHTML =
+        '<div class="daily-empty">日常日志加载失败。<br>确认 daily-log.json 已存在。</div>';
     }
   }
 
