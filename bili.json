@@ -1,8 +1,140 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-09-08T23:01:04.881Z",
+  "updatedAt": "2026-09-09T23:01:05.299Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1246095752061517831",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴FISSURE Playground 3\n\n🔴2026 年 9 月 10 日 11:00 BO3\n\n🔴杭州西湖 TYLOO vs Alliance\n",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/34c45e9dd2debe8509359bf0a1bcede4373076765.jpg",
+      "url": "https://t.bilibili.com/1246095752061517831",
+      "ts": "1788967676"
+    },
+    {
+      "id": "1246093900965216320",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
+      "kind": "动态·视频",
+      "text": "赛场风云禄｜重整旗鼓 雷霆破阵【裂变天地S3 vs GL】",
+      "cover": "https://i2.hdslb.com/bfs/archive/7f4823e381431316d7a1beb1f346c76cbf0b3451.jpg",
+      "url": "https://t.bilibili.com/1246093900965216320",
+      "ts": "1788967245"
+    },
+    {
+      "id": "1246093368381931541",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨ PGL Masters Bucharest 2026 East Asia Closed Qualifier\n\n✨MAP  CACHE/ANCIENT｜ BO3\n\n✨杭州西湖 TYLOO 2:0 NEXVOID",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/08fc4dfc4bcafe4e6742609064c34bb3373076765.jpg",
+      "url": "https://t.bilibili.com/1246093368381931541",
+      "ts": "1788967121"
+    },
+    {
+      "id": "1246053223307935746",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴PGL Masters Bucharest 2026 East Asia Closed Qualifier\n\n🔴2026 年 9 月 9 日 21:00 BO3\n\n🔴杭州西湖 TYLOO vs NEXVOID",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/cb6d71f5bb5f74aa19cb8e37ae82f62a373076765.jpg",
+      "url": "https://t.bilibili.com/1246053223307935746",
+      "ts": "1788957774"
+    },
+    {
+      "id": "1246049396467957764",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨FISSURE Playground 3\n\n✨MAP  MIRAGE/ANCIENT｜ BO3\n\n✨杭州西湖 TYLOO 2:0 GL\n",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/ed3a0db24c45661577fd748a81ebdb4c373076765.jpg",
+      "url": "https://t.bilibili.com/1246049396467957764",
+      "ts": "1788956883"
+    },
+    {
+      "id": "1246026749146300449",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "https://i2.hdslb.com/bfs/face/f42817a53a12399131eda0a3e9cfb3895cd7bb5c.jpg",
+      "kind": "动态·视频",
+      "text": "！？直布罗陀巨岩加入战场？！| 秋季版本“火山环带”各主国特色新卡【KARDS】",
+      "cover": "https://i0.hdslb.com/bfs/archive/af76176633a4e3885930f1cbdfeb3a724e192a06.jpg",
+      "url": "https://t.bilibili.com/1246026749146300449",
+      "ts": "1788951610"
+    },
+    {
+      "id": "1246004707379380225",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
+      "kind": "动态·图文",
+      "text": "正在记禄📝｜赛前准备 【20260909】 \n\n设备调试中…1 2 3 TYLOO 加油！\n",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/bf50216d2c737953370845c50ffcbe64373076765.jpg",
+      "url": "https://t.bilibili.com/1246004707379380225",
+      "ts": "1788946478"
+    },
+    {
+      "id": "1245977962561404969",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
+      "kind": "动态·视频",
+      "text": "赛场风云禄｜大狙破阵 五杀取敌【PGL 亚洲预选 vs The Huns】",
+      "cover": "https://i2.hdslb.com/bfs/archive/398ca03d4234c4f547df1e0bea868be76e73748e.jpg",
+      "url": "https://t.bilibili.com/1245977962561404969",
+      "ts": "1788940251"
+    },
+    {
+      "id": "1245975132218851336",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
+      "kind": "动态·图文",
+      "text": "【TYLOO 苏州裂变天地 S3 应援物领取地点】\n\n今天的应援和队服售卖还是在场馆外一号门这里哦！",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/b06a977db5c1c91f57fb45a269f687cd373076765.png",
+      "url": "https://t.bilibili.com/1245975132218851336",
+      "ts": "1788939592"
+    },
+    {
+      "id": "1245970128592437269",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "https://i2.hdslb.com/bfs/face/f42817a53a12399131eda0a3e9cfb3895cd7bb5c.jpg",
+      "kind": "动态",
+      "text": "今日新卡由@一拳人OPM和@小鸣er先生为各位带来直播预览，敬请期待",
+      "cover": "",
+      "url": "https://t.bilibili.com/1245970128592437269",
+      "ts": "1788938427"
+    },
+    {
+      "id": "1245967238065815560",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨ PGL Masters Bucharest 2026 East Asia Closed Qualifier\n\n✨MAP  INFERNO/MIRAGE/NUKE｜ BO3\n\n✨杭州西湖 TYLOO 2:1 The Huns",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/282f4aba8352c51cc70670dec3adbdea373076765.jpg",
+      "url": "https://t.bilibili.com/1245967238065815560",
+      "ts": "1788937754"
+    },
+    {
+      "id": "1245905433446580245",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴FISSURE Playground 3\n\n🔴2026 年 9 月 9 日 17:00 BO3\n\n🔴杭州西湖 TYLOO vs GL",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/4d0b78c9c734073e709fc516c6462f17373076765.jpg",
+      "url": "https://t.bilibili.com/1245905433446580245",
+      "ts": "1788923364"
+    },
     {
       "id": "1245841180737929286",
       "uid": "1636034895",
@@ -167,6 +299,17 @@
       "cover": "",
       "url": "https://t.bilibili.com/1245531960320720916",
       "ts": "1788836408"
+    },
+    {
+      "id": "1245315476798570561",
+      "uid": "414149787",
+      "author": "Phigros官方",
+      "avatar": "https://i0.hdslb.com/bfs/garb/b0cf08707b924d47cd71badbd065ebc272439637.png",
+      "kind": "动态·视频",
+      "text": "【Phigros】4.0.0 主线第九章更新曲目预览",
+      "cover": "https://i1.hdslb.com/bfs/archive/8a9343b5217e14b9c1a3cb8161f4212bfe22c412.jpg",
+      "url": "https://t.bilibili.com/1245315476798570561",
+      "ts": "1788786004"
     },
     {
       "id": "1245295453648453632",
@@ -543,39 +686,6 @@
       "ts": "1788530845"
     },
     {
-      "id": "1244198665042526229",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
-      "kind": "动态·图文",
-      "text": "TYLOO成功晋级2026 IEM北京",
-      "cover": "https://i0.hdslb.com/bfs/new_dyn/8e4e51fa2bb5c8680ec30b6f33d61d08373076765.jpg",
-      "url": "https://t.bilibili.com/1244198665042526229",
-      "ts": "1788525976"
-    },
-    {
-      "id": "1244196251211137030",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
-      "kind": "动态",
-      "text": "因FlyQuest战队网络问题弃权，我方判胜。",
-      "cover": "",
-      "url": "https://t.bilibili.com/1244196251211137030",
-      "ts": "1788525414"
-    },
-    {
-      "id": "1244182266815447043",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
-      "kind": "动态·图文",
-      "text": "2026无畏契约进化者杯系列赛 第三幕 | 今日赛果\n\nTYL 1:2 TEC\n\n很遗憾，我们在今日的赛事中失利，无缘2026进化者杯系列赛第三幕的后续赛程。\n\n年轻的小将们登台对弈，他们在赛场上敢打敢拼的表现令人眼前一亮，对局中所暴露的不足，也将成为成长路上宝贵的经验。队伍会认真复盘，沉淀学习，在一次次历练中打磨自身实力。\n\n少年征途漫长，不因一场胜负止步，让我们在下一项赛事再会。\n",
-      "cover": "https://i0.hdslb.com/bfs/new_dyn/a4ffd1f9593cee48c248fb71e9d23153373076765.jpg",
-      "url": "https://t.bilibili.com/1244182266815447043",
-      "ts": "1788522158"
-    },
-    {
       "id": "1244171336146747413",
       "uid": "2127596945",
       "author": "KARDS官方",
@@ -609,39 +719,6 @@
       "ts": "1788518935"
     },
     {
-      "id": "1244071516792946691",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴IEM Beijing 2026 Asia Closed Qualifier\n\n🔴2026 年 9 月 4 日 20:00 BO3\n\n🔴杭州西湖 TYLOO vs FlyQuest\n",
-      "cover": "https://i0.hdslb.com/bfs/new_dyn/dd29ac737ed7ce069af659a3acde2bf9373076765.jpg",
-      "url": "https://t.bilibili.com/1244071516792946691",
-      "ts": "1788496372"
-    },
-    {
-      "id": "1244063133050339449",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
-      "kind": "动态·视频",
-      "text": "【独家记禄】2026 TYLOO VCT CN第二赛段常规赛纪录片-《星途载禄》",
-      "cover": "https://i1.hdslb.com/bfs/archive/2acc85a05fe6e3b6de4f1f570cb81bba589b46bc.jpg",
-      "url": "https://t.bilibili.com/1244063133050339449",
-      "ts": "1788494420"
-    },
-    {
-      "id": "1244063102926848032",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
-      "kind": "动态·视频",
-      "text": "前线记禄🎤｜Zero 裂变天地S3赛前采访 我们苏州见！\n多多点赞投币收藏~小禄会在评论区🎁一份臻火鼠标垫~",
-      "cover": "https://i0.hdslb.com/bfs/archive/daba354cb3111a0a51e1a24985c848d5fab4b586.jpg",
-      "url": "https://t.bilibili.com/1244063102926848032",
-      "ts": "1788494413"
-    },
-    {
       "id": "1244063102942576706",
       "uid": "1340190821",
       "author": "崩坏星穹铁道",
@@ -664,39 +741,6 @@
       "ts": "1788490800"
     },
     {
-      "id": "1243816833856831489",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
-      "kind": "动态·图文",
-      "text": "2026无畏契约进化者杯系列赛 第三幕 | 赛程预告\n\n2026.09.04 17:00 「BO3」\n\nTYL vs TEC\n\n新锐登场，力争佳绩\n",
-      "cover": "https://i0.hdslb.com/bfs/new_dyn/ddd4a80746eabc67e55aa0ee25a90831373076765.jpg",
-      "url": "https://t.bilibili.com/1243816833856831489",
-      "ts": "1788437074"
-    },
-    {
-      "id": "1243778123265212425",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
-      "kind": "动态·图文",
-      "text": "🔥TYLOO粉丝DEMO征集活动\n\n看视频猜段位等你来投稿！\n\n无论是幽默时刻还是高光对局，都欢迎大家踊跃参与哦！\n\n🕐活动时间:2026.9.3-2026.9.15\n📫投稿邮箱:tyloogogo@163.com\n🔺邮件标题:\n【看视频猜段位】+【视频段位】+【5e平台】+【是否需要模糊ID】(只接受5e平台的投稿)\n例如:【看视频猜段位】【2000】【5e】【模糊ID】\n🔺视频文件:\n以附件形式上传(尽量保证文件大小在500M内)\n🔺视频内容：\n电脑录制，保证有【完整的一回合】内容而非击杀集锦\n⚠️重要告示:不接受炸鱼等恶意行为的投稿!\n",
-      "cover": "https://i0.hdslb.com/bfs/new_dyn/6cc20c258747ec4f1675cddde521e153373076765.jpg",
-      "url": "https://t.bilibili.com/1243778123265212425",
-      "ts": "1788428061"
-    },
-    {
-      "id": "1243770242034827266",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
-      "kind": "动态",
-      "text": "因RA战队弃权，我方进入下一轮比赛。",
-      "cover": "",
-      "url": "https://t.bilibili.com/1243770242034827266",
-      "ts": "1788426226"
-    },
-    {
       "id": "1243769273530187781",
       "uid": "414149787",
       "author": "Phigros官方",
@@ -706,17 +750,6 @@
       "cover": "",
       "url": "https://t.bilibili.com/1243769273530187781",
       "ts": "1788426000"
-    },
-    {
-      "id": "1243711967936380934",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
-      "kind": "动态·图文",
-      "text": "【2026 TYLOO CS2分部 裂变天地S3 苏州线下赛应援领取指南】\n\n❤️基础应援❤️\n关注@tyloo电子竞技俱乐部 官方微博、🎵、B站账号/加入官方🐧群\n（TYLOO钥匙扣+ 裂变天地S3限定打卡章+TYLOO应援手幅）x1\nP.S：打卡章仅供盖印打卡~不可以带走哦~\n\n🎉购买有礼🎉\n每天在现场通过官方渠道购买队服\n购入一件可获得TYLOO吧唧 x1\n购入两件可获得LOOer手摇扇 x1\n购入三件及以上可获得TO签 签名明信片 x1\n当天购入前十五名可获得签名明信片 x1（重复购买明信片不可叠加）\n\n领取方式：\n请根据社媒平台发布的应援展台位置，在工作人员的引导下提供相应的应援领取证明以领取应援物。\n\n*注意事项\n1. 所有应援物数量有限，一天仅限100份，且不可重复领取；\n2. 应援不支持代领，每人限领一份，禁止倒卖等二次盈利行为；\n3. 请大家提前准备好领取凭证，配合现场工作人员的指引进行领取。\n",
-      "cover": "https://i0.hdslb.com/bfs/new_dyn/3e4f951ec7b5a19518dfa2475f3fc1ef373076765.jpg",
-      "url": "https://t.bilibili.com/1243711967936380934",
-      "ts": "1788412658"
     },
     {
       "id": "1243430170803568644",

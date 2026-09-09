@@ -1,7 +1,20 @@
 {
-  "updatedAt": "2026-09-08T23:01:04.954Z",
+  "updatedAt": "2026-09-09T23:01:05.381Z",
   "keepDays": 30,
   "logs": [
+    {
+      "date": "2026-09-09",
+      "success": 0,
+      "fail": 1,
+      "accounts": [
+        {
+          "uid": "109***660",
+          "ok": false,
+          "start": "2026-09-08T23:01:48.000Z",
+          "durSec": null
+        }
+      ]
+    },
     {
       "date": "2026-09-08",
       "success": 0,
