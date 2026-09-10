@@ -1,8 +1,129 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-09-09T23:01:05.299Z",
+  "updatedAt": "2026-09-10T23:01:01.459Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1246444179133825077",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
+      "kind": "动态·图文",
+      "text": "【天禄电子竞技俱乐部无畏契约分部关于sword9事件的公开声明】\n\n对于近期发生的事件，俱乐部高度重视，现作如下声明：\n\n我们诚恳接受来自所有关注此事件的批评，也认可并感谢sword9曾为队伍付出的努力与贡献。\n\n俱乐部一直以来都希望为团队营造一个公平、团结的氛围，但我们也要坦诚地面对事实，sword9与团队之间的配合存在无法调和的分歧，给日常训练和队伍状态带来了较大影响。我们曾多次尝试沟通、协调，但遗憾未能取得理想效果。\n\n同时，在处理与sword9相关事宜的过程中，俱乐部存在沟通不及时、未能有效化解已有分歧与情绪的问题，我们已深刻认识到自身管理和沟通上的不足，对此我们深表歉意。俱乐部将会秉持公平的原则，妥善推进sword9各项后续事宜。\n\n队伍目前正在全力准备即将到来的上海全球冠军赛，我们会专注于自身备战，最大限度保障选手的参赛状态不受影响，以最好的姿态迎接这次比赛。未来，俱乐部将加倍努力完善内部机制，持续强化赛训团队管理，保障内部积极有效的沟通，以更成熟、更专业的面貌呈现给大家。\n\n天禄电子竞技俱乐部无畏契约分部\n2026年9月10日\n",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/c9c8bed5443c6f55d1e3c1f0869e0ce1373076765.jpg",
+      "url": "https://t.bilibili.com/1246444179133825077",
+      "ts": "1789048800"
+    },
+    {
+      "id": "1246443953652236352",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨ PGL Masters Bucharest 2026 East Asia Closed Qualifier\n\n✨MAP  CACHE/ANCIENT｜ BO3\n\n✨杭州西湖 TYLOO 2:0 NEXVOID",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/eda5c2e1c08b25c262f4a2acd3d6ab65373076765.jpg",
+      "url": "https://t.bilibili.com/1246443953652236352",
+      "ts": "1789048748"
+    },
+    {
+      "id": "1246405956081811460",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴PGL Masters Bucharest 2026 East Asia Closed Qualifier\n\n🔴2026 年 9 月 10 日 20:00 BO3\n\n🔴杭州西湖 TYLOO vs NEXVOID",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/864fdeb79147f206d1611b029009d9e9373076765.jpg",
+      "url": "https://t.bilibili.com/1246405956081811460",
+      "ts": "1789039901"
+    },
+    {
+      "id": "1246337769162145792",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "https://i2.hdslb.com/bfs/face/1336282f4138c9fd870fe75281de1441125a64c9.jpg",
+      "kind": "动态",
+      "text": "恭喜@初秋星华@null-1024@黑幕li等10位同学中奖，已私信通知，详情请点击抽奖查看。",
+      "cover": "",
+      "url": "https://t.bilibili.com/1246337769162145792",
+      "ts": "1789024025"
+    },
+    {
+      "id": "1246337760570114056",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "https://i2.hdslb.com/bfs/face/1336282f4138c9fd870fe75281de1441125a64c9.jpg",
+      "kind": "动态",
+      "text": "恭喜@--岄--@崩坏因缘晴灵@瑛下等10位同学中奖，已私信通知，详情请点击抽奖查看。",
+      "cover": "",
+      "url": "https://t.bilibili.com/1246337760570114056",
+      "ts": "1789024023"
+    },
+    {
+      "id": "1246320484110303233",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "https://i2.hdslb.com/bfs/face/1336282f4138c9fd870fe75281de1441125a64c9.jpg",
+      "kind": "动态·图文",
+      "text": "#崩坏星穹铁道# #挥掷千星的筹码# 4.5版本活动跃迁（其二）\n\n亲爱的开拓者：\n\n本期活动跃迁时间为 2026/09/12 12:00 - 2026/09/28 03:59。\n\n限定5星角色「砂金•戏浪（欢愉•量子）」「不死途（巡猎•雷）」，4星角色「桑博（虚无•风）」「虎克（毁灭•火）」「桂乃芬（虚无•火）」跃迁成功概率限时提升。\n\n限定5星光锥「向浪花掷下盛夏（欢愉）」「一场谎言的终幕（巡猎）」，4星光锥「唯有沉默（巡猎）」「此时恰好（丰饶）」「故事的下一页（记忆）」跃迁成功概率限时提升。\n\n※详情可前往游戏内公告及跃迁系统查看。\n",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/705cef3fad4b0bb1962e7bddf3ecdfaf1340190821.jpg",
+      "url": "https://t.bilibili.com/1246320484110303233",
+      "ts": "1789020000"
+    },
+    {
+      "id": "1246313339375583238",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨FISSURE Playground 3\n\n✨MAP  INFERNO/ANCIENT｜ BO3\n\n✨杭州西湖 TYLOO 0:2 Alliance",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/30ad0c31596d7a28bbbb144ef10e5c59373076765.jpg",
+      "url": "https://t.bilibili.com/1246313339375583238",
+      "ts": "1789018337"
+    },
+    {
+      "id": "1246305022186094597",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "https://i2.hdslb.com/bfs/face/1336282f4138c9fd870fe75281de1441125a64c9.jpg",
+      "kind": "动态·图文",
+      "text": "#崩坏星穹铁道# #挥掷千星的筹码# 「方寸大冒险」活动介绍\n\n踏上方寸大冒险，这里装下了大半个银河的麻烦。集结你的勇者小队，挑战重重难关，击败面前的所有强敌吧。\n\n※详情可前往游戏内公告查看。\n",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/308e3de595eeb356cb53e19e94b923dd1340190821.jpg",
+      "url": "https://t.bilibili.com/1246305022186094597",
+      "ts": "1789016400"
+    },
+    {
+      "id": "1246289631212732496",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "https://i2.hdslb.com/bfs/face/1336282f4138c9fd870fe75281de1441125a64c9.jpg",
+      "kind": "动态·图文",
+      "text": "互动抽奖 #崩坏星穹铁道# #挥掷千星的筹码# #星穹铁道砂金戏浪# \n\n《崩坏：星穹铁道》砂金•戏浪角色PV——「独家爆料」 \nhttps://www.bilibili.com/video/BV1yjYx6AEp7/ \n\n「砂金先生，您…您真的不介意播放全片吗？」\n \n中文CV：\n砂金•戏浪——杨超然\n女开拓者——陈婷婷\n ‌\n日文CV：\n砂金•戏浪——河西健吾\n女开拓者——石川由依\n ‌\n英文CV：\n砂金•戏浪——Camden Sutkowski\n女开拓者——Chloe Eves\n ‌\n韩文CV：\n砂金•戏浪——박준원\n女开拓者——김하루 \n———————————————————\n▉转发抽奖：\n关注并转发本条动态，帕姆将于9月17日抽取10位幸运开拓者各获得「星琼*500」一份。\n",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/d72c0b9bf29c8b990a1897931d90aae31340190821.jpg",
+      "url": "https://t.bilibili.com/1246289631212732496",
+      "ts": "1789012817"
+    },
+    {
+      "id": "1246289614033911865",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "https://i2.hdslb.com/bfs/face/1336282f4138c9fd870fe75281de1441125a64c9.jpg",
+      "kind": "动态·视频",
+      "text": "《崩坏：星穹铁道》砂金•戏浪角色PV——「独家爆料」\n#崩坏星穹铁道#​ #挥掷千星的筹码#​ #星穹铁道砂金戏浪#​ \n\n「砂金先生，您…您真的不介意播放全片吗？」",
+      "cover": "https://i2.hdslb.com/bfs/archive/d60c194240c047cd4357c227fa464e8010ad0ebe.jpg",
+      "url": "https://t.bilibili.com/1246289614033911865",
+      "ts": "1789012813"
+    },
+    {
+      "id": "1246272202236493825",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
+      "kind": "动态·图文",
+      "text": "正在记禄📝｜赛前准备 【20260910】\n\n今天的第一个 bo3 马上开始～\n",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/10f3573af8e35e9848d473aa8094f783373076765.jpg",
+      "url": "https://t.bilibili.com/1246272202236493825",
+      "ts": "1789008759"
+    },
     {
       "id": "1246095752061517831",
       "uid": "373076765",
@@ -123,6 +244,17 @@
       "cover": "https://i0.hdslb.com/bfs/new_dyn/282f4aba8352c51cc70670dec3adbdea373076765.jpg",
       "url": "https://t.bilibili.com/1245967238065815560",
       "ts": "1788937754"
+    },
+    {
+      "id": "1245919503785656323",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "https://i2.hdslb.com/bfs/face/1336282f4138c9fd870fe75281de1441125a64c9.jpg",
+      "kind": "动态",
+      "text": "和那刻夏老师、风堇助教一起来颗甜甜的奶糖帕[崩坏：星穹铁道_打招呼]",
+      "cover": "",
+      "url": "https://t.bilibili.com/1245919503785656323",
+      "ts": "1788926640"
     },
     {
       "id": "1245905433446580245",
@@ -312,17 +444,6 @@
       "ts": "1788786004"
     },
     {
-      "id": "1245295453648453632",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
-      "kind": "动态·图文",
-      "text": "出现了！是你们没有见过的全新版本瓦禄[墨镜]！\n",
-      "cover": "https://i0.hdslb.com/bfs/new_dyn/26b297459c2d46a22bd2b93ad50afe5a373076765.jpg",
-      "url": "https://t.bilibili.com/1245295453648453632",
-      "ts": "1788781342"
-    },
-    {
       "id": "1245285424905060375",
       "uid": "2127596945",
       "author": "KARDS官方",
@@ -453,50 +574,6 @@
       "cover": "https://i0.hdslb.com/bfs/new_dyn/ee0c6ecd773f2c6c6162b5ae3ee5f2571636034895.png",
       "url": "https://t.bilibili.com/1245176521674457090",
       "ts": "1788753651"
-    },
-    {
-      "id": "1245175044236116020",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
-      "kind": "动态·图文",
-      "text": "🎤喊话C组：TYL凶猛的双决斗来了！[打call]\n",
-      "cover": "https://i0.hdslb.com/bfs/new_dyn/50bca49dc53a2d17ac632d38673fb96d373076765.jpg",
-      "url": "https://t.bilibili.com/1245175044236116020",
-      "ts": "1788753307"
-    },
-    {
-      "id": "1245174378472144913",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
-      "kind": "动态·图文",
-      "text": "正在记禄📝｜备赛调试 【20260907】 \n\n好久没和大家在线下见面了！选手们都在努力备赛中💪我们明天现场见(⁎⁍̴̛ᴗ⁍̴̛⁎)\n",
-      "cover": "https://i0.hdslb.com/bfs/new_dyn/5b508e937a145679daf6338fa0a18ccb373076765.jpg",
-      "url": "https://t.bilibili.com/1245174378472144913",
-      "ts": "1788753152"
-    },
-    {
-      "id": "1245172961176977432",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴FISSURE Playground 3\n\n🔴2026 年 9 月 8 日 17:00 BO3\n\n🔴杭州西湖 TYLOO vs PARIVISION\n",
-      "cover": "https://i0.hdslb.com/bfs/new_dyn/da0f77ab3bdf1ed48ac3ac70bb3c3bf0373076765.jpg",
-      "url": "https://t.bilibili.com/1245172961176977432",
-      "ts": "1788752822"
-    },
-    {
-      "id": "1245152306633113605",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
-      "kind": "动态",
-      "text": "上海全球冠军赛分组出炉，TYL与TL、PRX、G2分在C组，首轮将对阵G2！",
-      "cover": "",
-      "url": "https://t.bilibili.com/1245152306633113605",
-      "ts": "1788748013"
     },
     {
       "id": "1244913858678620160",
@@ -948,72 +1025,6 @@
       "cover": "",
       "url": "https://t.bilibili.com/1241513670526107664",
       "ts": "1787900827"
-    },
-    {
-      "id": "1241513661897375768",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "https://i2.hdslb.com/bfs/face/1336282f4138c9fd870fe75281de1441125a64c9.jpg",
-      "kind": "动态",
-      "text": "恭喜@慧海经年Sapientome@kouseiい@vivianlaay等10位同学中奖，已私信通知，详情请点击抽奖查看。",
-      "cover": "",
-      "url": "https://t.bilibili.com/1241513661897375768",
-      "ts": "1787900825"
-    },
-    {
-      "id": "1241449991178813462",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "https://i2.hdslb.com/bfs/face/1336282f4138c9fd870fe75281de1441125a64c9.jpg",
-      "kind": "动态·图文",
-      "text": "#崩坏星穹铁道# #挥掷千星的筹码# 欢迎来到千星城 | 分社landing指南 \n\n托社长大人的福，报社蒸蒸日上，都开到千星城来了呶！不愧是星际和平娱乐总部，刚刚去趟中心城区，擦肩而过的大V比社长用球棒揍过的坏蛋还多呶！\n\n✧ 最终解释权归狸狸周刊所有 ✧\n✧ 如有雷同，阿哈全责 ✧\n",
-      "cover": "https://i0.hdslb.com/bfs/new_dyn/798ad583ca575d2916085a28bcca46771340190821.jpg",
-      "url": "https://t.bilibili.com/1241449991178813462",
-      "ts": "1787886000"
-    },
-    {
-      "id": "1241142568150892594",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "https://i2.hdslb.com/bfs/face/1336282f4138c9fd870fe75281de1441125a64c9.jpg",
-      "kind": "动态",
-      "text": "恭喜@哈哈-0V0@赢轙篽@-我是自由的_等10位同学中奖，已私信通知，详情请点击抽奖查看。",
-      "cover": "",
-      "url": "https://t.bilibili.com/1241142568150892594",
-      "ts": "1787814423"
-    },
-    {
-      "id": "1240771482946109459",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "https://i2.hdslb.com/bfs/face/1336282f4138c9fd870fe75281de1441125a64c9.jpg",
-      "kind": "动态",
-      "text": "恭喜@豆腐花77@风羽苏@添零11等10位同学中奖，已私信通知，详情请点击抽奖查看。",
-      "cover": "",
-      "url": "https://t.bilibili.com/1240771482946109459",
-      "ts": "1787728023"
-    },
-    {
-      "id": "1240731013627248649",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "https://i2.hdslb.com/bfs/face/1336282f4138c9fd870fe75281de1441125a64c9.jpg",
-      "kind": "动态·图文",
-      "text": "#知更鸟全新单曲# #崩坏星穹铁道# #知更鸟新歌上线# #唯有追赶风的方向# \n\n准备好，用歌曲的声浪，为轰鸣的引擎护航。\n此时此刻，每只鸟儿都在逐风翱翔！\n知更鸟全新单曲「唯有追赶风的方向」——全新音乐H5现已正式上线，参与活动为知更鸟打榜，互动即可领80星琼福利！欢迎各位开拓者前往平台收听。\n\n▌活动时间\n2026/8/26 12:00 - 2026/9/13 23:59\n\n▌活动简介\n活动期间，完成听歌活动互动即可获得星琼兑换码奖励（限量300万份）；\n获得兑换码后，开拓者可点击 \nQQ音乐APP「我的」-「会员中心」-「我的资产」-「优惠券」\n酷狗音乐APP 搜索“星穹铁道”点击进入「【活动】崩坏：星穹铁道」活动页面-「查看兑换码」\n\n▌活动奖励\n星琼*80（限量300万份，先到先得）\n（QQ音乐×酷狗音乐各40星琼）\n\n▌温馨提示\n●开拓者需完成开拓任务「湛蓝星」-「宇宙安宁片刻」后开启【邮件】功能，方可激活道具礼包，且每个UID限领1次；\n●兑换码有效期截止至2026年10月12日 00:00，请在有效期内进行兑换；\n●更多活动细则详见H5页面。\n",
-      "cover": "https://i0.hdslb.com/bfs/new_dyn/73938c1fd290f383daddc09f6fa745381340190821.jpg",
-      "url": "https://t.bilibili.com/1240731013627248649",
-      "ts": "1787718600"
-    },
-    {
-      "id": "1240353410887188529",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "https://i2.hdslb.com/bfs/face/1336282f4138c9fd870fe75281de1441125a64c9.jpg",
-      "kind": "动态·图文",
-      "text": "互动抽奖 #崩坏星穹铁道# #挥掷千星的筹码# #星穹铁道知更鸟晴歌# \n\n《崩坏：星穹铁道》知更鸟•晴歌角色PV——「追赶风的方向」\nhttps://www.bilibili.com/video/BV1oyhM6AETw/ \n\n风将吹向何方，谁也捉摸不透。\n气球又会系着我去哪漫游？\n \n中文CV：\n知更鸟•晴歌——钱琛 / 歌：Chevy\n男开拓者——秦且歌\n三月七——诺亚\n ‌\n日文CV：\n知更鸟•晴歌——名冢佳织 / 歌：Chevy\n男开拓者——榎木淳弥\n三月七——小仓唯\n ‌\n英文CV：\n知更鸟•晴歌——Alice Himora / Song vocals: Chevy\n男开拓者——Shaun Mendum\n三月七——Skyler Davenport\n ‌\n韩文CV：\n知更鸟•晴歌——신온유/ 노래: Chevy\n男开拓者——김명준\n三月七——정혜원 \n———————————————————\n▉转发抽奖：\n关注并转发本条动态，帕姆将于9月1日抽取10位幸运开拓者各获得「星琼*500」一份。\n",
-      "cover": "https://i0.hdslb.com/bfs/new_dyn/ed4f130f7e29d21d9df95cee8bfb06ce1340190821.png",
-      "url": "https://t.bilibili.com/1240353410887188529",
-      "ts": "1787630683"
     }
   ]
 }
