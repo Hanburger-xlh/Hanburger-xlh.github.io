@@ -1,8 +1,19 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-09-11T10:39:22.727Z",
+  "updatedAt": "2026-09-11T23:00:57.640Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1246693877804433415",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
+      "kind": "动态·图文",
+      "text": "正在记禄📝｜见面会现场 【20260911】\n\n感谢前来见面会支持我们的粉丝朋友们，期待下次我们以更好的面貌再见[给心心]\n",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/37057a9c3ecb16401c917f0cd943cb29373076765.jpg",
+      "url": "https://t.bilibili.com/1246693877804433415",
+      "ts": "1789106938"
+    },
     {
       "id": "1246649064128249856",
       "uid": "1636034895",
@@ -442,17 +453,6 @@
       "cover": "https://i0.hdslb.com/bfs/new_dyn/8cf752057d717094f168abf836675b801636034895.jpg",
       "url": "https://t.bilibili.com/1245593775628091392",
       "ts": "1788850800"
-    },
-    {
-      "id": "1245576597923168260",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
-      "kind": "动态·图文",
-      "text": "正在记禄📝｜赛前训练 【20260908】 \n\n和 PV 的比赛大家都在严肃准备中…一会儿赛场见[脱单doge]\n",
-      "cover": "https://i0.hdslb.com/bfs/new_dyn/c752dc4c96302d897a60f4f88ffbf9ae373076765.jpg",
-      "url": "https://t.bilibili.com/1245576597923168260",
-      "ts": "1788846801"
     },
     {
       "id": "1245570582810984466",
