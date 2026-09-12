@@ -23,23 +23,51 @@
 | `text` | 动态正文（图文动态取标题 + 摘要） |
 | `cover` | **动态首图**。图文取第一张图、图片动态取第一张、视频取视频封面、专栏无图 |
 | `avatar` | UP 主头像 |
+| `bvid` / `durSec` | **仅视频动态**：稿件号与时长（秒），供视频下载脚本使用 |
+| `video` | 已缓存的本地短视频路径（`bili-video/<bvid>.mp4`），未缓存则无此字段 |
 | `url` | 动态页链接 `https://t.bilibili.com/<id>` |
 | `kind` / `ts` / `author` / `uid` | 类型、发布时间戳、作者、UID |
 
-> **没有视频文件地址。** B 站动态接口不提供视频/音频文件 URL，只有视频**封面图**与动态页链接，
-> 因此这里下载和入库的都只是图片。
+> **B 站动态接口不提供视频文件地址**，只有视频**封面图**、`bvid` 与动态页链接。
+> 要拿到视频文件必须另调 `playurl` 接口，见下节。
 
 `cover` / `avatar` 原本是 B 站图床外链（`i0/i1/i2.hdslb.com`），
 `bili-daily/fetch-bili-images.py` 会把它们下载到 `bili-img/` 并改写为站内相对路径，
 使网站不依赖外链（外链受 B 站防盗链与可用性影响）。
 
+### 短视频缓存（360P、≤5 分钟、保留一周）
+
+`bili-daily/fetch-bili-videos.py` 会用动态里的 `bvid` 去取播放地址并下载到 `bili-video/`：
+
+```
+动态 bvid → x/web-interface/view（取 cid 与真实时长）
+          → x/player/playurl?qn=16&fnval=1（360P，audio+video 合一的 mp4）
+          → 保存为 bili-video/<bvid>.mp4
+```
+
+若该视频拿不到合一的 mp4，则退回 DASH（`fnval=4048`）分别下载 360P 视频轨与音频轨，
+再用 **ffmpeg** 合并（需本机有 ffmpeg）。
+
+| 限制 | 值 | 原因 |
+| --- | --- | --- |
+| 清晰度 | **360P** | 匿名即可获取（480P 也行，但体积翻倍） |
+| 时长 | **≤5 分钟** | 480P 长视频单条实测可达 80+ MB，合并后超过 GitHub 单文件 **100 MB** 硬上限会被拒收 |
+| 本地保留 | **7 天** | 超期文件删除并清空 `video` 字段（条目仍留在 `bili.json`） |
+| 单次下载数 | 6 个 | 防止首次运行时突发批量 |
+
+> ⚠️ **重要：git 历史不可回收。** 删除 `bili-video/` 里的文件只影响工作区，
+> 历史中的字节永久保留，仓库体积仍会持续增长（按实测频率约每周 5 条视频、
+> 单条 5–18 MB，即约每周 50–90 MB）。若要真正回收，只能定期用
+> `git filter-repo` 重写历史并 force push（破坏性操作）。
+
 ### 文件说明
 
 | 文件 | 作用 |
 | --- | --- |
-| `.github/scripts/crawl-bili.js` | 爬虫：WBI 签名抓取 UP 主动态，去重合并写入 `bili.json` |
+| `.github/scripts/crawl-bili.js` | 爬虫：WBI 签名抓取 UP 主动态，去重合并写入 `bili.json`（视频条目会带上 `bvid`/`durSec`） |
 | `bili-daily/fetch-bili-images.py` | 把 `bili.json` 里的图片下载到 `bili-img/`（转 WebP、按显示尺寸缩放），并清理不再引用的旧图 |
 | `bili-img/` | 动态图片（`cover/` 封面、`avatar/` 头像）。**刻意不放 `pic/`**：`sync-gallery.js` 会把 `pic/` 的每个子目录当成相册分类 |
+| `bili-daily/fetch-bili-videos.py` | 下载 360P、≤5 分钟的短视频到 `bili-video/`，按发布时间保留最近 7 天 |
 | `bili-config.json` | 要追踪的 UP 主 UID 列表（在此增删） |
 | `bili.json` | 抓取结果（自动生成，勿手改） |
 | `bili-daily/run-bili.ps1` | 手动/应急入口：同步→抓取→写日志→有更新自动 git push（日常主流程已内置抓取，此脚本仅供手动补跑） |
@@ -97,12 +125,13 @@
 
   1. `node .github/scripts/crawl-bili.js` —— 抓取 B 站动态，更新 `bili.json`
   2. `python bili-daily/fetch-bili-images.py` —— 下载动态图片到 `bili-img/`
-  3. `node assistant-logs/parse-and-publish.js --date 今天` —— 生成日常摘要 `daily-log.json`
-  4. `git add -- bili.json daily-log.json bili-img` → `git commit` → `git pull --rebase --autostash` → `git push origin main`
+  3. `python bili-daily/fetch-bili-videos.py` —— 下载 360P 短视频到 `bili-video/`（≤5 分钟，保留一周）
+  4. `node assistant-logs/parse-and-publish.js --date 今天` —— 生成日常摘要 `daily-log.json`
+  5. `git add -- bili.json daily-log.json bili-img bili-video` → `git commit` → `git pull --rebase --autostash` → `git push origin main`
 
   push 到 `main` 即触发 GitHub Pages 构建，网站当天就能看到结果。
   - 开关与仓库路径在 `daily_loop_settings.yaml`：
-    `web_publish_enable` / `web_crawl_bili` / `web_cache_images` / `web_repo` / `web_branch`。
+    `web_publish_enable` / `web_crawl_bili` / `web_cache_images` / `web_cache_videos` / `web_repo` / `web_branch`。
   - 只想测试发布链路（不跑日常、不关机）：`python daily_loop.py --web-test`
   - 抓取放在**日常跑完之后**，而不是开机登录时。原因：开机瞬间梯子核心
     （`com.vortex.helper` 服务）虽已在 7897 监听，但加载的是 `config.yaml` 的
@@ -126,5 +155,7 @@
 ```bash
 node .github/scripts/crawl-bili.js                       # 只抓取，写 bili.json
 python bili-daily/fetch-bili-images.py                   # 只下载图片，写 bili-img/
+python bili-daily/fetch-bili-videos.py --dry-run         # 只看会下哪些视频
+python bili-daily/fetch-bili-videos.py                   # 只下载短视频，写 bili-video/
 powershell -File "bili-daily\run-bili.ps1"               # 抓取 + 写日志 + 自动同步推送
 ```

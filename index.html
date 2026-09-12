@@ -459,11 +459,18 @@
     border-radius: 8px; display: block; object-fit: cover;
     border: 1px solid rgba(255,255,255,.06);
   }
+  /* 本地缓存的短视频（360P，≤5 分钟）。放在 <a> 之外，避免点播放时跳转。 */
+  .bili-video {
+    display: block; width: 100%; max-height: 340px; margin-top: 8px;
+    border-radius: 10px; background: #000;
+    border: 1px solid rgba(255,255,255,.06);
+  }
   .bili-empty { color: var(--text-dim); text-align: center; padding: 60px 20px; line-height: 2; }
 
   @media (max-width: 640px) {
     .bili-card { flex-direction: column; gap: 12px; }
     .bili-cover { width: 100%; max-height: none; }
+    .bili-video { max-height: none; }
   }
 
   /* ---------- 日常日志页 ---------- */
@@ -804,6 +811,7 @@
     const wrap = document.getElementById('bili-wrap');
     const items = BILI.active === 'all' ? BILI.all : BILI.all.filter(i => i.uid === BILI.active);
     wrap.innerHTML = items.map(it => `
+      <div class="bili-item">
       <a class="bili-card" href="${esc(it.url)}" target="_blank" rel="noopener">
         <div class="bili-avatar">
           ${it.avatar ? `<img src="${esc(it.avatar)}" alt="" loading="lazy" onerror="this.style.display='none'">` : ''}
@@ -815,9 +823,11 @@
             <span class="bili-time" title="${fmtFull(it.ts)}">${fmtTime(it.ts)}</span>
           </div>
           <div class="bili-text">${esc(it.text)}</div>
-          ${it.cover ? `<img class="bili-cover" src="${esc(it.cover)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">` : ''}
+          ${it.cover && !it.video ? `<img class="bili-cover" src="${esc(it.cover)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">` : ''}
         </div>
       </a>
+      ${it.video ? `<video class="bili-video" src="${esc(it.video)}"${it.cover ? ` poster="${esc(it.cover)}"` : ''} controls preload="metadata" playsinline></video>` : ''}
+      </div>
     `).join('');
     if (!items.length) {
       wrap.innerHTML = '<div class="bili-empty">暂无动态记录。<br>运行一次 “Fetch Bilibili Dynamics” 工作流后会自动填充。</div>';

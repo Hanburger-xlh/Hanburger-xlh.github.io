@@ -135,9 +135,13 @@ function normalizeItem(raw, configName) {
   let title = '';
   let kind = '';
   let cover = '';
+  let bvid = '';        // 视频动态才有：用于取播放地址
+  let durSec = null;    // 视频时长（秒），由 duration_text 解析
   if (major.archive) {
     title = major.archive.title || '';
     cover = major.archive.cover || '';
+    bvid = major.archive.bvid || '';
+    durSec = parseDuration(major.archive.duration_text);
     kind = '动态·视频';
   } else if (major.opus) {
     title = major.opus.title || (major.opus.summary && major.opus.summary.text) || '';
@@ -176,7 +180,17 @@ function normalizeItem(raw, configName) {
     cover: up(cover),
     url: 'https://t.bilibili.com/' + id,
     ts: author.pub_ts || 0,
+    ...(bvid ? { bvid } : {}),
+    ...(durSec !== null ? { durSec } : {}),
   };
+}
+
+// "05:23" / "1:02:03" -> 秒；解析不出返回 null
+function parseDuration(text) {
+  if (typeof text !== 'string' || !text.trim()) return null;
+  const parts = text.trim().split(':').map((s) => parseInt(s, 10));
+  if (!parts.length || parts.some((n) => Number.isNaN(n))) return null;
+  return parts.reduce((acc, n) => acc * 60 + n, 0);
 }
 
 // 有些图片地址是 http://，GitHub Pages 是 https，浏览器会拦掉 http 图片(混合内容)，统一升成 https
@@ -196,6 +210,8 @@ async function main() {
   const existing = readJsonSafe(outFile) || { items: [] };
   const seen = new Set((existing.items || []).map((i) => i.id));
   const merged = [...(existing.items || [])];
+  const byId = new Map();
+  merged.forEach((it, i) => byId.set(it.id, i));
   const perLimit = cfg.perUserLimit || 20;
   let changed = false;
 
@@ -217,7 +233,21 @@ async function main() {
       for (const raw of items) {
         const norm = normalizeItem(raw, name || uid);
         if (!norm) continue;
-        if (!seen.has(norm.id)) { seen.add(norm.id); merged.push(norm); changed = true; fresh++; }
+        if (!seen.has(norm.id)) {
+          seen.add(norm.id);
+          byId.set(norm.id, merged.length);
+          merged.push(norm);
+          changed = true;
+          fresh++;
+        } else {
+          // 已存在的条目：补齐后加的字段（bvid/durSec），
+          // 但不覆盖已本地化的 cover/avatar/video（那些由图片/视频下载脚本维护）
+          const cur = merged[byId.get(norm.id)];
+          if (cur) {
+            if (norm.bvid && cur.bvid !== norm.bvid) { cur.bvid = norm.bvid; changed = true; }
+            if (norm.durSec != null && cur.durSec !== norm.durSec) { cur.durSec = norm.durSec; changed = true; }
+          }
+        }
       }
       log(`[ok] uid=${uid} 抓取 ${items.length} 条，新增 ${fresh} 条`);
     } catch (e) {
