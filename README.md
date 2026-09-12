@@ -5,7 +5,7 @@
 ## B站动态自动抓取（本地每日方案）
 
 网站“动态”Tab 展示你关注的 B 站 UP 主动态。数据来自仓库里的 `bili.json`，
-由脚本抓取生成并提交到仓库。
+图片则下载到仓库的 `bili-img/`，由脚本抓取生成并提交到仓库。
 
 > 为什么不用 GitHub Actions 定时抓？
 > GitHub 托管 runner 的机房 IP 会被 B 站反爬风控（返回 HTTP 412），**抓不到数据**。
@@ -16,16 +16,34 @@
 > 注：早期做法是用“启动文件夹”在**登录那一刻**抓，现已取消——开机瞬间梯子核心还在
 > `mode: direct`（详见下文“网络与代理”），推送容易失败。
 
+### 抓取到的内容
+
+| 字段 | 说明 |
+| --- | --- |
+| `text` | 动态正文（图文动态取标题 + 摘要） |
+| `cover` | **动态首图**。图文取第一张图、图片动态取第一张、视频取视频封面、专栏无图 |
+| `avatar` | UP 主头像 |
+| `url` | 动态页链接 `https://t.bilibili.com/<id>` |
+| `kind` / `ts` / `author` / `uid` | 类型、发布时间戳、作者、UID |
+
+> **没有视频文件地址。** B 站动态接口不提供视频/音频文件 URL，只有视频**封面图**与动态页链接，
+> 因此这里下载和入库的都只是图片。
+
+`cover` / `avatar` 原本是 B 站图床外链（`i0/i1/i2.hdslb.com`），
+`bili-daily/fetch-bili-images.py` 会把它们下载到 `bili-img/` 并改写为站内相对路径，
+使网站不依赖外链（外链受 B 站防盗链与可用性影响）。
+
 ### 文件说明
 
 | 文件 | 作用 |
 | --- | --- |
 | `.github/scripts/crawl-bili.js` | 爬虫：WBI 签名抓取 UP 主动态，去重合并写入 `bili.json` |
+| `bili-daily/fetch-bili-images.py` | 把 `bili.json` 里的图片下载到 `bili-img/`（转 WebP、按显示尺寸缩放），并清理不再引用的旧图 |
+| `bili-img/` | 动态图片（`cover/` 封面、`avatar/` 头像）。**刻意不放 `pic/`**：`sync-gallery.js` 会把 `pic/` 的每个子目录当成相册分类 |
 | `bili-config.json` | 要追踪的 UP 主 UID 列表（在此增删） |
 | `bili.json` | 抓取结果（自动生成，勿手改） |
 | `bili-daily/run-bili.ps1` | 手动/应急入口：同步→抓取→写日志→有更新自动 git push（日常主流程已内置抓取，此脚本仅供手动补跑） |
-| `bili-daily/install-startup.cmd` | 一键把 `run-bili.ps1` 加进“启动”文件夹（**已不推荐**：抓取已并入日常主流程） |
-| `bili-daily/install-startup.ps1` | 被上面的 .cmd 调用的建自启脚本 |
+| `bili-daily/install-startup.cmd` / `.ps1` | 一键把 `run-bili.ps1` 加进“启动”文件夹（**已不推荐**：抓取已并入日常主流程） |
 | `logs/bili-crawl.log` | 运行日志（自动生成，已被 `.gitignore` 排除，不入库） |
 | `assistant-logs/parse-and-publish.js` | 解析三月七小助手日常日志，生成精简摘要写 `daily-log.json`（默认解析昨天，日常循环脚本会带 `--date 今天` 调用） |
 | `daily-log.json` | 日常结果摘要（自动生成，账号 UID 已打码，保留最近 30 天） |
@@ -45,29 +63,30 @@
    ```
    UID 数字在对应 UP 主空间主页网址的 `/数字` 里能看到。
 
-2. **注册开机自启（不用管理员，不用管 UAC）**：双击 `bili-daily\install-startup.cmd`。
-   它把 `run-bili.ps1` 加入当前用户的**启动文件夹**，之后每次开机登录自动运行。
-   验证：启动文件夹里出现 `B站动态每日抓取.lnk`。
+2. **确保 git 推送凭据已缓存**：在本仓库目录手动执行一次 `git push`，让它记住凭据，
+   之后脚本才能自动推送。
 
-3. **确保 git 推送凭据已缓存**：在本仓库目录手动执行一次 `git push`，让它记住凭据，
-   之后自启脚本才能自动推送。
+3. 图片缩放依赖 **Pillow**（`pip install pillow`）；缺失时会退回原图保存，不会中断流程。
 
-4. **手动测试一次**：
-   ```
-   powershell -NoProfile -ExecutionPolicy Bypass -File "bili-daily\run-bili.ps1"
-   ```
-   再打开 `logs/bili-crawl.log`，应看到 `[ok] uid=... 抓取 N 条`。
+> 抓取与发布现由游戏日常主流程负责，**不再需要注册启动项**。
+> `bili-daily\install-startup.cmd` 保留仅作备用。
+
+### 图片体积
+
+按前端实际显示尺寸缩放（`index.html`：头像 `44x44`、封面 `max-height:220px`）：
+
+| | 缩放前 | 缩放后（默认） |
+| --- | --- | --- |
+| 单张平均 | ~232 KB | ~40 KB（封面 43.5 / 头像 4.6） |
+| 首批 74 张合计 | 16.8 MB | **2.91 MB** |
+
+不缩放会让每天新增的二进制文件永久累积进 git 历史。如需调整，改 `fetch-bili-images.py`
+顶部的 `MAX_COVER_PX` / `MAX_AVATAR_PX` / `QUALITY` 即可。
 
 ### 之后每天
 
-电脑自动开机登录时，启动项会自动：拉取最新 → 抓 B 站动态 → 有新动态就提交并推送，
-网站随之更新。运行过程都记在 `logs/bili-crawl.log`（无需电脑常开，跑完即关机）。
-
-- 卸载：删除启动文件夹里的 `B站动态每日抓取.lnk`
-  （启动文件夹：`%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup`）
-
-> 提示：B 站按 IP 风控，本机偶尔某账号返回 0 条属正常波动，多跑会收敛；脚本只在
-> 真正抓到新动态时才提交，不会产生无意义的空提交。
+游戏日常跑完后，由 `daily_loop.py` 自动：抓动态 → 下载图片 → 生成日常摘要 →
+一次提交并推送，网站随之更新（详见下节）。
 
 ## 日常日志（三月七小助手）
 
@@ -77,11 +96,13 @@
   在跑完当天全部账号的日常后，会自动依次执行：
 
   1. `node .github/scripts/crawl-bili.js` —— 抓取 B 站动态，更新 `bili.json`
-  2. `node assistant-logs/parse-and-publish.js --date 今天` —— 生成日常摘要 `daily-log.json`
-  3. `git add -- bili.json daily-log.json` → `git commit` → `git pull --rebase --autostash` → `git push origin main`
+  2. `python bili-daily/fetch-bili-images.py` —— 下载动态图片到 `bili-img/`
+  3. `node assistant-logs/parse-and-publish.js --date 今天` —— 生成日常摘要 `daily-log.json`
+  4. `git add -- bili.json daily-log.json bili-img` → `git commit` → `git pull --rebase --autostash` → `git push origin main`
 
   push 到 `main` 即触发 GitHub Pages 构建，网站当天就能看到结果。
-  - 开关与仓库路径在 `daily_loop_settings.yaml`：`web_publish_enable` / `web_crawl_bili` / `web_repo` / `web_branch`。
+  - 开关与仓库路径在 `daily_loop_settings.yaml`：
+    `web_publish_enable` / `web_crawl_bili` / `web_cache_images` / `web_repo` / `web_branch`。
   - 只想测试发布链路（不跑日常、不关机）：`python daily_loop.py --web-test`
   - 抓取放在**日常跑完之后**，而不是开机登录时。原因：开机瞬间梯子核心
     （`com.vortex.helper` 服务）虽已在 7897 监听，但加载的是 `config.yaml` 的
@@ -93,10 +114,6 @@
   若代理端口不可达，脚本会自动**改用直连**（`-c http.proxy= -c https.proxy=`）；
   端口可达但推送失败时，每种方式**重试 3 次**（间隔 15 秒），最后再试直连。
   push 失败不影响关机；失败时本地提交会保留，可稍后手动 `git push`。
-- **手动补跑**：`powershell -File "bili-daily\run-bili.ps1"` 仍可单独抓取+推送（用作应急）。
-- **兜底**：每天早晨的 `run-bili.ps1` 仍会顺带重新解析**昨天**的
-  `daily_loop_YYYYMMDD.log`（三月七小助手 logs 目录，见脚本顶部 `ASSISTANT_LOGS_DIR`）。
-  同一日期会被覆盖重算，因此重复执行是安全的。
 - 摘要内容：日期 + 每个账号成功/失败（**账号 UID 打码**，如 `109***660`）+ 耗时，
   只保留最近 30 天，避免仓库膨胀。
 - 哪天电脑没开机/没跑就没有当天记录，属正常。
@@ -104,9 +121,10 @@
 
 > 隐私：网站是公开的，因此只上传打码摘要，不上传含完整账号/密码的原始日志。
 
-## 手动抓一次
+## 手动跑一次
 
 ```bash
-node .github/scripts/crawl-bili.js          # 只抓取，写 bili.json
-powershell -File "bili-daily\run-bili.ps1"  # 抓取 + 写日志 + 自动同步推送
+node .github/scripts/crawl-bili.js                       # 只抓取，写 bili.json
+python bili-daily/fetch-bili-images.py                   # 只下载图片，写 bili-img/
+powershell -File "bili-daily\run-bili.ps1"               # 抓取 + 写日志 + 自动同步推送
 ```
