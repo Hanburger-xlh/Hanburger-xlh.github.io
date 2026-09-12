@@ -209,6 +209,24 @@ def fetch_one(bvid, dst_abs, cookie):
         return False, f"{note}；dash 异常 {e}"
 
 
+def load_video_uids(repo):
+    """
+    从 bili-config.json 读 videoUids：只有这些 UID 的动态才下载视频。
+    未配置或为空 -> 不限制（所有 UP 都下载）。
+    """
+    cfg_path = os.path.join(repo, "bili-config.json")
+    try:
+        with open(cfg_path, encoding="utf-8") as f:
+            cfg = json.load(f)
+    except Exception as e:
+        log(f"[warn] 读取 bili-config.json 失败，视频不限制 UID：{e}")
+        return None
+    uids = cfg.get("videoUids")
+    if not uids:
+        return None
+    return {str(u) for u in uids}
+
+
 def main():
     global MAX_DURATION, KEEP_DAYS
 
@@ -238,12 +256,16 @@ def main():
     items = data.get("items") or []
     now = time.time()
     cutoff = now - KEEP_DAYS * 86400
+    allow_uids = load_video_uids(repo)
     cookie, has_sess = get_cookie()
-    log(f"保留 {KEEP_DAYS} 天内、时长 ≤{MAX_DURATION}s 的视频；360P；登录态={'有' if has_sess else '无（匿名）'}")
+    scope = "不限 UP" if allow_uids is None else f"仅 UID {'/'.join(sorted(allow_uids))}"
+    log(f"保留 {KEEP_DAYS} 天内、时长 ≤{MAX_DURATION}s 的视频；360P；{scope}；"
+        f"登录态={'有' if has_sess else '无（匿名）'}")
 
     changed = 0
     downloaded = 0
     skipped = 0
+    dropped = 0
     for it in items:
         bvid = it.get("bvid")
         if not bvid:
@@ -254,6 +276,19 @@ def main():
             ts = 0
         rel = f"{VIDEO_ROOT_REL}/{bvid}.mp4"
         abs_p = os.path.join(repo, rel.replace("/", os.sep))
+
+        # 不在允许名单里的 UP：清掉已缓存的视频，不下载
+        if allow_uids is not None and str(it.get("uid")) not in allow_uids:
+            if it.get("video"):
+                it.pop("video", None)
+                changed += 1
+                dropped += 1
+            if os.path.isfile(abs_p):
+                try:
+                    os.remove(abs_p)
+                except OSError:
+                    pass
+            continue
 
         # 超期：删文件 + 去掉字段（条目保留在 bili.json 中）
         if ts and ts < cutoff:
@@ -328,7 +363,8 @@ def main():
     n = sum(1 for it in items if it.get("video"))
     files = [f for f in os.listdir(video_root)] if os.path.isdir(video_root) else []
     total = sum(os.path.getsize(os.path.join(video_root, f)) for f in files) / 1024 / 1024
-    log(f"本地视频 {len(files)} 个 / {total:.1f} MB；带 video 字段的条目 {n}；本次下载 {downloaded}，跳过 {skipped}")
+    log(f"本地视频 {len(files)} 个 / {total:.1f} MB；带 video 字段的条目 {n}；"
+        f"本次下载 {downloaded}，跳过 {skipped}，因 UID 受限清掉 {dropped}")
     return 0
 
 

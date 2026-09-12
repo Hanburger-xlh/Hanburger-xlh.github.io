@@ -262,9 +262,20 @@ async function main() {
     await new Promise((r) => setTimeout(r, 800));
   }
 
-  // 按 uid 分组截断到 perLimit，再整体按时间倒序
+  // 按 uid 分组截断到 perLimit，再整体按时间倒序。
+  // 注意：必须以 bili-config.json 的 users 为准——否则从配置里删掉某个 UP 后，
+  // 它在 bili.json 里的旧条目会被一直保留下去。
+  const allowUids = new Set(cfg.users.map((u) => String(u.uid)));
   const byUid = {};
-  for (const it of merged) (byUid[it.uid] = byUid[it.uid] || []).push(it);
+  let droppedUids = 0;
+  for (const it of merged) {
+    if (!allowUids.has(String(it.uid))) { droppedUids++; continue; }
+    (byUid[it.uid] = byUid[it.uid] || []).push(it);
+  }
+  if (droppedUids) {
+    log(`[trim] 移除已不在 bili-config.json 中的 UP 条目 ${droppedUids} 条`);
+    changed = true;
+  }
   let trimmed = [];
   for (const uid of Object.keys(byUid)) {
     byUid[uid].sort((a, b) => b.ts - a.ts);
