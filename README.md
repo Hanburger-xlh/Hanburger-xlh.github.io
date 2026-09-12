@@ -35,7 +35,14 @@
 `bili-daily/fetch-bili-images.py` 会把它们下载到 `bili-img/` 并改写为站内相对路径，
 使网站不依赖外链（外链受 B 站防盗链与可用性影响）。
 
-### 短视频缓存（360P、≤5 分钟、保留一周）
+### 短视频缓存 —— 已关闭
+
+> **当前不下载任何视频。** 动态卡片**只保留封面图**（`cover`，已下载到 `bili-img/`）。
+> 关闭开关有两层，任一层都能拦住下载：
+> 1. `bili-config.json` → `"videoEnable": false`（脚本层：即便手动运行也只做清理）
+> 2. `daily_loop_settings.yaml` → `web_cache_videos: false`（主流程层：根本不调用该脚本）
+>
+> 想恢复：两处都改回 `true`。下面保留原设计说明备查。
 
 `bili-daily/fetch-bili-videos.py` 会用动态里的 `bvid` 去取播放地址并下载到 `bili-video/`：
 
@@ -50,19 +57,17 @@
 
 | 限制 | 值 | 原因 |
 | --- | --- | --- |
-| 来源 UP | **`bili-config.json` 的 `videoUids`** | 目前只配了 `414149787`（**Phigros官方**），即只有它的动态会下载视频；其余 UP 只展示图文与封面 |
+| 总开关 | **`videoEnable`（当前 false）** | 关闭后脚本只清理旧文件，不下载 |
+| 来源 UP | `videoUids`（当前 `["414149787"]`，Phigros官方） | 仅名单内 UP 的动态会下载视频 |
 | 清晰度 | **360P** | 匿名即可获取（480P 也行，但体积翻倍） |
 | 时长 | **≤5 分钟** | 480P 长视频单条实测可达 80+ MB，合并后超过 GitHub 单文件 **100 MB** 硬上限会被拒收 |
 | 本地保留 | **7 天** | 超期文件删除并清空 `video` 字段（条目仍留在 `bili.json`） |
 | 单次下载数 | 6 个 | 防止首次运行时突发批量 |
 
-> 改回"所有 UP 都下载视频"：把 `videoUids` 设为 `[]` 或删掉该键。
-> 换成别的 UP：把其 UID 填进去（Phigros官方 = `414149787`）。
-
-> ⚠️ **重要：git 历史不可回收。** 删除 `bili-video/` 里的文件只影响工作区，
-> 历史中的字节永久保留，仓库体积仍会持续增长（按实测频率约每周 5 条视频、
-> 单条 5–18 MB，即约每周 50–90 MB）。若要真正回收，只能定期用
-> `git filter-repo` 重写历史并 force push（破坏性操作）。
+> ⚠️ **git 历史不可回收。** 这也是当初关闭视频下载的关键原因之一：删除 `bili-video/`
+> 里的文件只影响工作区，历史中的字节永久保留。按实测频率（约每周 5 条、单条 5–18 MB）
+> 曾预计每周增长 50–90 MB。若将来重新开启，建议定期用 `git filter-repo`
+> 重写历史并 force push（破坏性操作）。
 
 ### 文件说明
 
@@ -71,8 +76,8 @@
 | `.github/scripts/crawl-bili.js` | 爬虫：WBI 签名抓取 UP 主动态，去重合并写入 `bili.json`（视频条目会带上 `bvid`/`durSec`） |
 | `bili-daily/fetch-bili-images.py` | 把 `bili.json` 里的图片下载到 `bili-img/`（转 WebP、按显示尺寸缩放），并清理不再引用的旧图 |
 | `bili-img/` | 动态图片（`cover/` 封面、`avatar/` 头像）。**刻意不放 `pic/`**：`sync-gallery.js` 会把 `pic/` 的每个子目录当成相册分类 |
-| `bili-daily/fetch-bili-videos.py` | 下载 360P、≤5 分钟的短视频到 `bili-video/`，按发布时间保留最近 7 天 |
-| `bili-config.json` | 要追踪的 UP 主 UID 列表（在此增删） |
+| `bili-daily/fetch-bili-videos.py` | 短视频下载（**当前已关闭**，`videoEnable: false`）。开启时下载 360P、≤5 分钟视频到 `bili-video/` 并保留 7 天 |
+| `bili-config.json` | 要追踪的 UP 主 UID 列表、视频开关（`videoEnable` / `videoUids`）、每 UP 条数上限 |
 | `bili.json` | 抓取结果（自动生成，勿手改） |
 | `bili-daily/run-bili.ps1` | 手动/应急入口：同步→抓取→写日志→有更新自动 git push（日常主流程已内置抓取，此脚本仅供手动补跑） |
 | `bili-daily/install-startup.cmd` / `.ps1` | 一键把 `run-bili.ps1` 加进“启动”文件夹（**已不推荐**：抓取已并入日常主流程） |
@@ -131,7 +136,7 @@
 
   1. `node .github/scripts/crawl-bili.js` —— 抓取 B 站动态，更新 `bili.json`
   2. `python bili-daily/fetch-bili-images.py` —— 下载动态图片到 `bili-img/`
-  3. `python bili-daily/fetch-bili-videos.py` —— 下载 360P 短视频到 `bili-video/`（≤5 分钟，保留一周）
+  3. ~~`python bili-daily/fetch-bili-videos.py`~~ —— **已关闭**（`web_cache_videos: false`），不再下载视频
   4. `node assistant-logs/parse-and-publish.js --date 今天` —— 生成日常摘要 `daily-log.json`
   5. `git add -- bili.json daily-log.json bili-img bili-video` → `git commit` → `git pull --rebase --autostash` → `git push origin main`
 
@@ -161,7 +166,7 @@
 ```bash
 node .github/scripts/crawl-bili.js                       # 只抓取，写 bili.json
 python bili-daily/fetch-bili-images.py                   # 只下载图片，写 bili-img/
-python bili-daily/fetch-bili-videos.py --dry-run         # 只看会下哪些视频
-python bili-daily/fetch-bili-videos.py                   # 只下载短视频，写 bili-video/
+python bili-daily/fetch-bili-videos.py --dry-run         # 视频已关闭；该命令只会提示"已关闭"
+python bili-daily/fetch-bili-videos.py                   # 同上：只做清理，不下载
 powershell -File "bili-daily\run-bili.ps1"               # 抓取 + 写日志 + 自动同步推送
 ```

@@ -8,6 +8,7 @@
     { "uid": "1636034895", "name": "" }
   ],
   "perUserLimit": 20,
+  "videoEnable": false,
   "videoUids": ["414149787"],
   "output": "bili.json"
 }

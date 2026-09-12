@@ -3,22 +3,21 @@
 """
 fetch-bili-videos.py — 下载动态里的 B 站视频（仅 360P、且时长 ≤5 分钟），保留最近一周。
 
-为什么限制这么严：
+⚠️ 当前状态：**已关闭**。`bili-config.json` 里 `"videoEnable": false`，
+   本脚本不会下载任何视频，只会清理残留的 bili-video/ 文件与 video 字段。
+   动态卡片只保留**封面图**（由 fetch-bili-images.py 下载到 bili-img/）。
+   想重新开启：把 videoEnable 改回 true（可配合 videoUids 限定 UP）。
+
+为什么当初限制这么严：
     * 480P 单条长视频实测可达 80+ MB（48 分钟 avc 轨 83.7 MB），
       加上音频合并后超过 GitHub 单文件 100 MB 硬上限，会被直接拒收；
     * git 历史不可回收，删除工作区文件不会释放仓库体积，
       因此必须把"每周新增体积"压在可接受范围。
-    360P + ≤5 分钟的单条约 5~18 MB，可长期维持。
 
 取流策略（匿名即可，360P 是匿名可得的清晰度）：
     1. x/web-interface/view          -> cid / 真实时长
     2. x/player/playurl qn=16 fnval=1 -> durl(mp4，音视频合一)，直接保存
     3. 上一步拿不到 durl 时退回 fnval=4048(dash) -> 分别下视频轨(360P)与音频轨，ffmpeg 合并
-
-保留策略：
-    仅保留下载文件对应的动态发布时间在 KEEP_DAYS=7 天内的视频；
-    超期或不再被 bili.json 引用的文件会被删除，并清掉条目的 video 字段
-    （条目本身仍留在 bili.json 里，只是不再带本地视频）。
 
 用法：
     python bili-daily/fetch-bili-videos.py
@@ -209,22 +208,51 @@ def fetch_one(bvid, dst_abs, cookie):
         return False, f"{note}；dash 异常 {e}"
 
 
-def load_video_uids(repo):
+def load_video_config(repo):
     """
-    从 bili-config.json 读 videoUids：只有这些 UID 的动态才下载视频。
-    未配置或为空 -> 不限制（所有 UP 都下载）。
+    读 bili-config.json：
+        videoEnable : 是否下载视频（缺省 true）。false 时不下载任何视频，
+                      并把已缓存的视频文件与 video 字段清理干净。
+        videoUids   : 只有这些 UID 的动态才下载视频；空/缺省 = 不限。
+    返回 (enabled, allow_uids)
     """
     cfg_path = os.path.join(repo, "bili-config.json")
     try:
         with open(cfg_path, encoding="utf-8") as f:
             cfg = json.load(f)
     except Exception as e:
-        log(f"[warn] 读取 bili-config.json 失败，视频不限制 UID：{e}")
-        return None
+        log(f"[warn] 读取 bili-config.json 失败，按默认（下载、不限 UID）处理：{e}")
+        return True, None
+    enabled = cfg.get("videoEnable", True)
+    if isinstance(enabled, str):
+        enabled = enabled.strip().lower() not in ("false", "0", "no", "off", "")
     uids = cfg.get("videoUids")
-    if not uids:
-        return None
-    return {str(u) for u in uids}
+    allow = {str(u) for u in uids} if uids else None
+    return bool(enabled), allow
+
+
+def cleanup_videos(repo, items):
+    """
+    关闭视频下载时的清理：删除 bili-video/ 下全部文件，并清空条目的 video 字段。
+    返回 (改动的条目数, 删除的文件数)。
+    """
+    video_root = os.path.join(repo, VIDEO_ROOT_REL)
+    changed = 0
+    for it in items:
+        if it.get("video"):
+            it.pop("video", None)
+            changed += 1
+    removed = 0
+    if os.path.isdir(video_root):
+        for fn in os.listdir(video_root):
+            p = os.path.join(video_root, fn)
+            if os.path.isfile(p):
+                try:
+                    os.remove(p)
+                    removed += 1
+                except OSError:
+                    pass
+    return changed, removed
 
 
 def main():
@@ -254,9 +282,20 @@ def main():
         return 0
 
     items = data.get("items") or []
+
+    # 视频下载已被关闭：只做清理，不发起任何下载
+    enabled, allow_uids = load_video_config(repo)
+    if not enabled:
+        changed, removed = cleanup_videos(repo, items)
+        if changed:
+            with open(bili_json, "w", encoding="utf-8") as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+        log(f"视频下载已关闭（bili-config.json 的 videoEnable=false）："
+            f"清空 video 字段 {changed} 处、删除本地视频 {removed} 个，未下载任何视频")
+        return 0
+
     now = time.time()
     cutoff = now - KEEP_DAYS * 86400
-    allow_uids = load_video_uids(repo)
     cookie, has_sess = get_cookie()
     scope = "不限 UP" if allow_uids is None else f"仅 UID {'/'.join(sorted(allow_uids))}"
     log(f"保留 {KEEP_DAYS} 天内、时长 ≤{MAX_DURATION}s 的视频；360P；{scope}；"
