@@ -1,8 +1,19 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-09-12T08:28:55.850Z",
+  "updatedAt": "2026-09-12T13:02:22.792Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1247124501978677267",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
+      "kind": "动态·图文",
+      "text": "「📷TYLOO小瓦片」\n队员们昨日在基地参与了联盟组织的心态建设课程，通过身心放松训练与团队互动环节调整状态，为即将到来的赛事做好准备。\n",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/55a6604a0a534ad736a7abcf7a862e57373076765.jpg",
+      "url": "https://t.bilibili.com/1247124501978677267",
+      "ts": "1789207200"
+    },
     {
       "id": "1247031780040507480",
       "uid": "1636034895",
@@ -37,6 +48,39 @@
       "ts": "1789128027"
     },
     {
+      "id": "1246771097021448199",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "https://i2.hdslb.com/bfs/face/f42817a53a12399131eda0a3e9cfb3895cd7bb5c.jpg",
+      "kind": "动态·图文",
+      "text": "火山环带：战备卡组",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/07f74b53782cb06a33ba3f61a19be71b2127596945.png",
+      "url": "https://t.bilibili.com/1246771097021448199",
+      "ts": "1789124917"
+    },
+    {
+      "id": "1246768878649868328",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "https://i2.hdslb.com/bfs/face/f42817a53a12399131eda0a3e9cfb3895cd7bb5c.jpg",
+      "kind": "动态·图文",
+      "text": "本周乱斗更新 —— 防空演习",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/49e3acf847b443bf00b642b45bcffe672127596945.jpg",
+      "url": "https://t.bilibili.com/1246768878649868328",
+      "ts": "1789124400"
+    },
+    {
+      "id": "1246702399043665943",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "https://i2.hdslb.com/bfs/face/f42817a53a12399131eda0a3e9cfb3895cd7bb5c.jpg",
+      "kind": "动态",
+      "text": "火山环带已经爆发，战局如何变化，哪些新卡组最具潜力？参与本周末击剑杯，一探究竟",
+      "cover": "",
+      "url": "https://t.bilibili.com/1246702399043665943",
+      "ts": "1789108922"
+    },
+    {
       "id": "1246693877804433415",
       "uid": "373076765",
       "author": "TYLOO电子竞技俱乐部",
@@ -46,6 +90,17 @@
       "cover": "https://i0.hdslb.com/bfs/new_dyn/37057a9c3ecb16401c917f0cd943cb29373076765.jpg",
       "url": "https://t.bilibili.com/1246693877804433415",
       "ts": "1789106938"
+    },
+    {
+      "id": "1246661472255213574",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "https://i2.hdslb.com/bfs/face/f42817a53a12399131eda0a3e9cfb3895cd7bb5c.jpg",
+      "kind": "动态·图文",
+      "text": "KARDS 澳新风暴：火山环带 KCP激励计划开启！",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/e1ddddf2faeb57784bb85302624376122127596945.png",
+      "url": "https://t.bilibili.com/1246661472255213574",
+      "ts": "1789099393"
     },
     {
       "id": "1246649064128249856",
@@ -68,6 +123,28 @@
       "cover": "",
       "url": "https://t.bilibili.com/1246645202953699398",
       "ts": "1789095605"
+    },
+    {
+      "id": "1246445160556920852",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "https://i2.hdslb.com/bfs/face/f42817a53a12399131eda0a3e9cfb3895cd7bb5c.jpg",
+      "kind": "动态·视频",
+      "text": "地火怒涌，破局致胜！「澳新风暴：火山环带」全新秋季版本现已上线！【KARDS】",
+      "cover": "https://i0.hdslb.com/bfs/archive/da9f15d30ef968983c745dc7650a0f27db870516.jpg",
+      "url": "https://t.bilibili.com/1246445160556920852",
+      "ts": "1789049029"
+    },
+    {
+      "id": "1246444477610983448",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "https://i2.hdslb.com/bfs/face/f42817a53a12399131eda0a3e9cfb3895cd7bb5c.jpg",
+      "kind": "动态·图文",
+      "text": "KARDS 火山环带现已上线 - 迷你套装概览 & 补丁说明",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/0cd86de6af73452d102a7934f53156712127596945.png",
+      "url": "https://t.bilibili.com/1246444477610983448",
+      "ts": "1789048870"
     },
     {
       "id": "1246444179133825077",
@@ -123,6 +200,17 @@
       "cover": "",
       "url": "https://t.bilibili.com/1246337760570114056",
       "ts": "1789024023"
+    },
+    {
+      "id": "1246330051124789250",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "https://i2.hdslb.com/bfs/face/f42817a53a12399131eda0a3e9cfb3895cd7bb5c.jpg",
+      "kind": "动态·图文",
+      "text": "​火山环带即将爆发！停机维护更新公告",
+      "cover": "https://i0.hdslb.com/bfs/new_dyn/abaa18b62b84230299f2b2f17c5a4ccd2127596945.png",
+      "url": "https://t.bilibili.com/1246330051124789250",
+      "ts": "1789022228"
     },
     {
       "id": "1246320484110303233",
@@ -453,17 +541,6 @@
       "cover": "https://i0.hdslb.com/bfs/new_dyn/fe6d76a51e4dad54f4a936b5d0a2cd05373076765.jpg",
       "url": "https://t.bilibili.com/1245650784885932073",
       "ts": "1788864074"
-    },
-    {
-      "id": "1245650076178579463",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "https://i2.hdslb.com/bfs/face/3fbb7e8d12911fae8d9825259dc0b27d71fccad5.jpg",
-      "kind": "动态·图文",
-      "text": "【TYLOO 苏州裂变天地 S3 应援物领取地点】\n\n在场馆外 1 号门这里！还有队服哦！[天禄裂变天地S1表情包_我是帅哥]",
-      "cover": "https://i0.hdslb.com/bfs/new_dyn/fdfa5329b84bca9bdfbf4b81e956c1f1373076765.png",
-      "url": "https://t.bilibili.com/1245650076178579463",
-      "ts": "1788863909"
     },
     {
       "id": "1245640161230848016",
@@ -862,17 +939,6 @@
       "ts": "1788332823"
     },
     {
-      "id": "1243068195274752020",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "https://i2.hdslb.com/bfs/face/f42817a53a12399131eda0a3e9cfb3895cd7bb5c.jpg",
-      "kind": "动态·图文",
-      "text": "​KARDS制作人中国行 正片 本周五见",
-      "cover": "https://i0.hdslb.com/bfs/new_dyn/539130d6bab2b6b27303c260a24cac032127596945.png",
-      "url": "https://t.bilibili.com/1243068195274752020",
-      "ts": "1788262768"
-    },
-    {
       "id": "1243010548197490696",
       "uid": "414149787",
       "author": "Phigros官方",
@@ -917,17 +983,6 @@
       "ts": "1788181646"
     },
     {
-      "id": "1242688129317470226",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "https://i2.hdslb.com/bfs/face/f42817a53a12399131eda0a3e9cfb3895cd7bb5c.jpg",
-      "kind": "动态",
-      "text": "感谢@参横阑干带来的「火山环带」新卡预览",
-      "cover": "",
-      "url": "https://t.bilibili.com/1242688129317470226",
-      "ts": "1788174277"
-    },
-    {
       "id": "1242656018016501769",
       "uid": "414149787",
       "author": "Phigros官方",
@@ -948,39 +1003,6 @@
       "cover": "",
       "url": "https://t.bilibili.com/1242626908874604548",
       "ts": "1788160023"
-    },
-    {
-      "id": "1241958143775211537",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "https://i2.hdslb.com/bfs/face/f42817a53a12399131eda0a3e9cfb3895cd7bb5c.jpg",
-      "kind": "动态",
-      "text": "感谢@归雨令zero带来的火山环带新卡揭示",
-      "cover": "",
-      "url": "https://t.bilibili.com/1241958143775211537",
-      "ts": "1788004314"
-    },
-    {
-      "id": "1241577257509584898",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "https://i2.hdslb.com/bfs/face/f42817a53a12399131eda0a3e9cfb3895cd7bb5c.jpg",
-      "kind": "动态·图文",
-      "text": "​KARDS 夏末活动开启！",
-      "cover": "https://i0.hdslb.com/bfs/new_dyn/adc55902d0e679d869df8c9538002c032127596945.jpg",
-      "url": "https://t.bilibili.com/1241577257509584898",
-      "ts": "1787915632"
-    },
-    {
-      "id": "1241573765664473124",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "https://i2.hdslb.com/bfs/face/f42817a53a12399131eda0a3e9cfb3895cd7bb5c.jpg",
-      "kind": "动态·视频",
-      "text": "冰岛人教你万能金合什么 |「问了吗」第二期【KARDS面对面】",
-      "cover": "https://i1.hdslb.com/bfs/archive/52629a5fbce9417823130e68287b908cdee04d9e.jpg",
-      "url": "https://t.bilibili.com/1241573765664473124",
-      "ts": "1787914819"
     },
     {
       "id": "1241565955310485504",
