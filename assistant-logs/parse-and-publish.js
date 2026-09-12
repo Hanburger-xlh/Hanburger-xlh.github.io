@@ -52,7 +52,9 @@ function parseDailyFile(filePath, dateStr) {
   try { lines = fs.readFileSync(filePath, 'utf8').split(/\r?\n/); }
   catch { return null; }
 
-  const blockStart = {};   // uid -> 开始 ts(ms)
+  const firstStart = {};   // uid -> 首次开始 ts(ms)
+  const lastStart = {};    // uid -> 最近一次开始 ts(ms)，补跑会覆盖
+  const durMap = {};       // uid -> 最后一次尝试的耗时(秒)
   const outcomeTs = {};    // uid -> 完成/失败 ts(ms)
   const outcome = {};      // uid -> true/false
   const order = [];        // 真正出现的账号顺序
@@ -63,6 +65,16 @@ function parseDailyFile(filePath, dateStr) {
   let haveRun = false;
 
   const addOrder = (uid) => { if (!inOrder[uid]) { inOrder[uid] = true; order.push(uid); } };
+  // 记录一次「完成/失败」结果，耗时按最近一次尝试（补跑）计算
+  const markOutcome = (uid, ok, ts) => {
+    outcome[uid] = ok;
+    addOrder(uid);
+    haveRun = true;
+    if (ts === null) return;
+    outcomeTs[uid] = ts;
+    const s = lastStart[uid];
+    if (s !== undefined) durMap[uid] = Math.max(0, Math.round((ts - s) / 1000));
+  };
 
   for (const raw of lines) {
     const line = raw.trim();
@@ -73,20 +85,24 @@ function parseDailyFile(filePath, dateStr) {
     let m = line.match(/发现\s+\d+\s+个账号:\s*\[([^\]]*)\]/);
     if (m && !discovered.length) { discovered = splitList(m[1]); haveRun = true; continue; }
 
-    m = line.match(/账号\s+(\d+)\s*-+\s*$/);                 // [ts] ---------- 账号 X ----------
+    // `---------- 账号 X ----------`，补跑时为 `---------- 账号 X (补跑) ----------`
+    m = line.match(/账号\s+(\d+)\s*(?:[(（][^)）]*[)）])?\s*-+\s*$/);
     if (m) {
       const uid = m[1];
       addOrder(uid);
-      if (ts !== null && blockStart[uid] === undefined) blockStart[uid] = ts;
+      if (ts !== null) {
+        if (firstStart[uid] === undefined) firstStart[uid] = ts;
+        lastStart[uid] = ts;
+      }
       haveRun = true;
       continue;
     }
 
-    m = line.match(/\[账号\s+(\d+)\]\s*日常执行完成/);          // 完成
-    if (m) { const u = m[1]; outcome[u] = true; if (ts !== null) outcomeTs[u] = ts; addOrder(u); haveRun = true; continue; }
+    m = line.match(/\[账号\s+(\d+)\]\s*(?:\[[^\]]*\])?\s*日常执行完成/);          // 完成
+    if (m) { markOutcome(m[1], true, ts); continue; }
 
-    m = line.match(/\[账号\s+(\d+)\]\s*日常执行失败/);          // 失败
-    if (m) { const u = m[1]; outcome[u] = false; if (ts !== null) outcomeTs[u] = ts; addOrder(u); haveRun = true; continue; }
+    m = line.match(/\[账号\s+(\d+)\]\s*(?:\[[^\]]*\])?\s*日常执行失败/);          // 失败（含超时强杀）
+    if (m) { markOutcome(m[1], false, ts); continue; }
 
     m = line.match(/成功\s+(\d+)\s+个:\s*\[([^\]]*)\]\s*[；;]?\s*失败\s+(\d+)\s+个:\s*\[([^\]]*)\]/);
     if (m) { successList = splitList(m[2]); failedList = splitList(m[4]); haveRun = true; continue; }
@@ -97,10 +113,12 @@ function parseDailyFile(filePath, dateStr) {
   const okSet = new Set(successList);
   const accounts = order.map((uid) => {
     const ok = outcome[uid] !== undefined ? outcome[uid] : okSet.has(uid);
-    const s = blockStart[uid];
+    const s = firstStart[uid];
     const e = outcomeTs[uid];
-    let durSec = null;
-    if (s !== undefined && e !== undefined) durSec = Math.max(0, Math.round((e - s) / 1000));
+    let durSec = durMap[uid];
+    if (durSec === undefined) {
+      durSec = (s !== undefined && e !== undefined) ? Math.max(0, Math.round((e - s) / 1000)) : null;
+    }
     return { uid: maskUid(uid), ok, start: s !== undefined ? new Date(s).toISOString() : null, durSec };
   });
 
