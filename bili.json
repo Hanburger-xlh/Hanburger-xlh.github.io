@@ -1,8 +1,19 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-09-11T23:00:57.640Z",
+  "updatedAt": "2026-09-12T00:56:42.198Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1246784454374981763",
+      "uid": "414149787",
+      "author": "Phigros官方",
+      "avatar": "https://i0.hdslb.com/bfs/garb/b0cf08707b924d47cd71badbd065ebc272439637.png",
+      "kind": "动态·视频",
+      "text": "【Phigros】7周年线下纪念演出「新黎明 [NEW DAWN]」先导预告",
+      "cover": "https://i1.hdslb.com/bfs/archive/889d02c6dd9db25c3250035dfb40414b5be91ef8.jpg",
+      "url": "https://t.bilibili.com/1246784454374981763",
+      "ts": "1789128027"
+    },
     {
       "id": "1246693877804433415",
       "uid": "373076765",
