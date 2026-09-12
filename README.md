@@ -78,8 +78,11 @@
   - 开关与仓库路径在 `daily_loop_settings.yaml`：`web_publish_enable` / `web_repo` / `web_branch`。
   - 只想测试发布链路（不跑日常、不关机）：
     `python daily_loop.py --web-test`
-  - push 失败不影响关机；失败时本地提交会保留，可稍后手动 `git push`。
-    推送需要网络可达 GitHub（本机若走代理，请确认代理已启动）。
+- **网络与代理**：本机 git 全局配置了 `http/https.proxy = 127.0.0.1:7897`，所有 git 操作默认走该代理。
+  开机时若梯子没启动，推送会失败。因此 `daily_loop.py` 与 `run-bili.ps1` 都会先探测该代理端口：
+  - 端口不可达 → 自动**改用直连**（`-c http.proxy= -c https.proxy=`）；
+  - 端口可达但推送失败 → 每种方式**重试 3 次**（间隔 15 秒），最后再试直连。
+  push 失败不影响关机；失败时本地提交会保留，可稍后手动 `git push`。
 - **兜底**：每天早晨的 `run-bili.ps1` 仍会顺带重新解析**昨天**的
   `daily_loop_YYYYMMDD.log`（三月七小助手 logs 目录，见脚本顶部 `ASSISTANT_LOGS_DIR`）。
   同一日期会被覆盖重算，因此重复执行是安全的。
