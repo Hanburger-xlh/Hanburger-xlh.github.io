@@ -1,4 +1,4 @@
-﻿# run-bili.ps1
+# run-bili.ps1
 # 每天(开机登录时)由计划任务 BiliCrawlDaily 调用：
 #   1. 与远端 main 快进同步（仅在仓库干净时，避免覆盖本地未提交改动）
 #   2. 运行 .github/scripts/crawl-bili.js 抓取 B 站动态
@@ -29,6 +29,44 @@ function Resolve-Node {
     return $null
 }
 
+# 本机 git 全局配置了 http/https.proxy = 127.0.0.1:7897，所有 git 操作都会强制走该代理。
+# 开机时梯子常常还没启动，git 就会直接失败。这里先探测代理端口：不可达就改用直连。
+function Get-GitNetArgs {
+    $proxy = (git config --get https.proxy 2>$null)
+    if (-not $proxy) { $proxy = (git config --get http.proxy 2>$null) }
+    if (-not $proxy) { return @() }
+    $m = [regex]::Match([string]$proxy, '://([^:/]+):(\d+)')
+    if (-not $m.Success) { return @() }
+    $hp = $m.Groups[1].Value
+    $pp = [int]$m.Groups[2].Value
+    $ok = $false
+    try {
+        $client = New-Object System.Net.Sockets.TcpClient
+        $client.Connect($hp, $pp)
+        $ok = $client.Connected
+        $client.Close()
+    } catch { $ok = $false }
+    if (-not $ok) {
+        Write-Log "提示: 本地代理 $proxy 未在监听(可能开机未启动梯子)，本次改用直连。"
+        return @('-c', 'http.proxy=', '-c', 'https.proxy=')
+    }
+    return @()
+}
+
+# 带回退与重试的 git push：先按上面的方式选传输路径，失败则重试数次。
+function Invoke-GitPush {
+    param([string]$Branch = 'main', [int]$Retry = 3, [int]$IntervalSec = 15)
+    $netArgs = Get-GitNetArgs
+    for ($i = 1; $i -le $Retry; $i++) {
+        $out = git @netArgs push origin $Branch 2>&1 | Out-String
+        Write-Log ($out.Trim())
+        if ($LASTEXITCODE -eq 0) { return $true }
+        Write-Log "push 第 $i/$Retry 次失败，${IntervalSec} 秒后重试..."
+        if ($i -lt $Retry) { Start-Sleep -Seconds $IntervalSec }
+    }
+    return $false
+}
+
 Write-Log "==== 开始每日 B 站动态抓取 ===="
 Write-Log "仓库: $repo"
 
@@ -41,10 +79,11 @@ Write-Log "分支: $branch"
 
 # ---- 1) 尝试快进同步到远端（保持本地为最新）----
 Write-Log "--- 尝试同步远端 (git pull --ff-only) ---"
-$pullOut = git pull --ff-only origin main 2>&1 | Out-String
+$netArgs = Get-GitNetArgs
+$pullOut = git @netArgs pull --ff-only origin main 2>&1 | Out-String
 Write-Log ($pullOut.Trim())
 if ($LASTEXITCODE -ne 0) {
-    Write-Log "提示: 无法快进同步(可能本地有未提交改动或非 main)。继续用当前本地副本抓取。"
+    Write-Log "提示: 无法快进同步(可能本地有未提交改动或非 main/网络不可达)。继续用当前本地副本抓取。"
 }
 
 # ---- 2) 定位 node 并跑爬虫 ----
@@ -79,14 +118,13 @@ $commitOut = git commit -m "chore(update): 每日B站动态/日常日志" 2>&1 |
 Write-Log ($commitOut.Trim())
 
 # push 前先尝试与远端同步(rebase 本机刚提交的这条，冲突很罕见)
-git pull --rebase origin main 2>&1 | Out-String | ForEach-Object { Write-Log $_.Trim() }
+git @netArgs pull --rebase origin main 2>&1 | Out-String | ForEach-Object { Write-Log $_.Trim() }
 
-$pushOut = git push origin main 2>&1 | Out-String
-Write-Log ($pushOut.Trim())
-if ($LASTEXITCODE -ne 0) {
-    Write-Log "注意: push 失败。常见原因是没有缓存的推送凭据——请在本机手动执行一次 'git push' 让它记住凭据，之后即可自动推送。"
-} else {
+if (Invoke-GitPush -Branch 'main') {
     Write-Log "推送成功，网站数据已更新。"
+} else {
+    Write-Log "注意: push 多次重试仍失败。本地提交已保留，可稍后手动 push。"
+    Write-Log "      常见原因：网络不可达 GitHub、代理未启动且直连被阻断、或推送凭据过期。"
 }
 
 Write-Log "==== 结束 ===="
