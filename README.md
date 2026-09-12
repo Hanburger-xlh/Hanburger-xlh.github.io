@@ -24,7 +24,7 @@
 | `bili-daily/install-startup.cmd` | 一键把 `run-bili.ps1` 加进“启动”文件夹（**无需管理员/UAC**） |
 | `bili-daily/install-startup.ps1` | 被上面的 .cmd 调用的建自启脚本 |
 | `logs/bili-crawl.log` | 运行日志（自动生成，已被 `.gitignore` 排除，不入库） |
-| `assistant-logs/parse-and-publish.js` | 解析三月七小助手日常日志，生成精简摘要写 `daily-log.json` |
+| `assistant-logs/parse-and-publish.js` | 解析三月七小助手日常日志，生成精简摘要写 `daily-log.json`（默认解析昨天，日常循环脚本会带 `--date 今天` 调用） |
 | `daily-log.json` | 日常结果摘要（自动生成，账号 UID 已打码，保留最近 30 天） |
 | `index.html` | “动态”“日常”Tab 与渲染逻辑 |
 
@@ -70,12 +70,23 @@
 
 网站“日常”Tab 展示三月七小助手每天跑游戏日常的结果，数据来自 `daily-log.json`。
 
-- 每天早晨的 `run-bili.ps1` 会顺带解析**昨天**跑完的
-  `daily_loop_YYYYMMDD.log`（三月七小助手 logs 目录，见脚本顶部 `ASSISTANT_LOGS_DIR`），
-  生成精简摘要：日期 + 每个账号成功/失败（**账号 UID 打码**，如 `109***660`）+ 耗时，
-  并提交推送。只保留最近 30 天，避免仓库膨胀。
+- **主流程（当天发布）**：`H:\file\March7thAssistant_v2.5.3\March7thAssistant_full\daily_loop.py`
+  在跑完当天全部账号的日常后，会自动调用本仓库的
+  `assistant-logs\parse-and-publish.js --date 今天` 生成 `daily-log.json`，
+  然后 `git add daily-log.json` → `git commit` → `git pull --rebase --autostash` → `git push origin main`。
+  push 到 `main` 即触发 GitHub Pages 构建，网站当天就能看到结果，不必等第二天开机。
+  - 开关与仓库路径在 `daily_loop_settings.yaml`：`web_publish_enable` / `web_repo` / `web_branch`。
+  - 只想测试发布链路（不跑日常、不关机）：
+    `python daily_loop.py --web-test`
+  - push 失败不影响关机；失败时本地提交会保留，可稍后手动 `git push`。
+    推送需要网络可达 GitHub（本机若走代理，请确认代理已启动）。
+- **兜底**：每天早晨的 `run-bili.ps1` 仍会顺带重新解析**昨天**的
+  `daily_loop_YYYYMMDD.log`（三月七小助手 logs 目录，见脚本顶部 `ASSISTANT_LOGS_DIR`）。
+  同一日期会被覆盖重算，因此重复执行是安全的。
+- 摘要内容：日期 + 每个账号成功/失败（**账号 UID 打码**，如 `109***660`）+ 耗时，
+  只保留最近 30 天，避免仓库膨胀。
 - 哪天电脑没开机/没跑就没有当天记录，属正常。
-- 想手动处理某天：`node assistant-logs\parse-and-publish.js --date 2026-09-05`
+- 想手动补某一天：`node assistant-logs\parse-and-publish.js --date 2026-09-05`
 
 > 隐私：网站是公开的，因此只上传打码摘要，不上传含完整账号/密码的原始日志。
 
