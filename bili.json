@@ -1,6 +1,6 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-09-12T14:14:19.275Z",
+  "updatedAt": "2026-09-12T14:23:28.660Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
     {
@@ -133,7 +133,10 @@
       "text": "地火怒涌，破局致胜！「澳新风暴：火山环带」全新秋季版本现已上线！【KARDS】",
       "cover": "bili-img/cover/2f7b005729734fd7.webp",
       "url": "https://t.bilibili.com/1246445160556920852",
-      "ts": "1789049029"
+      "ts": "1789049029",
+      "bvid": "BV1ZfYM66ExJ",
+      "durSec": 83,
+      "video": "bili-video/BV1ZfYM66ExJ.mp4"
     },
     {
       "id": "1246444477610983448",
@@ -353,7 +356,9 @@
       "text": "！？直布罗陀巨岩加入战场？！| 秋季版本“火山环带”各主国特色新卡【KARDS】",
       "cover": "bili-img/cover/087e8d020fe27946.webp",
       "url": "https://t.bilibili.com/1246026749146300449",
-      "ts": "1788951610"
+      "ts": "1788951610",
+      "bvid": "BV1viYx6JEgQ",
+      "durSec": 304
     },
     {
       "id": "1246011246430388226",
