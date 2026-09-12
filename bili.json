@@ -1,6 +1,6 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-09-12T14:31:30.031Z",
+  "updatedAt": "2026-09-12T14:34:17.389Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
     {
@@ -313,7 +313,9 @@
       "text": "赛场风云禄｜重整旗鼓 雷霆破阵【裂变天地S3 vs GL】",
       "cover": "bili-img/cover/7ead75d3e87498db.webp",
       "url": "https://t.bilibili.com/1246093900965216320",
-      "ts": "1788967245"
+      "ts": "1788967245",
+      "bvid": "BV1NzY46TED6",
+      "durSec": 56
     },
     {
       "id": "1246093368381931541",
