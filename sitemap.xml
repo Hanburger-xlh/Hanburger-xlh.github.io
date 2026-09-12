@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 站点是单页应用，内容通过 #gallery / #bili / #daily 等哈希路由切换，无法被单独索引，
+     因此这里只登记首页。新增独立 HTML 页面时在此追加 <url> 即可。 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://hanburger-xlh.github.io/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

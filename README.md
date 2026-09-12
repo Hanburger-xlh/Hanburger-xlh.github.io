@@ -75,7 +75,7 @@
 | --- | --- |
 | `.github/scripts/crawl-bili.js` | 爬虫：WBI 签名抓取 UP 主动态，去重合并写入 `bili.json`（视频条目会带上 `bvid`/`durSec`） |
 | `bili-daily/fetch-bili-images.py` | 把 `bili.json` 里的图片下载到 `bili-img/`（转 WebP、按显示尺寸缩放），并清理不再引用的旧图 |
-| `bili-img/` | 动态图片（`cover/` 封面、`avatar/` 头像）。**刻意不放 `pic/`**：`sync-gallery.js` 会把 `pic/` 的每个子目录当成相册分类 |
+| `bili-img/` | 动态图片（`cover/` 封面、`avatar/` 头像）。**刻意不放 `pic/`**：相册索引会把 `pic/` 的每个子目录当成一个分类 |
 | `bili-daily/fetch-bili-videos.py` | 短视频下载（**当前已关闭**，`videoEnable: false`）。开启时下载 360P、≤5 分钟视频到 `bili-video/` 并保留 7 天 |
 | `bili-config.json` | 要追踪的 UP 主 UID 列表、视频开关（`videoEnable` / `videoUids`）、每 UP 条数上限 |
 | `bili.json` | 抓取结果（自动生成，勿手改） |
@@ -84,7 +84,15 @@
 | `logs/bili-crawl.log` | 运行日志（自动生成，已被 `.gitignore` 排除，不入库） |
 | `assistant-logs/parse-and-publish.js` | 解析三月七小助手日常日志，生成精简摘要写 `daily-log.json`（默认解析昨天，日常循环脚本会带 `--date 今天` 调用） |
 | `daily-log.json` | 日常结果摘要（自动生成，账号 UID 已打码，保留最近 30 天） |
-| `index.html` | “动态”“日常”Tab 与渲染逻辑 |
+| `index.html` | 单页站点（文章 / 网址 / 图片 / 动态 / 日常）；含 meta、OG 分享卡片、无障碍属性 |
+| `build-gallery.py` | 扫描 `pic/` → 生成 `pic-thumb/` 缩略图 → 重写 `images.js` |
+| `sync-gallery.js` | `build-gallery.py` 的转发入口（保留原命令名，实际逻辑在 Python 侧） |
+| `pic/` | 相册原图（灯箱看大图用） |
+| `pic-thumb/` | 相册缩略图（网格用，长边 ≤640px） |
+| `images.js` | 相册索引（自动生成）：`{ t:缩略图, f:原图, w, h }` |
+| `make-icons.py` | 生成 `favicon.svg` / `apple-touch-icon.png` / `og-cover.png` |
+| `robots.txt` / `sitemap.xml` | 搜索引擎索引配置 |
+| `404.html` | GitHub Pages 自定义 404 页 |
 
 ### 一次性配置（只需做一次）
 
@@ -112,7 +120,36 @@
 
 ### 图片体积
 
-按前端实际显示尺寸缩放（`index.html`：头像 `44x44`、封面 `max-height:220px`）：
+相册有**两层图**：网格用 `pic-thumb/` 的缩略图，点开的灯箱才加载 `pic/` 的原图。
+`pic/` 原图的中位宽是 1254px（最大 4096px），而网格每格只显示约 400px，
+直接拿原图铺网格等于多下十几倍的字节。实测（全 241 张）：
+
+| | 合计 | 平均 |
+| --- | --- | --- |
+| `pic/` 原图 | 49.1 MB | 209 KB |
+| `pic-thumb/` 缩略图（长边 640px，WebP q80） | **9.9 MB** | **43 KB** |
+
+浏览相册的流量因此降低约 **80%**。`images.js` 里还记了原图宽高，前端写成
+`<img width height>`，让浏览器在图片到达前就按真实比例占位，消除瀑布流逐张重排。
+
+新增图片后跑一次即可（幂等，已存在的缩略图会跳过）：
+
+```bash
+python build-gallery.py          # 或 node sync-gallery.js
+```
+
+### 站点资源
+
+```bash
+python make-icons.py             # 重新生成 favicon.svg / apple-touch-icon.png / og-cover.png
+```
+
+配色取自 `index.html` 的 CSS 变量（`--bg #0d0f14`、`--accent #7c9cff`、`--accent-2 #b48cff`）。
+对外分享链接时，`og-cover.png`（1200×630）会作为预览图。
+
+### 动态封面 / 头像的体积
+
+B 站动态的封面与头像按前端实际显示尺寸缩放（`index.html`：头像 `44x44`、封面 `max-height:220px`）：
 
 | | 缩放前 | 缩放后（默认） |
 | --- | --- | --- |
@@ -174,4 +211,6 @@ python bili-daily/fetch-bili-images.py                   # 只下载图片，写
 python bili-daily/fetch-bili-videos.py --dry-run         # 视频已关闭；该命令只会提示"已关闭"
 python bili-daily/fetch-bili-videos.py                   # 同上：只做清理，不下载
 powershell -File "bili-daily\run-bili.ps1"               # 抓取 + 写日志 + 自动同步推送
+python build-gallery.py                                  # 相册：生成缩略图 + 重写 images.js
+python make-icons.py                                     # 站点：重新生成图标与分享封面
 ```

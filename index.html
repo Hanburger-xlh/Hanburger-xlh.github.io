@@ -4,6 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>hans窝</title>
+<meta name="description" content="个人主页：文章、常用网址、图片相册，以及关注的 B 站动态与三月七小助手游戏日常记录。">
+<meta name="author" content="hans">
+<meta name="theme-color" content="#0d0f14">
+<link rel="canonical" href="https://hanburger-xlh.github.io/">
+
+<!-- 分享卡片（微信 / QQ / 飞书 / Twitter 等） -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="hans窝">
+<meta property="og:title" content="hans窝">
+<meta property="og:description" content="文章、常用网址、图片相册，以及 B 站动态与游戏日常记录。">
+<meta property="og:url" content="https://hanburger-xlh.github.io/">
+<meta property="og:image" content="https://hanburger-xlh.github.io/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="hans窝">
+<meta name="twitter:description" content="文章、常用网址、图片相册，以及 B 站动态与游戏日常记录。">
+<meta name="twitter:image" content="https://hanburger-xlh.github.io/og-cover.png">
+
+<!-- 图标（由 make-icons.py 生成） -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
   :root {
     --bg: #0d0f14;
@@ -286,6 +308,8 @@
   }
   @media (max-width: 640px) { .card { margin-bottom: 8px; border-radius: 10px; } }
   .card:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(0,0,0,.5); }
+  .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .card[role="button"] { cursor: zoom-in; }
 
   .card img {
     display: block;
@@ -565,18 +589,19 @@
 <footer>Powered by GitHub Pages</footer>
 
 <!-- 灯箱 -->
-<div class="lightbox" id="lightbox">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true"
+     aria-label="图片查看器" aria-describedby="lb-info">
   <button class="lb-close" id="lb-close" aria-label="关闭">&times;</button>
   <button class="lb-btn lb-prev" id="lb-prev" aria-label="上一张">&#10094;</button>
   <img id="lb-img" alt="">
   <button class="lb-btn lb-next" id="lb-next" aria-label="下一张">&#10095;</button>
-  <div class="lb-info" id="lb-info"></div>
+  <div class="lb-info" id="lb-info" aria-live="polite"></div>
 </div>
 
 <script src="images.js"></script>
 <script src="articles.js"></script>
 <script src="links.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js" defer></script>
 <script>
   /* ========== 标签切换 ========== */
   let articleLoaded = false;
@@ -584,7 +609,11 @@
   function switchView(name) {
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
     document.getElementById('view-' + name).classList.add('active');
-    document.querySelectorAll('.tabs button').forEach(b => b.classList.toggle('active', b.dataset.view === name));
+    document.querySelectorAll('.tabs button').forEach(b => {
+      const on = b.dataset.view === name;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-current', on ? 'page' : 'false');   // 让读屏软件知道当前页
+    });
     if (name === 'articles' && !articleLoaded && ARTICLES.length) {
       articleLoaded = true;
       loadArticle(ARTICLES[0]);
@@ -666,10 +695,14 @@
   const galleryEl = document.getElementById('gallery');
   const filtersEl = document.getElementById('filters');
 
-  // 拍平所有图片
+  // 拍平所有图片（images.js 里每条含 t=缩略图、f=原图、w/h=尺寸）
   let allImages = [];
   GALLERY.groups.forEach(g => {
-    g.images.forEach(src => allImages.push({ src, groupName: g.name }));
+    g.images.forEach(im => allImages.push({
+      t: im.t, f: im.f, w: im.w, h: im.h,
+      groupName: g.name,
+      alt: g.name + ' · ' + String(im.f).split('/').pop().replace(/\.[^.]+$/, '')
+    }));
   });
 
   const counts = {};
@@ -677,12 +710,13 @@
 
   let activeFilter = 'all';
   let currentItems = [];
+  let lastFocus = null;
 
   function renderFilters() {
     const html = [];
-    html.push(`<button data-filter="all" class="${activeFilter==='all'?'active':''}">全部 <span class="count">${allImages.length}</span></button>`);
+    html.push(`<button data-filter="all" aria-pressed="${activeFilter==='all'}" class="${activeFilter==='all'?'active':''}">全部 <span class="count">${allImages.length}</span></button>`);
     GALLERY.groups.forEach(g => {
-      html.push(`<button data-filter="${g.id}" class="${activeFilter===g.id?'active':''}">${g.name} <span class="count">${counts[g.id]}</span></button>`);
+      html.push(`<button data-filter="${g.id}" aria-pressed="${activeFilter===g.id}" class="${activeFilter===g.id?'active':''}">${g.name} <span class="count">${counts[g.id]}</span></button>`);
     });
     filtersEl.innerHTML = html.join('');
     filtersEl.querySelectorAll('button').forEach(btn => {
@@ -698,15 +732,23 @@
     const group = GALLERY.groups.find(g => g.id === activeFilter);
     const items = activeFilter === 'all'
       ? allImages
-      : group.images.map(src => ({ src, groupName: group.name }));
+      : group.images.map(im => ({
+          t: im.t, f: im.f, w: im.w, h: im.h, groupName: group.name,
+          alt: group.name + ' · ' + String(im.f).split('/').pop().replace(/\.[^.]+$/, '')
+        }));
 
     currentItems = items;
 
+    // width/height 让浏览器在图片到达前就按真实比例占位，消除瀑布流逐张重排；
+    // 缩略图缺失时（新图还没跑 build-gallery.py）回退到原图。
     galleryEl.innerHTML = items.map((item, i) => `
-      <figure class="card" data-index="${i}">
+      <figure class="card" data-index="${i}" tabindex="0" role="button"
+              aria-label="查看第 ${i + 1} 张，共 ${items.length} 张：${esc(item.alt)}">
         <div class="placeholder"></div>
-        <img src="${enc(item.src)}" alt="${item.groupName}" loading="lazy">
-        <figcaption class="tag">${item.groupName}</figcaption>
+        <img src="${enc(item.t)}" alt="${esc(item.alt)}" loading="lazy" decoding="async"
+             ${item.w ? `width="${item.w}" height="${item.h}"` : ''}
+             onerror="this.onerror=null;this.src='${enc(item.f)}'">
+        <figcaption class="tag">${esc(item.groupName)}</figcaption>
       </figure>
     `).join('');
 
@@ -721,7 +763,12 @@
 });
 
     galleryEl.querySelectorAll('.card').forEach(card => {
-      card.addEventListener('click', () => openLightbox(parseInt(card.dataset.index, 10)));
+      const idx = parseInt(card.dataset.index, 10);
+      card.addEventListener('click', () => openLightbox(idx));
+      // 键盘可达：Enter / 空格 打开
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(idx); }
+      });
     });
   }
 
@@ -733,21 +780,26 @@
 
   function openLightbox(i) {
     lbIndex = i;
+    lastFocus = document.activeElement;
     showLightbox();
     lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
+    const closeBtn = document.getElementById('lb-close');
+    if (closeBtn) closeBtn.focus();
   }
 
   function showLightbox() {
     const item = currentItems[lbIndex];
-    lbImg.src = enc(item.src);
-    lbImg.alt = item.groupName;
+    if (!item) return;
+    lbImg.src = enc(item.f);          // 灯箱看原图
+    lbImg.alt = item.alt || item.groupName;
     lbInfo.textContent = `${item.groupName} · ${lbIndex + 1} / ${currentItems.length}`;
   }
 
   function closeLightbox() {
     lightbox.classList.remove('open');
     document.body.style.overflow = '';
+    if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
   }
 
   function step(d) {
@@ -797,9 +849,9 @@
 
   function renderBiliFilters() {
     const el = document.getElementById('bili-filters');
-    let html = `<button data-bili-filter="all" class="${BILI.active==='all'?'active':''}">全部 <span class="count">${BILI.all.length}</span></button>`;
+    let html = `<button data-bili-filter="all" aria-pressed="${BILI.active==='all'}" class="${BILI.active==='all'?'active':''}">全部 <span class="count">${BILI.all.length}</span></button>`;
     BILI.authors.forEach(a => {
-      html += `<button data-bili-filter="${a.uid}" class="${BILI.active===a.uid?'active':''}">${esc(a.name)} <span class="count">${a.count}</span></button>`;
+      html += `<button data-bili-filter="${a.uid}" aria-pressed="${BILI.active===a.uid}" class="${BILI.active===a.uid?'active':''}">${esc(a.name)} <span class="count">${a.count}</span></button>`;
     });
     el.innerHTML = html;
     el.querySelectorAll('button').forEach(btn => {
@@ -830,7 +882,7 @@
       </div>
     `).join('');
     if (!items.length) {
-      wrap.innerHTML = '<div class="bili-empty">暂无动态记录。<br>运行一次 “Fetch Bilibili Dynamics” 工作流后会自动填充。</div>';
+      wrap.innerHTML = '<div class="bili-empty">暂无动态记录。<br>本机跑完游戏日常后会自动抓取并提交。</div>';
     }
   }
 
@@ -856,11 +908,11 @@
       renderBiliFilters();
       renderBiliFeed();
       const upd = data.updatedAt ? '最后更新：' + new Date(data.updatedAt).toLocaleString('zh-CN', { hour12: false }) : '尚未抓取到数据';
-      status.textContent = `来源：B站 · 由 GitHub Actions 每小时自动抓取 · ${upd}`;
+      status.textContent = `来源：B站 · 本机跑完游戏日常后自动抓取 · ${upd}`;
     } catch (e) {
       status.textContent = '动态加载失败：' + e.message;
       document.getElementById('bili-wrap').innerHTML =
-        '<div class="bili-empty">动态数据加载失败。<br>确认 bili.json 已存在，且已运行 “Fetch Bilibili Dynamics” 工作流。</div>';
+        '<div class="bili-empty">动态数据加载失败。<br>确认 bili.json 已存在（由本机日常脚本生成）。</div>';
     }
   }
 
