@@ -187,6 +187,28 @@ B 站动态的封面与头像按前端实际显示尺寸缩放（`index.html`：
     登录那一刻推送很容易撞上这个窗口而失败。日常跑完时（开机约 30 分钟后）代理已就绪。
   - 因此**原先放在启动文件夹的 `B站动态每日抓取.lnk` 已移出**
     （备份在 `%APPDATA%\StartupBackup\`），避免与本次运行重复抓取。
+- **推送通道：SSH（不要改回 HTTPS）**。2026-09-13 07:29 的自动运行里，HTTPS 推送在
+  **提权的计划任务**（`March7thDailyLoop`，RunLevel=Highest）下连续 6 次失败：
+
+  ```
+  fatal: Unable to persist credentials with the 'wincredman' credential store.
+  fatal: could not read Username for 'https://github.com'
+  ```
+
+  这是凭据问题而非网络问题（代理与直连两条路报同样的错）。对照实验：同样的无控制台环境、
+  但**非提权**的计划任务可以正常推送，因此与提权（或开机时会话的凭据库状态）相关。
+  GCM 的 `wincredman` 存储在非标准会话下本就有已知限制。
+
+  现在改用 SSH：`origin = git@github.com:Hanburger-xlh/Hanburger-xlh.github.io.git`，
+  密钥 `~/.ssh/id_ed25519` **无口令**（无人值守免交互的前提），`known_hosts` 已预置
+  GitHub 主机指纹，仓库内固定了 `core.sshCommand`：
+
+  ```
+  "C:/Program Files/Git/usr/bin/ssh.exe" -o BatchMode=yes -o StrictHostKeyChecking=accept-new
+  ```
+
+  SSH 完全不经过 Windows 凭据管理器，因此**与是否提权无关**。
+  注意：`http/https.proxy` 与 HTTPS 回退逻辑仍然保留，但当前 remote 已不需要它们。
 - **网络与代理**：本机 git 全局配置了 `http/https.proxy = 127.0.0.1:7897`，所有 git 操作默认走该代理。
   若代理端口不可达，脚本会自动**改用直连**（`-c http.proxy= -c https.proxy=`）；
   端口可达但推送失败时，每种方式**重试 3 次**（间隔 15 秒），最后再试直连。
