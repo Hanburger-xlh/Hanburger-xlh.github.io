@@ -1,8 +1,19 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-09-12T23:29:14.523Z",
+  "updatedAt": "2026-09-13T03:16:16.388Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1247387364685250658",
+      "uid": "1636034895",
+      "author": "绝区零",
+      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
+      "kind": "动态",
+      "text": "恭喜@梁淩薇@_久世舞夕颜-@番茄FanQi等10位同学中奖，已私信通知，详情请点击抽奖查看。",
+      "cover": "",
+      "url": "https://t.bilibili.com/1247387364685250658",
+      "ts": "1789268403"
+    },
     {
       "id": "1247124501978677267",
       "uid": "373076765",
@@ -45,7 +56,9 @@
       "text": "【Phigros】7周年线下纪念演出「新黎明 [NEW DAWN]」先导预告",
       "cover": "bili-img/cover/870fc63ff69ce770.webp",
       "url": "https://t.bilibili.com/1246784454374981763",
-      "ts": "1789128027"
+      "ts": "1789128027",
+      "bvid": "BV1atY76XEAN",
+      "durSec": 81
     },
     {
       "id": "1246771097021448199",
@@ -647,7 +660,9 @@
       "text": "【Phigros】4.0.0 主线第九章更新曲目预览",
       "cover": "bili-img/cover/8bd8ffbcecbc6c21.webp",
       "url": "https://t.bilibili.com/1245315476798570561",
-      "ts": "1788786004"
+      "ts": "1788786004",
+      "bvid": "BV16vbN6REhD",
+      "durSec": 111
     },
     {
       "id": "1245285424905060375",
@@ -681,17 +696,6 @@
       "cover": "bili-img/cover/3fcb5ea1b1abf35b.webp",
       "url": "https://t.bilibili.com/1245269104004169793",
       "ts": "1788775207"
-    },
-    {
-      "id": "1245269076106805255",
-      "uid": "1636034895",
-      "author": "绝区零",
-      "avatar": "bili-img/avatar/c66e1df51110f519.webp",
-      "kind": "动态·图文",
-      "text": "#绝区零# #她与她的隐秘往事# #绝区零珂蕾妲#\n「珂蕾妲」潜能激发机制介绍\n\n更新即将完成…\n资料库中已收录代理人「珂蕾妲」的战斗相关信息已更新，重点内容解析完毕，请查收。\n\n—— 欢迎来到罗斯凯利法！——\n▼《绝区零》3.2版本「她与她的隐秘往事」将于9月9日上线！\n版本期间，参与活动可免费领取妄想天使全新时装！\nbilibili安卓端下载地址：https://www.biligame.com/detail/?id=108434 \nbilibiliPC端下载地址：https://www.biligame.com/detail/?id=111210\n",
-      "cover": "bili-img/cover/d663a818833601d8.webp",
-      "url": "https://t.bilibili.com/1245269076106805255",
-      "ts": "1788775200"
     },
     {
       "id": "1245259298566570024",
@@ -781,7 +785,9 @@
       "text": "【直播回放】Phigros 七周年纪念直播 2026年09月05日19点场",
       "cover": "bili-img/cover/0fd3b4caff7aac00.webp",
       "url": "https://t.bilibili.com/1244629458829180953",
-      "ts": "1788626278"
+      "ts": "1788626278",
+      "bvid": "BV1fLbL6EEPM",
+      "durSec": 15113
     },
     {
       "id": "1244575868369502212",
