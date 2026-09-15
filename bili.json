@@ -1,8 +1,54 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-09-14T23:32:25.418Z",
+  "updatedAt": "2026-09-15T23:32:24.610Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1248253219375677446",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "神秘的“地下城市” —— 直布罗陀巨岩",
+      "cover": "bili-img/cover/7764d4a059bc6bd0.webp",
+      "url": "https://t.bilibili.com/1248253219375677446",
+      "ts": "1789470000"
+    },
+    {
+      "id": "1248233919939084296",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态",
+      "text": "今天是征集活动的最后一天啦~想要投稿的友友们要抓紧咯[脱单doge]",
+      "cover": "",
+      "url": "https://t.bilibili.com/1248233919939084296",
+      "ts": "1789465507"
+    },
+    {
+      "id": "1248149691315519512",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态",
+      "text": "是TYL的定海神针，也是我们的MVP！再次恭喜@TYL_slowly 成为2026 VCT CN 赛季最佳选手[加油]",
+      "cover": "",
+      "url": "https://t.bilibili.com/1248149691315519512",
+      "ts": "1789445896"
+    },
+    {
+      "id": "1248147917498220550",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "前线记禄🎤｜TYLOO裂变天地S3赛后采访",
+      "cover": "bili-img/cover/d221a0219093ba67.webp",
+      "url": "https://t.bilibili.com/1248147917498220550",
+      "ts": "1789445483",
+      "bvid": "BV1AfeE6LEHW",
+      "durSec": 348
+    },
     {
       "id": "1247866687345131575",
       "uid": "1340190821",
@@ -24,6 +70,63 @@
       "cover": "",
       "url": "https://t.bilibili.com/1247822101309554697",
       "ts": "1789369623"
+    },
+    {
+      "id": "1247526510872494098",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "【📷0913训练返图】\n聚精会神，努力备战[加油]\n",
+      "cover": "bili-img/cover/8efebae25da3d30c.webp",
+      "url": "https://t.bilibili.com/1247526510872494098",
+      "ts": "1789300800"
+    },
+    {
+      "id": "1247520994013216787",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "赛场风云禄｜锋芒破空 一战收官【PGL 亚洲预选 vs DEPO】",
+      "cover": "bili-img/cover/e595dc8f25a4768e.webp",
+      "url": "https://t.bilibili.com/1247520994013216787",
+      "ts": "1789299516",
+      "bvid": "BV16xYq6dEUP",
+      "durSec": 73
+    },
+    {
+      "id": "1247514298171785235",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "少年恃险若平地，独倚长剑凌清秋！\n\n恭喜杭州西湖TYLOO获得前往PGL Masters Bucharest 2026的资格！\n",
+      "cover": "bili-img/cover/21ff6fceb0bd6a0e.webp",
+      "url": "https://t.bilibili.com/1247514298171785235",
+      "ts": "1789297957"
+    },
+    {
+      "id": "1247511807059296294",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨ PGL Masters Bucharest 2026 East Asia Closed Qualifier\n\n✨MAP  CACHE/ANCIENT/MIRAGE｜ BO5\n\n✨杭州西湖 TYLOO 3:0 DEPO\n",
+      "cover": "bili-img/cover/7acd56ed36d4507a.webp",
+      "url": "https://t.bilibili.com/1247511807059296294",
+      "ts": "1789297377"
+    },
+    {
+      "id": "1247466349175767094",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴PGL Masters Bucharest 2026 East Asia Closed Qualifier\n\n🔴2026 年 9 月 13 日 16:15 BO5\n\n🔴杭州西湖 TYLOO vs DEPO\n",
+      "cover": "bili-img/cover/b146c366954dedcc.webp",
+      "url": "https://t.bilibili.com/1247466349175767094",
+      "ts": "1789286793"
     },
     {
       "id": "1247402815821709328",
@@ -421,39 +524,6 @@
       "ts": "1788948000"
     },
     {
-      "id": "1246004707379380225",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "正在记禄📝｜赛前准备 【20260909】 \n\n设备调试中…1 2 3 TYLOO 加油！\n",
-      "cover": "bili-img/cover/adf7cc76787f1000.webp",
-      "url": "https://t.bilibili.com/1246004707379380225",
-      "ts": "1788946478"
-    },
-    {
-      "id": "1245977962561404969",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·视频",
-      "text": "赛场风云禄｜大狙破阵 五杀取敌【PGL 亚洲预选 vs The Huns】",
-      "cover": "bili-img/cover/47257dd264a6b11e.webp",
-      "url": "https://t.bilibili.com/1245977962561404969",
-      "ts": "1788940251"
-    },
-    {
-      "id": "1245975132218851336",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "【TYLOO 苏州裂变天地 S3 应援物领取地点】\n\n今天的应援和队服售卖还是在场馆外一号门这里哦！",
-      "cover": "bili-img/cover/b0cbb3639217a3e3.webp",
-      "url": "https://t.bilibili.com/1245975132218851336",
-      "ts": "1788939592"
-    },
-    {
       "id": "1245970128592437269",
       "uid": "2127596945",
       "author": "KARDS官方",
@@ -463,17 +533,6 @@
       "cover": "",
       "url": "https://t.bilibili.com/1245970128592437269",
       "ts": "1788938427"
-    },
-    {
-      "id": "1245967238065815560",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨ PGL Masters Bucharest 2026 East Asia Closed Qualifier\n\n✨MAP  INFERNO/MIRAGE/NUKE｜ BO3\n\n✨杭州西湖 TYLOO 2:1 The Huns",
-      "cover": "bili-img/cover/e280c3a9fd792e59.webp",
-      "url": "https://t.bilibili.com/1245967238065815560",
-      "ts": "1788937754"
     },
     {
       "id": "1245926206084218905",
@@ -509,17 +568,6 @@
       "ts": "1788926412"
     },
     {
-      "id": "1245905433446580245",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴FISSURE Playground 3\n\n🔴2026 年 9 月 9 日 17:00 BO3\n\n🔴杭州西湖 TYLOO vs GL",
-      "cover": "bili-img/cover/53a54d362e01bc48.webp",
-      "url": "https://t.bilibili.com/1245905433446580245",
-      "ts": "1788923364"
-    },
-    {
       "id": "1245903028316274741",
       "uid": "1636034895",
       "author": "绝区零",
@@ -553,28 +601,6 @@
       "ts": "1788908404"
     },
     {
-      "id": "1245695830485106689",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴PGL Masters Bucharest 2026 East Asia Closed Qualifier\n\n🔴2026 年 9 月 9 日 12:00 BO3\n\n🔴杭州西湖 TYLOO vs The Huns",
-      "cover": "bili-img/cover/f76709dd3546c324.webp",
-      "url": "https://t.bilibili.com/1245695830485106689",
-      "ts": "1788874562"
-    },
-    {
-      "id": "1245690405956091920",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨FISSURE Playground 3\n\n✨MAP  INFERNO/ANCIENT｜ BO3\n\n✨杭州西湖 TYLOO 0:2 PARIVISION",
-      "cover": "bili-img/cover/7c2529ca3ec680d4.webp",
-      "url": "https://t.bilibili.com/1245690405956091920",
-      "ts": "1788873299"
-    },
-    {
       "id": "1245655844317560837",
       "uid": "1636034895",
       "author": "绝区零",
@@ -584,17 +610,6 @@
       "cover": "bili-img/cover/a3c5169839f9c3c3.webp",
       "url": "https://t.bilibili.com/1245655844317560837",
       "ts": "1788865252"
-    },
-    {
-      "id": "1245650784885932073",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "正在记禄📝｜赛前准备 【20260908】 \n\n比赛马上开始！TYLOO 加油！\n",
-      "cover": "bili-img/cover/a9c2809e07ed24d0.webp",
-      "url": "https://t.bilibili.com/1245650784885932073",
-      "ts": "1788864074"
     },
     {
       "id": "1245640161230848016",
@@ -964,17 +979,6 @@
       "cover": "",
       "url": "https://t.bilibili.com/1243769273530187781",
       "ts": "1788426000"
-    },
-    {
-      "id": "1243430170803568644",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "​澳新风暴：火山环带 新卡预览 #1",
-      "cover": "bili-img/cover/0e329dad7b2b22be.webp",
-      "url": "https://t.bilibili.com/1243430170803568644",
-      "ts": "1788347047"
     },
     {
       "id": "1243369079203430409",
