@@ -1,8 +1,113 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-09-18T23:32:24.198Z",
+  "updatedAt": "2026-09-19T23:30:18.795Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1249722229196849190",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "2026 TYLOO VCT CN第二赛段季后赛纪录片-《争冠之心》预告",
+      "cover": "bili-img/cover/ddc8172ab2221ee5.webp",
+      "url": "https://t.bilibili.com/1249722229196849190",
+      "ts": "1789812031",
+      "bvid": "BV1tne46VEo2",
+      "durSec": 92
+    },
+    {
+      "id": "1249691174398066688",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "TYLOO无畏契约 | 2026无畏契约上海全球冠军赛出征海报\n\n逐光而战，蓄力出征\n历经败者组的磨砺，我们以头号种子之名奔赴世界舞台\n无畏契约上海全球冠军赛，禄启新程！\n",
+      "cover": "bili-img/cover/261df470396323e8.webp",
+      "url": "https://t.bilibili.com/1249691174398066688",
+      "ts": "1789804800"
+    },
+    {
+      "id": "1249668623702687753",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "神秘盖可扭臀舞，TYL出征上海冠军赛！",
+      "cover": "bili-img/cover/6920edb30b948c4a.webp",
+      "url": "https://t.bilibili.com/1249668623702687753",
+      "ts": "1789799550",
+      "bvid": "BV1AYe46NEj6",
+      "durSec": 529
+    },
+    {
+      "id": "1249644788758609943",
+      "uid": "1636034895",
+      "author": "绝区零",
+      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
+      "kind": "动态·图文",
+      "text": "#绝区零# #她与她的隐秘往事# #绝区零洛克茜#\n养成指南上新丨洛克茜养成材料预告\n\n想要提前准备洛克茜养成材料的绳匠们注意啦：\n前往养成指南，使用养成材料计算功能，可以提前了解洛克茜所需养成材料的类型和总量，以及还需获取的数量。\n\n【养成前瞻材料计算说明】\n养成指南工具提供  [智能计算]  和 [自定义计算] 两种计算方式：\n[智能计算] ：根据游戏内培养建议，为绳匠计算养成所需材料； \n[自定义计算] ：绳匠可以自由设置代理人、音擎、技能的目标等级，计算养成所需材料。\n\n【养成指南入口】\n游戏内：ESC - 更多 - 养成指南\n游戏外：绝区零官方小程序 - 养成指南\n\n—— 欢迎来到罗斯凯利法！——\n▼《绝区零》3.2版本「她与她的隐秘往事」现已上线！\n限定S级代理人「克拉蕾」&「南宫羽」现已加入调频&复刻。\n版本期间，参与活动可免费领取妄想天使全新时装！\nbilibili安卓端下载地址：https://www.biligame.com/detail/?id=108434 \nbilibiliPC端下载地址：https://www.biligame.com/detail/?id=111210\n",
+      "cover": "bili-img/cover/e12610b24744b4fe.webp",
+      "url": "https://t.bilibili.com/1249644788758609943",
+      "ts": "1789794000"
+    },
+    {
+      "id": "1249617745489690627",
+      "uid": "1636034895",
+      "author": "绝区零",
+      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
+      "kind": "动态",
+      "text": "恭喜@江東雨@束雪血魅@KamisatoRosui等10位同学中奖，已私信通知，详情请点击抽奖查看。",
+      "cover": "",
+      "url": "https://t.bilibili.com/1249617745489690627",
+      "ts": "1789787704"
+    },
+    {
+      "id": "1249613875761905712",
+      "uid": "1636034895",
+      "author": "绝区零",
+      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
+      "kind": "动态",
+      "text": "恭喜@慕宿muh@朝花一夕辞@高山公园等10位同学中奖，已私信通知，详情请点击抽奖查看。",
+      "cover": "",
+      "url": "https://t.bilibili.com/1249613875761905712",
+      "ts": "1789786803"
+    },
+    {
+      "id": "1248981742467940355",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "正在记禄📝 | TYLOO CS2 苏州裂变天地S3 VLOG",
+      "cover": "bili-img/cover/846f4bdfa92820c9.webp",
+      "url": "https://t.bilibili.com/1248981742467940355",
+      "ts": "1789639623",
+      "bvid": "BV1K9eu6oEoz",
+      "durSec": 1093
+    },
+    {
+      "id": "1248979927818043413",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "【TYLOO x AMD x ROG 2026上海冠军赛观赛派对✨】\n\n🔥2026无畏契约上海全球冠军赛大幕将启！TYLOO无畏契约分部、@AMD中国 与@ROG玩家国度官方UP 联合举办线下观赛派对，还有AMD X3D笔记本 1v1斗牛对战，诚邀各位到场，共同为TYLOO的上海全球冠军赛首战呐喊助威💪！\n\n活动时间：2026年9月24日 19：00 - 当日比赛结束\n⚠️本次观赛活动时间较晚，请大家合理规划行程，出行注意安全\n📍活动地点：苏小牛 · 牛肉串（上海市普陀区长寿路189弄购物中心长寿路沿街-1层）\n\n📩参与方式详见海报，名额将通过抽签产生\n⏳报名截止时间：9月19日 12：00\n\n✨现场惊喜\n9月24日14:00起，包含TYLOO 2026无畏契约上海全球冠军赛队服在内的TYLOO's LIFE全系列周边，将在本次观赛派对现场开启线下首卖（仅限当日）！\n未获得观赛派对名额的粉丝朋友也可前往活动现场进行周边选购！\n（线下当日消费，实付每满100元即可随机抽取小卡*1；每满500元可额外抽取随机小卡*1【每满500元可抽6张】）\n\n让我们相聚苏小牛，一起为TYLOO加油助威！\n",
+      "cover": "bili-img/cover/b82a9e66c3ee6363.webp",
+      "url": "https://t.bilibili.com/1248979927818043413",
+      "ts": "1789639200"
+    },
+    {
+      "id": "1248964465923194885",
+      "uid": "414149787",
+      "author": "Phigros官方",
+      "avatar": "bili-img/avatar/e28cbaefe234b980.webp",
+      "kind": "动态·图文",
+      "text": "Phigros将于2026年09月25日更新！本次更新将带来lowiro全新音乐游戏“In Falsus”的一首曲目。\n\n更新的曲目是：\n「Cryogenic」 by: Camellia ft. Petra Gurin\n\n#Phigros# #Pigeon Games# #鸽游#\n",
+      "cover": "bili-img/cover/0439f7dc2194de18.webp",
+      "url": "https://t.bilibili.com/1248964465923194885",
+      "ts": "1789635600"
+    },
     {
       "id": "1248935356782346297",
       "uid": "1340190821",
@@ -577,63 +682,6 @@
       "ts": "1789012800"
     },
     {
-      "id": "1246272202236493825",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "正在记禄📝｜赛前准备 【20260910】\n\n今天的第一个 bo3 马上开始～\n",
-      "cover": "bili-img/cover/8bc67576e45688d9.webp",
-      "url": "https://t.bilibili.com/1246272202236493825",
-      "ts": "1789008759"
-    },
-    {
-      "id": "1246095752061517831",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴FISSURE Playground 3\n\n🔴2026 年 9 月 10 日 11:00 BO3\n\n🔴杭州西湖 TYLOO vs Alliance\n",
-      "cover": "bili-img/cover/669dee6c3e973456.webp",
-      "url": "https://t.bilibili.com/1246095752061517831",
-      "ts": "1788967676"
-    },
-    {
-      "id": "1246093900965216320",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·视频",
-      "text": "赛场风云禄｜重整旗鼓 雷霆破阵【裂变天地S3 vs GL】",
-      "cover": "bili-img/cover/7ead75d3e87498db.webp",
-      "url": "https://t.bilibili.com/1246093900965216320",
-      "ts": "1788967245",
-      "bvid": "BV1NzY46TED6",
-      "durSec": 56
-    },
-    {
-      "id": "1246093368381931541",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨ PGL Masters Bucharest 2026 East Asia Closed Qualifier\n\n✨MAP  CACHE/ANCIENT｜ BO3\n\n✨杭州西湖 TYLOO 2:0 NEXVOID",
-      "cover": "bili-img/cover/10525069923c2ade.webp",
-      "url": "https://t.bilibili.com/1246093368381931541",
-      "ts": "1788967121"
-    },
-    {
-      "id": "1246053223307935746",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴PGL Masters Bucharest 2026 East Asia Closed Qualifier\n\n🔴2026 年 9 月 9 日 21:00 BO3\n\n🔴杭州西湖 TYLOO vs NEXVOID",
-      "cover": "bili-img/cover/3d9adb78d34de5b9.webp",
-      "url": "https://t.bilibili.com/1246053223307935746",
-      "ts": "1788957774"
-    },
-    {
       "id": "1246026749146300449",
       "uid": "2127596945",
       "author": "KARDS官方",
@@ -722,39 +770,6 @@
       "cover": "bili-img/cover/e3719803625b3c71.webp",
       "url": "https://t.bilibili.com/1245903013258723330",
       "ts": "1788922800"
-    },
-    {
-      "id": "1245841180737929286",
-      "uid": "1636034895",
-      "author": "绝区零",
-      "avatar": "bili-img/avatar/c66e1df51110f519.webp",
-      "kind": "动态·图文",
-      "text": "3.2版本「她与她的隐秘往事」更新公告",
-      "cover": "bili-img/cover/4a79b78aeb1856cc.webp",
-      "url": "https://t.bilibili.com/1245841180737929286",
-      "ts": "1788908404"
-    },
-    {
-      "id": "1245655844317560837",
-      "uid": "1636034895",
-      "author": "绝区零",
-      "avatar": "bili-img/avatar/c66e1df51110f519.webp",
-      "kind": "动态·图文",
-      "text": "互动抽奖 #绝区零# #她与她的隐秘往事# #绝区零妄想天使#\n「妄想天使」限定时装展示\n\n绳匠们好！\n本期为大家带来的是「妄想天使」限定时装的介绍，参与「天使应援大作战」活动即可免费领取，一起来看看吧！\n\n—— 欢迎来到罗斯凯利法！——\n▼ 关注@绝区零 并转发本条动态，我们将随机抽取10位绳匠送出「立绘系列马口铁徽章 随机款*1」。 \n本次活动将于9月15 日上午11:00开奖，请关注官方动态消息。\n\n▼《绝区零》3.2版本「她与她的隐秘往事」将于9月9日上线！\n版本期间，参与活动可免费领取妄想天使全新时装！\nbilibili安卓端下载地址：https://www.biligame.com/detail/?id=108434 \nbilibiliPC端下载地址：https://www.biligame.com/detail/?id=111210\n",
-      "cover": "bili-img/cover/a3c5169839f9c3c3.webp",
-      "url": "https://t.bilibili.com/1245655844317560837",
-      "ts": "1788865252"
-    },
-    {
-      "id": "1245640161230848016",
-      "uid": "1636034895",
-      "author": "绝区零",
-      "avatar": "bili-img/avatar/c66e1df51110f519.webp",
-      "kind": "动态·图文",
-      "text": "#绝区零# #她与她的隐秘往事# \n丽都修葺漫谈Vol.14丨系统&玩法篇\n\n绳匠们好！\n本期为大家带来的是3.2版本系统优化、「迷宫诡域：贝果计划 II」更新情报等内容，一起来看看吧！\n\n—— 欢迎来到罗斯凯利法！——\n▼《绝区零》3.2版本「她与她的隐秘往事」将于9月9日上线！\n版本期间，参与活动可免费领取妄想天使全新时装！\nbilibili安卓端下载地址：https://www.biligame.com/detail/?id=108434 \nbilibiliPC端下载地址：https://www.biligame.com/detail/?id=111210\n",
-      "cover": "bili-img/cover/677a27693100259e.webp",
-      "url": "https://t.bilibili.com/1245640161230848016",
-      "ts": "1788861600"
     },
     {
       "id": "1245550415796240388",
