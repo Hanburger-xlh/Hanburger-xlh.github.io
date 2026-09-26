@@ -1,8 +1,45 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-09-25T23:28:51.249Z",
+  "updatedAt": "2026-09-26T23:28:47.634Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1252375101638180873",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "📹丨禄行千里-全球冠军赛特别篇//官方调试日VLOG",
+      "cover": "bili-img/cover/980d5929bb5033ee.webp",
+      "url": "https://t.bilibili.com/1252375101638180873",
+      "ts": "1790429701",
+      "bvid": "BV1RBho6aEhj",
+      "durSec": 111
+    },
+    {
+      "id": "1252350671874687129",
+      "uid": "414149787",
+      "author": "Phigros官方",
+      "avatar": "bili-img/avatar/0db4169f82399a5c.webp",
+      "kind": "动态·视频",
+      "text": "CICF x MankaLive音游区总宣信息公开！",
+      "cover": "bili-img/cover/e0aacd6204e1415b.webp",
+      "url": "https://t.bilibili.com/1252350671874687129",
+      "ts": "1790424013",
+      "bvid": "BV1ffhX6hErG",
+      "durSec": 86
+    },
+    {
+      "id": "1252234660505714726",
+      "uid": "1636034895",
+      "author": "绝区零",
+      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
+      "kind": "动态·图文",
+      "text": "互动抽奖 #绝区零# #她与她的隐秘往事# #绝区零洛克茜# \n代理人未归档影像丨洛克茜篇\n\n「来得正好，翘班的理由找到了。」\n\n—— 欢迎来到罗斯凯利法！——\n▼ 关注@绝区零 并转发本条动态，我们将随机抽取10位绳匠送出「立绘系列马口铁徽章*1」。 \n本次活动将于10月3日上午11:00开奖，请关注官方动态消息。\n\n▼《绝区零》3.2版本「她与她的隐秘往事」现已上线！\n限定S级代理人「克拉蕾」&「南宫羽」现已加入调频&复刻。\n版本期间，参与活动可免费领取妄想天使全新时装！\nbilibili安卓端下载地址：https://www.biligame.com/detail/?id=108434 \nbilibiliPC端下载地址：https://www.biligame.com/detail/?id=111210\n",
+      "cover": "bili-img/cover/e1d617ea6d948d3b.webp",
+      "url": "https://t.bilibili.com/1252234660505714726",
+      "ts": "1790397002"
+    },
     {
       "id": "1252041380545429560",
       "uid": "414149787",
@@ -723,17 +760,6 @@
       "ts": "1789465507"
     },
     {
-      "id": "1248149691315519512",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态",
-      "text": "是TYL的定海神针，也是我们的MVP！再次恭喜@TYL_slowly 成为2026 VCT CN 赛季最佳选手[加油]",
-      "cover": "",
-      "url": "https://t.bilibili.com/1248149691315519512",
-      "ts": "1789445896"
-    },
-    {
       "id": "1248145087132598272",
       "uid": "1340190821",
       "author": "崩坏星穹铁道",
@@ -800,17 +826,6 @@
       "cover": "bili-img/cover/5fd896560a7cbad1.webp",
       "url": "https://t.bilibili.com/1247773901040123911",
       "ts": "1789358400"
-    },
-    {
-      "id": "1247762319622012928",
-      "uid": "1636034895",
-      "author": "绝区零",
-      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
-      "kind": "动态",
-      "text": "恭喜@名字什么太麻烦了啊@火星口水鸡@施季里茨ovo等10位同学中奖，已私信通知，详情请点击抽奖查看。",
-      "cover": "",
-      "url": "https://t.bilibili.com/1247762319622012928",
-      "ts": "1789355704"
     },
     {
       "id": "1246784454374981763",
