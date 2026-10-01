@@ -1,8 +1,19 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-09-30T10:40:28.233Z",
+  "updatedAt": "2026-10-01T00:12:17.459Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1253819496954593286",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "​黄金周庆典 现已开启！",
+      "cover": "bili-img/cover/f157bddf4c55c786.webp",
+      "url": "https://t.bilibili.com/1253819496954593286",
+      "ts": "1790766000"
+    },
     {
       "id": "1253804035083862022",
       "uid": "373076765",
@@ -975,17 +986,6 @@
       "ts": "1788786004",
       "bvid": "BV16vbN6REhD",
       "durSec": 111
-    },
-    {
-      "id": "1245285424905060375",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态",
-      "text": "感谢@KARDS情报局带来的「火山环带」新卡预览",
-      "cover": "",
-      "url": "https://t.bilibili.com/1245285424905060375",
-      "ts": "1788779007"
     },
     {
       "id": "1244882529047019543",
