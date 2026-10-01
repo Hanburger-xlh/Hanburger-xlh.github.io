@@ -1,8 +1,56 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-10-01T00:12:17.459Z",
+  "updatedAt": "2026-10-01T23:37:29.613Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1254210023320453128",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "2026无畏契约上海全球冠军赛 小组赛 | 今日赛果\n\nTYL 1:2 TL\n\n鏖战落幕，TYLOO遗憾止步2026无畏契约上海全球冠军赛小组赛。喧嚣归于平静，这场失利，为我们本年度VCT赛事的征程画上句号。\n\n回望本赛季，团队以全新的人员架构开启2026无畏巡回的征程。人员更迭带来了磨合的阵痛，也让我们在赛场淬炼出诸多亮眼瞬间。我们始终向着更高峰全力冲刺——从六强、三强，一步步走向联赛总决赛、走向国际赛事的舞台，并最终收获了梦寐以求的花火奖杯。\n\n冠军赛的征程犹如一场梦。在上海，我们经历了很多的第一次：第一次国际赛事的击败，第一次国际赛事分数的获取，再到第一次斩获地图胜利，每一个第一次都是TYLOO队史的突破。虽然结局留有遗憾，但我们会以此为动力，在来年为了能够再次回到这个舞台而奋斗。\n\n2026无畏巡回的旅途，也是天禄所有人共同珍藏的专属记忆，无论是多座城市巡回的线下赛场历练，亦或是与全国各地的观众朋友们近距离互动，都让队伍收获了独一无二的赛场阅历与成长。衷心感谢每一位始终坚守、信任并支持TYLOO的观众，我们深知大家心中的失落与期许，团队也会在未来继续努力，全盘消化本季得失，全方位打磨自身实力。\n\n暂别过往，蓄力新生。我们终将以更坚韧的姿态与更强劲的实力，归来再战！\n",
+      "cover": "bili-img/cover/c909fdcfd103bf3d.webp",
+      "url": "https://t.bilibili.com/1254210023320453128",
+      "ts": "1790856927"
+    },
+    {
+      "id": "1254084928126058549",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "禄戏厅🕹| 你 画 我 猜 🔍【CS2】",
+      "cover": "bili-img/cover/4adcd0ee785415e4.webp",
+      "url": "https://t.bilibili.com/1254084928126058549",
+      "ts": "1790827801",
+      "bvid": "BV1irad6eEbW",
+      "durSec": 1177
+    },
+    {
+      "id": "1254051682897100808",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "金秋送爽，丹桂飘香。\n山河无恙，举国华章。\n七十余载风雨兼程，\n七十余载砥砺前行，\n杭州西湖 TYLOO电子竞技俱乐部CS2分部祝祖国繁荣昌盛，愿华夏儿女与盛世同辉！\n",
+      "cover": "bili-img/cover/86d1f95670f93e7f.webp",
+      "url": "https://t.bilibili.com/1254051682897100808",
+      "ts": "1790820060"
+    },
+    {
+      "id": "1254051478897688630",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "TYLOO CS2分部祝大家国庆快乐！",
+      "cover": "bili-img/cover/e7d95aab80eaf60b.webp",
+      "url": "https://t.bilibili.com/1254051478897688630",
+      "ts": "1790820013",
+      "bvid": "BV1UUa76LEn2",
+      "durSec": 20
+    },
     {
       "id": "1253819496954593286",
       "uid": "2127596945",
@@ -710,17 +758,6 @@
       "ts": "1790126956"
     },
     {
-      "id": "1250928124990849024",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "🎂𝗛𝗕𝗗 𝘁𝗼 @TYL_slowly \n\n秋分风起，桂香漫场。恰逢这昼夜均分的时节，迎来属于slowly的生日！\n一如秋分的沉稳平衡，赛场之上你把控节奏、稳住战局，率队登顶联赛之巅，摘下属于我们的冠军荣光。\n\n✨新岁启序，愿你保持内心的笃定与锋芒，奔赴更大的国际赛场。怀揣这份夺冠的底气，在接下来的征途继续挥洒热爱，续写更多高光瞬间。 \n\n🎉祝孙科伦生日快乐，新的一岁，我们一起同心向前！\n",
-      "cover": "bili-img/cover/4779c7c474dbcb1d.webp",
-      "url": "https://t.bilibili.com/1250928124990849024",
-      "ts": "1790092800"
-    },
-    {
       "id": "1250835353674186761",
       "uid": "1636034895",
       "author": "绝区零",
@@ -741,32 +778,6 @@
       "cover": "",
       "url": "https://t.bilibili.com/1250790782679384065",
       "ts": "1790060823"
-    },
-    {
-      "id": "1250788983099621494",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·视频",
-      "text": "噢Ω就这啊α - 向上｜上海全球冠军赛 特别节目",
-      "cover": "bili-img/cover/d99ba4dce87b5af9.webp",
-      "url": "https://t.bilibili.com/1250788983099621494",
-      "ts": "1790060404",
-      "bvid": "BV1RXhk6REwc",
-      "durSec": 3563
-    },
-    {
-      "id": "1250742636120113184",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·视频",
-      "text": "2026无畏契约上海全球冠军赛 | TYLOO出征片",
-      "cover": "bili-img/cover/71f2744e466caad7.webp",
-      "url": "https://t.bilibili.com/1250742636120113184",
-      "ts": "1790049613",
-      "bvid": "BV15Th66UEKg",
-      "durSec": 131
     },
     {
       "id": "1250742631825145897",
@@ -800,19 +811,6 @@
       "cover": "bili-img/cover/633aeb8c5148597d.webp",
       "url": "https://t.bilibili.com/1249984950168453120",
       "ts": "1789873200"
-    },
-    {
-      "id": "1249722229196849190",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·视频",
-      "text": "2026 TYLOO VCT CN第二赛段季后赛纪录片-《争冠之心》预告",
-      "cover": "bili-img/cover/ddc8172ab2221ee5.webp",
-      "url": "https://t.bilibili.com/1249722229196849190",
-      "ts": "1789812031",
-      "bvid": "BV1tne46VEo2",
-      "durSec": 92
     },
     {
       "id": "1249629326880538624",
