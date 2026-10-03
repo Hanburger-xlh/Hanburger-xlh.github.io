@@ -1,8 +1,118 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-10-01T23:37:29.613Z",
+  "updatedAt": "2026-10-03T00:10:10.980Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1254594483004112914",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "正在记禄📝｜媒体日拍摄 【20261002】 \n\n顺利到达赛事地，媒体日拍摄中...我们明天赛场见！\n",
+      "cover": "bili-img/cover/317bba32d94a093a.webp",
+      "url": "https://t.bilibili.com/1254594483004112914",
+      "ts": "1790946441"
+    },
+    {
+      "id": "1254577129197142020",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "黄金周乱斗锦标赛#1 精英大战 已开放！",
+      "cover": "bili-img/cover/fc3fc791824351b8.webp",
+      "url": "https://t.bilibili.com/1254577129197142020",
+      "ts": "1790942400"
+    },
+    {
+      "id": "1254546980716150809",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态",
+      "text": "关注土豆杯谢谢喵[超辉夜姬表情包_我想想]，10月4日晚直播见！",
+      "cover": "",
+      "url": "https://t.bilibili.com/1254546980716150809",
+      "ts": "1790935381"
+    },
+    {
+      "id": "1254530743544053768",
+      "uid": "414149787",
+      "author": "Phigros官方",
+      "avatar": "bili-img/avatar/0db4169f82399a5c.webp",
+      "kind": "动态·图文",
+      "text": "#Phigros# #Pigeon Games# #鸽游#\n",
+      "cover": "bili-img/cover/917f2a5f4e4ac626.webp",
+      "url": "https://t.bilibili.com/1254530743544053768",
+      "ts": "1790931600"
+    },
+    {
+      "id": "1254507943724843014",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴ESL Pro League Season 24\n\n🔴2026 年 10月 3 日 17:00 BO3\n\n🔴杭州西湖 TYLOO vs Falcons\n",
+      "cover": "bili-img/cover/75625b97ccceb6c7.webp",
+      "url": "https://t.bilibili.com/1254507943724843014",
+      "ts": "1790926292"
+    },
+    {
+      "id": "1254498082514534402",
+      "uid": "414149787",
+      "author": "Phigros官方",
+      "avatar": "bili-img/avatar/0db4169f82399a5c.webp",
+      "kind": "动态",
+      "text": "小鸽子们好！10月3日16:30，Phigros 7周年纪念演出「新黎明」上海场将开启线上直播。没能到现场的小鸽子，也可以通过沐华拾光的直播间与大家相见！本场为充电直播，观看方式及赠礼详情请见原动态。明天见！\n#Phigros# #Pigeon Games# #鸽游#",
+      "cover": "",
+      "url": "https://t.bilibili.com/1254498082514534402",
+      "ts": "1790923996"
+    },
+    {
+      "id": "1254453434173620230",
+      "uid": "1636034895",
+      "author": "绝区零",
+      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
+      "kind": "动态·图文",
+      "text": "#绝区零# #她与她的隐秘往事# #绝区零洛克茜#\n《绝区零》2026年10月月历壁纸\n\n「抱歉，小姐现在很忙，不方便见人。」\n「限定款茶歇蛋糕要化了？...稍等，我去问一下小姐。」\n\n亲爱的绳匠，欢迎前往评论区下载&使用10月月历壁纸~\n\n—— 欢迎来到罗斯凯利法！——\n▼《绝区零》3.2版本「她与她的隐秘往事」现已上线！\n限定S级代理人「洛克茜」&「普罗米娅」现已加入调频。\n版本期间，参与活动可免费领取妄想天使全新时装！\nbilibili安卓端下载地址：https://www.biligame.com/detail/?id=108434 \nbilibiliPC端下载地址：https://www.biligame.com/detail/?id=111210\n",
+      "cover": "bili-img/cover/d7247337a873b27c.webp",
+      "url": "https://t.bilibili.com/1254453434173620230",
+      "ts": "1790913600"
+    },
+    {
+      "id": "1254445718237610055",
+      "uid": "1636034895",
+      "author": "绝区零",
+      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
+      "kind": "动态",
+      "text": "恭喜@海阔任鱼跃龙门@Ricky在无人区@GXZA小草帽等10位同学中奖，已私信通知，详情请点击抽奖查看。",
+      "cover": "",
+      "url": "https://t.bilibili.com/1254445718237610055",
+      "ts": "1790911804"
+    },
+    {
+      "id": "1254441852782772224",
+      "uid": "1636034895",
+      "author": "绝区零",
+      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
+      "kind": "动态",
+      "text": "恭喜@籽暝@超级喜欢颜书齐@缭然等10位同学中奖，已私信通知，详情请点击抽奖查看。",
+      "cover": "",
+      "url": "https://t.bilibili.com/1254441852782772224",
+      "ts": "1790910904"
+    },
+    {
+      "id": "1254437991607173127",
+      "uid": "1636034895",
+      "author": "绝区零",
+      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
+      "kind": "动态",
+      "text": "恭喜@ArikLee@ShiftShiftShit@无痕亦雪等10位同学中奖，已私信通知，详情请点击抽奖查看。",
+      "cover": "",
+      "url": "https://t.bilibili.com/1254437991607173127",
+      "ts": "1790910005"
+    },
     {
       "id": "1254210023320453128",
       "uid": "373076765",
@@ -13,6 +123,30 @@
       "cover": "bili-img/cover/c909fdcfd103bf3d.webp",
       "url": "https://t.bilibili.com/1254210023320453128",
       "ts": "1790856927"
+    },
+    {
+      "id": "1254175238406537344",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·视频",
+      "text": "根本没有这样的冰岛人... | 黄金周假期快乐！【KARDS】",
+      "cover": "bili-img/cover/7e2d6b34511d1358.webp",
+      "url": "https://t.bilibili.com/1254175238406537344",
+      "ts": "1790848828",
+      "bvid": "BV1hEaz6LE4X",
+      "durSec": 265
+    },
+    {
+      "id": "1254117990746554369",
+      "uid": "1636034895",
+      "author": "绝区零",
+      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
+      "kind": "动态·图文",
+      "text": "#绝区零# #她与她的隐秘往事# \n「跛脚乌鸦奇探录」活动说明\n\n【活动时间】\n2026/10/03 10:00 ~ 2026/10/19 03:59\n\n【参与条件】\n绳网等级≥20级，完成主线第一章·幕间后即可参与。\n\n【玩法说明】\n• 活动期间，绳匠将会与侦探社的科洛和阿跛一起，调查罗斯凯利法「萝卜」走私案，挖掘其背后的真相。\n• 活动包含「秘密接头」、「物流卧底」、「口岸排查」、「布控缉拿」、「针脚与真相」共5个委托事件，完成前一委托事件并达到指定时间后，即可解锁下一事件。\n• 完成活动委托，即可获得[菲林]、[邦布券]和各类养成材料奖励。\n\n—— 欢迎来到罗斯凯利法！——\n▼《绝区零》3.2版本「她与她的隐秘往事」现已上线！\n限定S级代理人「洛克茜」&「普罗米娅」现已加入调频。\n版本期间，参与活动可免费领取妄想天使全新时装！\nbilibili安卓端下载地址：https://www.biligame.com/detail/?id=108434 \nbilibiliPC端下载地址：https://www.biligame.com/detail/?id=111210\n",
+      "cover": "bili-img/cover/fae2f62c1e327821.webp",
+      "url": "https://t.bilibili.com/1254117990746554369",
+      "ts": "1790835499"
     },
     {
       "id": "1254084928126058549",
@@ -26,6 +160,41 @@
       "ts": "1790827801",
       "bvid": "BV1irad6eEbW",
       "durSec": 1177
+    },
+    {
+      "id": "1254082348965691396",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "【猜谜】火山环带 卡牌使用率之最",
+      "cover": "bili-img/cover/05a422ef4973b9d6.webp",
+      "url": "https://t.bilibili.com/1254082348965691396",
+      "ts": "1790827200"
+    },
+    {
+      "id": "1254071364596269060",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "​2026年 10月战场通票现已部署！",
+      "cover": "bili-img/cover/20ff1542b3a9a008.webp",
+      "url": "https://t.bilibili.com/1254071364596269060",
+      "ts": "1790824643"
+    },
+    {
+      "id": "1254069595095957527",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·视频",
+      "text": "扇上牡丹三两朵，一簇火光映牌桌 | 10月全新桌饰【KARDS】",
+      "cover": "bili-img/cover/ff1d934a575c7b8a.webp",
+      "url": "https://t.bilibili.com/1254069595095957527",
+      "ts": "1790824231",
+      "bvid": "BV1xLYN6VEWw",
+      "durSec": 59
     },
     {
       "id": "1254051682897100808",
@@ -607,17 +776,6 @@
       "ts": "1790244000"
     },
     {
-      "id": "1251577524081655814",
-      "uid": "1636034895",
-      "author": "绝区零",
-      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
-      "kind": "动态·图文",
-      "text": "#绝区零# #她与她的隐秘往事# #绝区零克拉蕾# #绝区零洛克茜# #维尔乌姆假日相册#\n假日相册 | 维尔乌姆的日常掠影\n\n即使是每天都会走过的地方、日复一日的事情…有你陪伴就弥足珍贵。\n\n🎁「维尔乌姆假日相册」网页活动正在火热进行中！\n完成行程规划，即可解锁多样结局！参与必得菲林奖励~\n参与活动>> https://b23.tv/kED3pkC\n\n—— 欢迎来到罗斯凯利法！——\n▼《绝区零》3.2版本「她与她的隐秘往事」现已上线！\n限定S级代理人「克拉蕾」&「南宫羽」现已加入调频&复刻。\n版本期间，参与活动可免费领取妄想天使全新时装！\nbilibili安卓端下载地址：https://www.biligame.com/detail/?id=108434 \nbilibiliPC端下载地址：https://www.biligame.com/detail/?id=111210\n",
-      "cover": "bili-img/cover/2d4a48f4d6608a62.webp",
-      "url": "https://t.bilibili.com/1251577524081655814",
-      "ts": "1790244000"
-    },
-    {
       "id": "1251469889992916994",
       "uid": "1340190821",
       "author": "崩坏星穹铁道",
@@ -653,30 +811,6 @@
       "ts": "1790157600"
     },
     {
-      "id": "1251206438876872706",
-      "uid": "1636034895",
-      "author": "绝区零",
-      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
-      "kind": "动态·图文",
-      "text": "#绝区零# #她与她的隐秘往事# #绝区零克拉蕾# #绝区零洛克茜# #维尔乌姆假日相册#\n假日相册 | 空中巴士密语\n\n和你一起看过的风景，构成了我所有珍贵的记忆。\n\n🎁「维尔乌姆假日相册」网页活动正在火热进行中！\n完成行程规划，即可解锁多样结局！参与必得菲林奖励~\n参与活动>> https://b23.tv/kED3pkC \n\n—— 欢迎来到罗斯凯利法！——\n▼《绝区零》3.2版本「她与她的隐秘往事」现已上线！\n限定S级代理人「克拉蕾」&「南宫羽」现已加入调频&复刻。\n版本期间，参与活动可免费领取妄想天使全新时装！\nbilibili安卓端下载地址：https://www.biligame.com/detail/?id=108434 \nbilibiliPC端下载地址：https://www.biligame.com/detail/?id=111210\n",
-      "cover": "bili-img/cover/d55754995d6d85b8.webp",
-      "url": "https://t.bilibili.com/1251206438876872706",
-      "ts": "1790157600"
-    },
-    {
-      "id": "1251191030704767001",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·视频",
-      "text": "给大家分享下slowly的日常赛前准备",
-      "cover": "bili-img/cover/981e4bf23318d355.webp",
-      "url": "https://t.bilibili.com/1251191030704767001",
-      "ts": "1790154013",
-      "bvid": "BV1CChx6oE1p",
-      "durSec": 291
-    },
-    {
       "id": "1251144602057965664",
       "uid": "1340190821",
       "author": "崩坏星穹铁道",
@@ -686,19 +820,6 @@
       "cover": "bili-img/cover/06a61f79ba6715f7.webp",
       "url": "https://t.bilibili.com/1251144602057965664",
       "ts": "1790143203"
-    },
-    {
-      "id": "1251129140199817240",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·视频",
-      "text": "冠军赛前，给大家带来全套的SiuFatBB赛前准备",
-      "cover": "bili-img/cover/baa9ea8ca7f67c50.webp",
-      "url": "https://t.bilibili.com/1251129140199817240",
-      "ts": "1790139603",
-      "bvid": "BV12Jh46AEaB",
-      "durSec": 458
     },
     {
       "id": "1251113794317320193",
@@ -725,17 +846,6 @@
       "durSec": 738
     },
     {
-      "id": "1251113734178340865",
-      "uid": "1636034895",
-      "author": "绝区零",
-      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
-      "kind": "动态·图文",
-      "text": "互动抽奖 #绝区零# #绝区零丽娜# #生日快乐丽娜# \n生日快乐丽娜丨回归基本功\n\n「哎呀，真没想到，小可琳今天居然主动请缨去下厨~」\n「那副鼓足勇气的样子，可真不像她呢~」\n「不过莱卡恩说的也对，总要有些历练的机会才能进步。」\n「那我只好勉为其难，重拾一下身为女仆的基本功了~」\n\n—— 欢迎来到新艾利都！——\n▼ 关注@绝区零 并转发本条动态，我们将随机抽取10位绳匠送出「游园熠刻系列旋转亚克力立牌 随机款*1」。 \n本次活动将于9月30日上午11:00开奖，请关注官方动态消息。\n\n▼《绝区零》3.2版本「她与她的隐秘往事」现已上线！\n限定S级代理人「克拉蕾」&「南宫羽」现已加入调频&复刻。\n版本期间，参与活动可免费领取妄想天使全新时装！\nbilibili安卓端下载地址：https://www.biligame.com/detail/?id=108434 \nbilibiliPC端下载地址：https://www.biligame.com/detail/?id=111210\n",
-      "cover": "bili-img/cover/9c020a876681ca5b.webp",
-      "url": "https://t.bilibili.com/1251113734178340865",
-      "ts": "1790136016"
-    },
-    {
       "id": "1251098205695770627",
       "uid": "1340190821",
       "author": "崩坏星穹铁道",
@@ -758,17 +868,6 @@
       "ts": "1790126956"
     },
     {
-      "id": "1250835353674186761",
-      "uid": "1636034895",
-      "author": "绝区零",
-      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
-      "kind": "动态·图文",
-      "text": "#绝区零# #她与她的隐秘往事# #绝区零克拉蕾# #绝区零洛克茜# #维尔乌姆假日相册#\n假日相册 | 片刻闲的片刻琉光\n\n品尝罗斯凯利法的特色下午茶，或是亲手做一份独家特调？\n\n🎁「维尔乌姆假日相册」网页活动正在火热进行中！\n完成行程规划，即可解锁多样结局！参与必得菲林奖励~\n参与活动>> https://b23.tv/kED3pkC \n\n—— 欢迎来到罗斯凯利法！——\n▼《绝区零》3.2版本「她与她的隐秘往事」现已上线！\n限定S级代理人「克拉蕾」&「南宫羽」现已加入调频&复刻。\n版本期间，参与活动可免费领取妄想天使全新时装！\nbilibili安卓端下载地址：https://www.biligame.com/detail/?id=108434 \nbilibiliPC端下载地址：https://www.biligame.com/detail/?id=111210\n",
-      "cover": "bili-img/cover/d6ca63e3657ea35f.webp",
-      "url": "https://t.bilibili.com/1250835353674186761",
-      "ts": "1790071200"
-    },
-    {
       "id": "1250790782679384065",
       "uid": "1340190821",
       "author": "崩坏星穹铁道",
@@ -778,17 +877,6 @@
       "cover": "",
       "url": "https://t.bilibili.com/1250790782679384065",
       "ts": "1790060823"
-    },
-    {
-      "id": "1250742631825145897",
-      "uid": "1636034895",
-      "author": "绝区零",
-      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
-      "kind": "动态·图文",
-      "text": "互动抽奖  #绝区零# #绝区零维琳娜# #生日快乐维琳娜#\n生日快乐维琳娜丨尽享片刻安闲\n\n「感谢店长百忙之中能够抽出时间来赴茶会之约~」\n「我吗？店长不会把我当成什么全年无休的工作狂了吧。」\n「公务固然重要，但是茶会也是不可或缺的一环。」\n「好了，是时候享受这片刻的闲暇时光了~」\n\n—— 欢迎来到罗斯凯利法！——\n▼ 关注@绝区零 并转发本条动态，我们将随机抽取10位绳匠送出「游园熠刻系列旋转亚克力立牌 随机款*1」。 \n本次活动将于9月29日上午11:00开奖，请关注官方动态消息。\n\n▼《绝区零》3.2版本「她与她的隐秘往事」现已上线！\n限定S级代理人「克拉蕾」&「南宫羽」现已加入调频&复刻。\n版本期间，参与活动可免费领取妄想天使全新时装！\nbilibili安卓端下载地址：https://www.biligame.com/detail/?id=108434 \nbilibiliPC端下载地址：https://www.biligame.com/detail/?id=111210\n",
-      "cover": "bili-img/cover/e094a39526714a86.webp",
-      "url": "https://t.bilibili.com/1250742631825145897",
-      "ts": "1790049612"
     },
     {
       "id": "1250479730410389511",
@@ -901,76 +989,6 @@
       "cover": "",
       "url": "https://t.bilibili.com/1246702399043665943",
       "ts": "1789108922"
-    },
-    {
-      "id": "1246661472255213574",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "KARDS 澳新风暴：火山环带 KCP激励计划开启！",
-      "cover": "bili-img/cover/be9e01e315907ce7.webp",
-      "url": "https://t.bilibili.com/1246661472255213574",
-      "ts": "1789099393"
-    },
-    {
-      "id": "1246445160556920852",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·视频",
-      "text": "地火怒涌，破局致胜！「澳新风暴：火山环带」全新秋季版本现已上线！【KARDS】",
-      "cover": "bili-img/cover/2f7b005729734fd7.webp",
-      "url": "https://t.bilibili.com/1246445160556920852",
-      "ts": "1789049029",
-      "bvid": "BV1ZfYM66ExJ",
-      "durSec": 83
-    },
-    {
-      "id": "1246444477610983448",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "KARDS 火山环带现已上线 - 迷你套装概览 & 补丁说明",
-      "cover": "bili-img/cover/963875b075129ae9.webp",
-      "url": "https://t.bilibili.com/1246444477610983448",
-      "ts": "1789048870"
-    },
-    {
-      "id": "1246330051124789250",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "​火山环带即将爆发！停机维护更新公告",
-      "cover": "bili-img/cover/dcfa1725fbb6d31a.webp",
-      "url": "https://t.bilibili.com/1246330051124789250",
-      "ts": "1789022228"
-    },
-    {
-      "id": "1246026749146300449",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·视频",
-      "text": "！？直布罗陀巨岩加入战场？！| 秋季版本“火山环带”各主国特色新卡【KARDS】",
-      "cover": "bili-img/cover/087e8d020fe27946.webp",
-      "url": "https://t.bilibili.com/1246026749146300449",
-      "ts": "1788951610",
-      "bvid": "BV1viYx6JEgQ",
-      "durSec": 304
-    },
-    {
-      "id": "1245970128592437269",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态",
-      "text": "今日新卡由@一拳人OPM和@小鸣er先生为各位带来直播预览，敬请期待",
-      "cover": "",
-      "url": "https://t.bilibili.com/1245970128592437269",
-      "ts": "1788938427"
     },
     {
       "id": "1245315476798570561",
@@ -1118,28 +1136,6 @@
       "cover": "",
       "url": "https://t.bilibili.com/1241558224330555392",
       "ts": "1787911200"
-    },
-    {
-      "id": "1241545339416084501",
-      "uid": "414149787",
-      "author": "Phigros官方",
-      "avatar": "bili-img/avatar/e28cbaefe234b980.webp",
-      "kind": "动态·图文",
-      "text": "#我和Phi的七周年# 视频征集活动开启！\n\n从2019年到今天，Phigros即将迎来七周年。\n也许你从最初的版本一路走来，也许你刚刚认识Phi不久；无论相遇于何时，每位小鸽子都有一段属于自己的Phigros回忆。\n七周年之际，鸽游想邀请大家用一段视频，说说你和Phigros的故事。\n视频形式不限，不需要专业设备，也不要求真人出镜。只要是你真正想记录的故事，我们都想看到。\n\n活动时间：2026年8月28日起至9月3日22:00截止\n\n参与方式：\n1. 在哔哩哔哩发布一段符合活动主题的视频；\n2. 投稿时带上话题 #我和Phi的七周年# 和 #Phigros七周年#；\n3. 请保留原始视频文件，入选后工作人员将通过站内私信联系。\n横屏16:9、1080P画面更方便在直播中展示，其他画幅同样可以参加。\n我们将从符合要求的投稿中选取部分作品，通过Phigros官方动态转发，并有机会在9月5日的Phigros七周年纪念直播中展示。活动不设置名次，每一段真诚的回忆都同样珍贵。\n\n投稿须知：\n1. 投稿内容须为本人原创或已取得相关授权；\n2. 视频中出现其他人物时，请事先取得本人同意；\n3. 请优先使用本人录制的Phigros游戏画面及原创素材；\n4. 投稿即视为同意Phigros官方在保留作者署名的情况下，将作品或作品片段用于七周年直播、官方动态及相关回顾内容；\n5. 请勿在公开投稿中留下手机号、地址等个人信息。\n\n期待与大家的回忆，在七周年相遇！\n#Phigros# #Pigeon Games# #鸽游#",
-      "cover": "",
-      "url": "https://t.bilibili.com/1241545339416084501",
-      "ts": "1787908200"
-    },
-    {
-      "id": "1241542762471358486",
-      "uid": "414149787",
-      "author": "Phigros官方",
-      "avatar": "bili-img/avatar/e28cbaefe234b980.webp",
-      "kind": "动态·图文",
-      "text": "咕咕，小鸽子们好！\n从今天起，Phigros七周年系列活动正式开启！\n自8月31起至9月5日，我们将陆续带来：\n\n#我和Phi的七周年# 视频征集即刻开启。分享你与Phigros共同经历的故事，优秀作品有机会编入七周年纪念直播；\nPhigros七周年Q&A征集活动即将开启，部分问题将在直播中由制作组回答；\n鸽游写给小鸽子们的一段话将在8月31日七周年纪念日与大家见面；\n我们将在下周提前公布9.5直播的具体节目单。\n\n各项活动的参与方式与活动时间，将通过后续动态陆续公布。\n\n9月5日（周六）晚20:00，Phigros七周年纪念直播将在Pigeon Bar正式开始！大家关心的Phigros主线第九章正式PV与定档日期，也将在本次直播中首次公开。\n\n8月31日，我们一起庆祝Phigros七周年；\n9月5日，我们直播间见！\n#Phigros# #PigeonGames# #鸽游#\n",
-      "cover": "bili-img/cover/f41ef17412b7c168.webp",
-      "url": "https://t.bilibili.com/1241542762471358486",
-      "ts": "1787907600"
     }
   ]
 }
