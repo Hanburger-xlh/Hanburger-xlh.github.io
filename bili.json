@@ -1,8 +1,89 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-10-03T00:10:10.980Z",
+  "updatedAt": "2026-10-04T23:34:20.178Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1255338246785728518",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨ ESL Pro League Season 24\n\n✨MAP  NUKE/MIRAGE｜ BO3\n\n✨杭州西湖 TYLOO 0:2 9z\n",
+      "cover": "bili-img/cover/afd69496f04aab60.webp",
+      "url": "https://t.bilibili.com/1255338246785728518",
+      "ts": "1791119612"
+    },
+    {
+      "id": "1255309882843725840",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "正在记禄📝｜赛前准备 【20261004】 \n\n今天对战9z的比赛快要开始啦，TYLOO加油！\n",
+      "cover": "bili-img/cover/df34cf701a3c73e2.webp",
+      "url": "https://t.bilibili.com/1255309882843725840",
+      "ts": "1791113008"
+    },
+    {
+      "id": "1255223957741633553",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴ESL Pro League Season 24\n\n🔴2026 年 10月 4 日 19:30 BO3\n\n🔴杭州西湖 TYLOO vs 9z\n",
+      "cover": "bili-img/cover/0c9eefa0b69aa7ed.webp",
+      "url": "https://t.bilibili.com/1255223957741633553",
+      "ts": "1791093002"
+    },
+    {
+      "id": "1254931023795322932",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨ ESL Pro League Season 24\n\n✨MAP  ANUBIS/MIRAGE｜ BO3\n\n✨杭州西湖 TYLOO 0:2 Falcons\n",
+      "cover": "bili-img/cover/a744043a4cc56aaa.webp",
+      "url": "https://t.bilibili.com/1254931023795322932",
+      "ts": "1791024798"
+    },
+    {
+      "id": "1254924744560476181",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "赛场风云禄｜暴力瞄准 五杀ACE【EPL 24 vs Falcons】",
+      "cover": "bili-img/cover/82a585a0fd293670.webp",
+      "url": "https://t.bilibili.com/1254924744560476181",
+      "ts": "1791023336",
+      "bvid": "BV12nHv6wE5T",
+      "durSec": 35
+    },
+    {
+      "id": "1254917413010407442",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "📹丨禄行千里-2026无畏契约全球冠军赛//30 TYL vs TL",
+      "cover": "bili-img/cover/11cabdb81f444085.webp",
+      "url": "https://t.bilibili.com/1254917413010407442",
+      "ts": "1791021629",
+      "bvid": "BV1d6Hv6EEoL",
+      "durSec": 260
+    },
+    {
+      "id": "1254900095717998593",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "正在记禄📝｜赛前准备 【20261003】 \n\n赛前准备中，请大家多多为我们加油！\n",
+      "cover": "bili-img/cover/8b0c3757d4548fba.webp",
+      "url": "https://t.bilibili.com/1254900095717998593",
+      "ts": "1791017597"
+    },
     {
       "id": "1254594483004112914",
       "uid": "373076765",
@@ -697,19 +778,6 @@
       "durSec": 548
     },
     {
-      "id": "1251855891640090642",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·视频",
-      "text": "禄戏厅🕹| 我 猜 谜 🤓",
-      "cover": "bili-img/cover/cc6478d090e4231c.webp",
-      "url": "https://t.bilibili.com/1251855891640090642",
-      "ts": "1790308813",
-      "bvid": "BV1m6ht6qEjx",
-      "durSec": 996
-    },
-    {
       "id": "1251855878766723110",
       "uid": "1636034895",
       "author": "绝区零",
@@ -719,50 +787,6 @@
       "cover": "bili-img/cover/1411de39f93d2dfd.webp",
       "url": "https://t.bilibili.com/1251855878766723110",
       "ts": "1790308810"
-    },
-    {
-      "id": "1251855837932027920",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "万里无云境九州，最团圆夜是中秋\n杭州西湖 TYLOO 电子竞技俱乐部祝大家和风晓月梦长满，年来好景岁如常。\n",
-      "cover": "bili-img/cover/06290edd50002c3f.webp",
-      "url": "https://t.bilibili.com/1251855837932027920",
-      "ts": "1790308800"
-    },
-    {
-      "id": "1251643724528615441",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "2026无畏契约上海全球冠军赛小组赛 | 今日赛果\n\nTYL 0:2 G2\n\n很遗憾我们在今日的比赛中不敌对手，队伍将进入小组赛败者组展开争夺。\n\n团队将正视比赛中暴露出来的问题与不足，抓住短暂的赛事间歇期复盘总结，吸取经验，全力备战接下来的每一场对决。\n",
-      "cover": "bili-img/cover/b74902e2f8f0def5.webp",
-      "url": "https://t.bilibili.com/1251643724528615441",
-      "ts": "1790259414"
-    },
-    {
-      "id": "1251579248506830854",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态",
-      "text": "#bilibili个性装扮# 我正在使用“TYLOO 2026上海全球冠军赛头像挂件”头像挂件，你也来试试~",
-      "cover": "",
-      "url": "https://t.bilibili.com/1251579248506830854",
-      "ts": "1790244402"
-    },
-    {
-      "id": "1251578812551921673",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "别挡我的禄！TYL VCT 收藏集上线啦",
-      "cover": "bili-img/cover/21456308255c7b29.webp",
-      "url": "https://t.bilibili.com/1251578812551921673",
-      "ts": "1790244300"
     },
     {
       "id": "1251577524037615641",
@@ -785,30 +809,6 @@
       "cover": "bili-img/cover/0521d4d10cdf2448.webp",
       "url": "https://t.bilibili.com/1251469889992916994",
       "ts": "1790218940"
-    },
-    {
-      "id": "1251469310193303601",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·视频",
-      "text": "冠军赛前，给大家带来全套的Splash赛前准备",
-      "cover": "bili-img/cover/16b173e0bf1079bd.webp",
-      "url": "https://t.bilibili.com/1251469310193303601",
-      "ts": "1790218805",
-      "bvid": "BV1ifhx62EkG",
-      "durSec": 305
-    },
-    {
-      "id": "1251206438894698517",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "2026无畏契约上海全球冠军赛 小组赛 | 赛程预告\n\n2026.09.24 20:00 BO3\nTYL vs G2\n\n大幕将启，无畏向前\n",
-      "cover": "bili-img/cover/3508c05eda9dc4ad.webp",
-      "url": "https://t.bilibili.com/1251206438894698517",
-      "ts": "1790157600"
     },
     {
       "id": "1251144602057965664",
