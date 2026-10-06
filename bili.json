@@ -1,8 +1,52 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-10-04T23:34:20.178Z",
+  "updatedAt": "2026-10-06T01:05:14.103Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1255769895299186688",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨ ESL Pro League Season 24\n\n✨MAP  CACHE/MIRAGE｜ BO3\n\n✨杭州西湖 TYLOO 1:2 M80\n\n瑞士轮失利后，我们 EPL S24 的征程就此画上句号。\n\n感谢每一位守候在屏幕前的观众，这个结果辜负了大家的期待，我们很抱歉。\n\n回看这三场比赛，问题不在某一个回合，而在于我们没能把日常训练的积累稳定地兑现出来，赛场上暴露出来的问题我们会认真复盘，总结经验教训，并且努力改正。\n\n胜负之外，是你们的支持让我们一直有继续走下去的底气。感谢每一位支持天禄的粉丝朋友，下一次再见，希望能带给大家更精彩的表现。",
+      "cover": "bili-img/cover/6633e99e605050cd.webp",
+      "url": "https://t.bilibili.com/1255769895299186688",
+      "ts": "1791220113"
+    },
+    {
+      "id": "1255577961818488870",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴ESL Pro League Season 24\n\n🔴2026 年 10月 5 日 22:00 BO3\n\n🔴杭州西湖 TYLOO vs M80\n",
+      "cover": "bili-img/cover/935194c8446c6fc8.webp",
+      "url": "https://t.bilibili.com/1255577961818488870",
+      "ts": "1791175425"
+    },
+    {
+      "id": "1255566689655848964",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "bili-img/avatar/0f01306058505549.webp",
+      "kind": "动态·图文",
+      "text": "#崩坏星穹铁道# #月升之前与兽共舞# 「帕姆展览馆 | 月升之前，与兽共舞」\n\n「我的『真珠』就在这里，在这副躯壳的『心』中跳动。」\n",
+      "cover": "bili-img/cover/e453b36db2719f8f.webp",
+      "url": "https://t.bilibili.com/1255566689655848964",
+      "ts": "1791172800"
+    },
+    {
+      "id": "1255504842177118224",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "​黄金周乱斗锦标赛#2 疯狂全卡战 开启",
+      "cover": "bili-img/cover/a08b327c7bd5e7bd.webp",
+      "url": "https://t.bilibili.com/1255504842177118224",
+      "ts": "1791158400"
+    },
     {
       "id": "1255338246785728518",
       "uid": "373076765",
@@ -24,6 +68,17 @@
       "cover": "bili-img/cover/df34cf701a3c73e2.webp",
       "url": "https://t.bilibili.com/1255309882843725840",
       "ts": "1791113008"
+    },
+    {
+      "id": "1255273324097830932",
+      "uid": "414149787",
+      "author": "Phigros官方",
+      "avatar": "bili-img/avatar/0db4169f82399a5c.webp",
+      "kind": "动态",
+      "text": "第九章穹顶孤舟系列周边火热售卖中！欢迎小鸽子们选购～",
+      "cover": "",
+      "url": "https://t.bilibili.com/1255273324097830932",
+      "ts": "1791104496"
     },
     {
       "id": "1255223957741633553",
@@ -83,6 +138,28 @@
       "cover": "bili-img/cover/8b0c3757d4548fba.webp",
       "url": "https://t.bilibili.com/1254900095717998593",
       "ts": "1791017597"
+    },
+    {
+      "id": "1254896337655169047",
+      "uid": "414149787",
+      "author": "Phigros官方",
+      "avatar": "bili-img/avatar/0db4169f82399a5c.webp",
+      "kind": "动态",
+      "text": "咕咕，小鸽子们！Phigros 7周年纪念演出「新黎明」上海场现已开播！没能到现场的大家，可以来直播间一起听歌、一起迎接新黎明。\n本场为充电直播，具体观看方式请以直播间说明为准。\n直播间：https://live.bilibili.com/1924021083 \n#Phigros#",
+      "cover": "",
+      "url": "https://t.bilibili.com/1254896337655169047",
+      "ts": "1791016722"
+    },
+    {
+      "id": "1254824519352188930",
+      "uid": "414149787",
+      "author": "Phigros官方",
+      "avatar": "bili-img/avatar/0db4169f82399a5c.webp",
+      "kind": "动态·图文",
+      "text": "Phigros主线最终章——第九章【穹顶孤舟】全部12首歌曲揭晓！\n\n第九章曲目信息：\n「About The Universe」 by: SOTUI & MIssionary\n「Implexrough」 by: Silentroom × mommy\n「Evanescent」 by: LeaF\n「Entrance to the Chaos」 by: 打打だいず vs. siromaru\n「Exoplanetary Mirage」 by: Camellia\n「True Home, True World (Rework)」 by: 816ThreeNumbers\n「Ametrine」 by: GRYSCL & MIssionary\n「Petrichor」 by: void (Mournfinale)\n「ハテ」 by: rN || Frums\n「Desultory Signals」 by: technoplanet\n「Message」 by: くるぶっこちゃん\n「What do you want more than a Happy ending?」 by: Apo11o\"HALO\"program ft. 安月名 莉子×大瀬良あい\n\n这场末日旅行，终将到达名为“现实”的彼岸。\n#Phigros# #Pigeon Games# #鸽游#\n",
+      "cover": "bili-img/cover/4adc6c40e1e5d48d.webp",
+      "url": "https://t.bilibili.com/1254824519352188930",
+      "ts": "1791000000"
     },
     {
       "id": "1254594483004112914",
@@ -149,6 +226,30 @@
       "cover": "",
       "url": "https://t.bilibili.com/1254498082514534402",
       "ts": "1790923996"
+    },
+    {
+      "id": "1254453530783121424",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "bili-img/avatar/0f01306058505549.webp",
+      "kind": "动态·图文",
+      "text": "互动抽奖 #崩坏星穹铁道# #乐子神智取米哈游# #星穹铁道星神阿哈# \n\n「乐子神智取米哈游」第一话 | 棋局\nhttps://www.bilibili.com/video/BV1NBaR6mEay/ \n\n「哼哼哼，贪饕，决定胜负的关键不在棋局之内，而在——」\n\n「棋盘之外！！！」\n\n————————\n▉ 阿哈的赠礼\n\n异世界冒险中的乐子神学会了开发限定纪念品——\n\n这样就能把你捧在手心啦！\n\n● 4.7版本登录游戏即可领取纪念道具「这样就能把你捧在手心啦」。 \n——————————————————— \n▉转发抽奖：\n关注并转发本条动态，帕姆将于10月14日抽取10位幸运开拓者各获得「随机角色周边」一份。\n",
+      "cover": "bili-img/cover/f3d763ba956b5409.webp",
+      "url": "https://t.bilibili.com/1254453530783121424",
+      "ts": "1790913623"
+    },
+    {
+      "id": "1254453487869100073",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "bili-img/avatar/0f01306058505549.webp",
+      "kind": "动态·视频",
+      "text": "「乐子神智取米哈游」第一话 | 棋局\n#崩坏星穹铁道#​ #乐子神智取米哈游#​ #星穹铁道星神阿哈#​ \n\n「哼哼哼，贪饕，决定胜负的关键不在棋局之内，而在——」\n\n「棋盘之外！！！」\n\n————————\n▉ 阿哈的赠礼\n\n异世界冒险中的乐子神学会了开发限定纪念品——\n\n这样就能把你捧在手心啦！\n\n● 4.7版本登录游戏即可领取纪念道具「这样就能把你捧在手心啦」。",
+      "cover": "bili-img/cover/f07c064067fcbcc6.webp",
+      "url": "https://t.bilibili.com/1254453487869100073",
+      "ts": "1790913613",
+      "bvid": "BV1NBaR6mEay",
+      "durSec": 49
     },
     {
       "id": "1254453434173620230",
@@ -627,19 +728,6 @@
       "ts": "1790564400"
     },
     {
-      "id": "1252694647189274662",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·视频",
-      "text": "📹丨禄行千里-2026无畏契约全球冠军赛//29 TYL vs G2",
-      "cover": "bili-img/cover/e44d74107a49b02f.webp",
-      "url": "https://t.bilibili.com/1252694647189274662",
-      "ts": "1790504101",
-      "bvid": "BV1eZa86oEzK",
-      "durSec": 179
-    },
-    {
       "id": "1252598122082730036",
       "uid": "1340190821",
       "author": "崩坏星穹铁道",
@@ -660,19 +748,6 @@
       "cover": "bili-img/cover/3f772a1d5ead2ea3.webp",
       "url": "https://t.bilibili.com/1252598008260853765",
       "ts": "1790481600"
-    },
-    {
-      "id": "1252375101638180873",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·视频",
-      "text": "📹丨禄行千里-全球冠军赛特别篇//官方调试日VLOG",
-      "cover": "bili-img/cover/980d5929bb5033ee.webp",
-      "url": "https://t.bilibili.com/1252375101638180873",
-      "ts": "1790429701",
-      "bvid": "BV1RBho6aEhj",
-      "durSec": 111
     },
     {
       "id": "1252350671874687129",
@@ -833,30 +908,6 @@
       "ts": "1790136030"
     },
     {
-      "id": "1251113777123819560",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "bili-img/avatar/0f01306058505549.webp",
-      "kind": "动态·视频",
-      "text": "《崩坏：星穹铁道》即兴巡演PV——「至此，已成艺术」\n#崩坏星穹铁道#​ #月升之前与兽共舞#​ #星穹铁道真珠#\n\n楼主[匿名]：画成这样…可以接稿吗？\nID[Jade]：每日审美积累已达成\nID[点石成金]：稿子有点熟悉啊，你不会是……\nID[扑满保护协会名誉会长]：下次让账账做模特好不好~\nID[龙颜大悦]：这就是你在半夜敲我门的原因？\nID[高清条形码]：我用最简单最直接最不绕弯子的方式告诉你：老师，你是我的神！",
-      "cover": "bili-img/cover/2aed2088e9066c80.webp",
-      "url": "https://t.bilibili.com/1251113777123819560",
-      "ts": "1790136026",
-      "bvid": "BV1yvhW6sEzi",
-      "durSec": 738
-    },
-    {
-      "id": "1251098205695770627",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "bili-img/avatar/0f01306058505549.webp",
-      "kind": "动态·图文",
-      "text": "#崩坏星穹铁道# #月升之前与兽共舞# 「货币战争•零和博弈」即将结束 \n\n亲爱的开拓者：\n\n「货币战争•零和博弈」即将在11/11 06:00结束，结束后奖励无法获取！开拓者别忘记挑战并领取命运的足迹、星轨通票、星琼等奖励！\n双倍晋升点模式开启，加速获取晋升等级奖励！\n\n帕姆温馨提示：达成奖励后别忘了领取帕~\n",
-      "cover": "bili-img/cover/061547c162081c48.webp",
-      "url": "https://t.bilibili.com/1251098205695770627",
-      "ts": "1790132400"
-    },
-    {
       "id": "1251074821748424729",
       "uid": "2127596945",
       "author": "KARDS官方",
@@ -866,17 +917,6 @@
       "cover": "",
       "url": "https://t.bilibili.com/1251074821748424729",
       "ts": "1790126956"
-    },
-    {
-      "id": "1250790782679384065",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "bili-img/avatar/0f01306058505549.webp",
-      "kind": "动态",
-      "text": "恭喜@州牧羊@梨花带闪电@莫本夫等10位同学中奖，已私信通知，详情请点击抽奖查看。",
-      "cover": "",
-      "url": "https://t.bilibili.com/1250790782679384065",
-      "ts": "1790060823"
     },
     {
       "id": "1250479730410389511",
@@ -978,17 +1018,6 @@
       "cover": "bili-img/cover/a11da28a2d9b1f0f.webp",
       "url": "https://t.bilibili.com/1246768878649868328",
       "ts": "1789124400"
-    },
-    {
-      "id": "1246702399043665943",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态",
-      "text": "火山环带已经爆发，战局如何变化，哪些新卡组最具潜力？参与本周末击剑杯，一探究竟",
-      "cover": "",
-      "url": "https://t.bilibili.com/1246702399043665943",
-      "ts": "1789108922"
     },
     {
       "id": "1245315476798570561",
@@ -1103,39 +1132,6 @@
       "cover": "",
       "url": "https://t.bilibili.com/1242719778930425858",
       "ts": "1788181646"
-    },
-    {
-      "id": "1242656018016501769",
-      "uid": "414149787",
-      "author": "Phigros官方",
-      "avatar": "bili-img/avatar/e28cbaefe234b980.webp",
-      "kind": "动态·图文",
-      "text": "音乐中，我们一起长大了七岁。",
-      "cover": "",
-      "url": "https://t.bilibili.com/1242656018016501769",
-      "ts": "1788166800"
-    },
-    {
-      "id": "1241565955310485504",
-      "uid": "414149787",
-      "author": "Phigros官方",
-      "avatar": "bili-img/avatar/e28cbaefe234b980.webp",
-      "kind": "动态·图文",
-      "text": "应AppStore要求，从下个版本起，Phigros对iOS系统的最低要求将从「iOS 12.0」变更为「iOS 15.0」。未满足系统最低要求的设备今后将无法对本游戏应用进行安装和更新。\nPhigros对Android系统的最低要求仍为「Android 8.0」不变。\n\n给小鸽子们带来不便，还请谅解。\n#Phigros# #Pigeon Games# #鸽游#\n",
-      "cover": "bili-img/cover/5b5779d9ed8ea585.webp",
-      "url": "https://t.bilibili.com/1241565955310485504",
-      "ts": "1787913000"
-    },
-    {
-      "id": "1241558224330555392",
-      "uid": "414149787",
-      "author": "Phigros官方",
-      "avatar": "bili-img/avatar/e28cbaefe234b980.webp",
-      "kind": "动态·图文",
-      "text": "Phigros七周年直播Q&A问题征集开启！\n咕咕，小鸽子们看这里！七年来，我们在评论区、社区和直播间里收到了许多关于Phigros的问题。这一次，趁着七周年纪念直播，换我们来回答。\n欢迎在本动态的评论区留下你的问题。我们将从中选择部分具有代表性、适合公开回答的问题，在9月5日的Phigros七周年纪念直播中由制作组进行回答。\n\n征集时间：2026年8月28日—9月1日22:00\n参与方式：直接在本动态评论区留言即可。建议一条评论只提交一个问题，并尽量简洁、明确；如果已经有人提出了相同问题，可以为对应评论点赞，方便我们整理。同一个账号多条评论不会计入采集。\n\n征集说明：\n1. 问题将根据代表性、可回答性及直播时间综合选择，不完全按照点赞数量决定；\n2. 内容相近的问题可能会合并回答；\n3. 涉及尚未公开的合作、版权、人员隐私及其他保密内容的问题，可能暂时无法回答；\n4. 如遇游戏BUG、账号及存档等个别问题，请通过官方客服渠道反馈。\n\n虽然无法在直播中回答每一个问题，但我们会认真阅读各位小鸽子的留言。\n关于Phigros、关于第九章，也关于一起走过的这七年——有什么想问的，就在评论区告诉我们吧！\n9月5日，我们直播间见！\n\n#Phigros# #Pigeon Games# #鸽游#",
-      "cover": "",
-      "url": "https://t.bilibili.com/1241558224330555392",
-      "ts": "1787911200"
     }
   ]
 }
