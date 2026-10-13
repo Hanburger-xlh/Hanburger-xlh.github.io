@@ -1,8 +1,19 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-10-12T23:34:48.461Z",
+  "updatedAt": "2026-10-13T23:35:08.395Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1258650817663074308",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态",
+      "text": "正确答案：C、B\n\n恭喜答对并中奖的玩家：@QYQ-KARD南洋军阀2143@一只付纳诺哒@小小蟹黄君@rEKiPs@动作巨星大门牙@改良-黑流地脉@压制的高人原德俄联盟@bili_88937487062@我真不叫三水羊@薛补慧\n\n请留意您的后台私信， 以领取奖励！",
+      "cover": "",
+      "url": "https://t.bilibili.com/1258650817663074308",
+      "ts": "1791890880"
+    },
     {
       "id": "1257801328946577427",
       "uid": "1636034895",
@@ -1009,17 +1020,6 @@
       "ts": "1789128027",
       "bvid": "BV1atY76XEAN",
       "durSec": 81
-    },
-    {
-      "id": "1246771097021448199",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "火山环带：战备卡组",
-      "cover": "bili-img/cover/7bee55849c100da2.webp",
-      "url": "https://t.bilibili.com/1246771097021448199",
-      "ts": "1789124917"
     },
     {
       "id": "1245315476798570561",
