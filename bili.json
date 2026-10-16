@@ -1,8 +1,41 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-10-15T23:35:08.122Z",
+  "updatedAt": "2026-10-16T23:33:50.511Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1259772321664598019",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "​本周乱斗锦标赛更新：指令为王",
+      "cover": "bili-img/cover/19483fa2b921fbeb.webp",
+      "url": "https://t.bilibili.com/1259772321664598019",
+      "ts": "1792152000"
+    },
+    {
+      "id": "1259757171145441285",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "KARDS 2026年 世界锦标赛 10月30-31日开战！",
+      "cover": "bili-img/cover/831dfbba3dab268d.webp",
+      "url": "https://t.bilibili.com/1259757171145441285",
+      "ts": "1792148473"
+    },
+    {
+      "id": "1259396076079677440",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "​版本更新 —— 2026 年 10 月",
+      "cover": "bili-img/cover/5b15bd7baa42e2c3.webp",
+      "url": "https://t.bilibili.com/1259396076079677440",
+      "ts": "1792064399"
+    },
     {
       "id": "1259277685270511633",
       "uid": "1636034895",
@@ -13,6 +46,17 @@
       "cover": "bili-img/cover/0bfd958bc9f2bc21.webp",
       "url": "https://t.bilibili.com/1259277685270511633",
       "ts": "1792036834"
+    },
+    {
+      "id": "1259014725952339990",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "KARDS 2026年10月平衡性调整",
+      "cover": "bili-img/cover/6eebf11104388806.webp",
+      "url": "https://t.bilibili.com/1259014725952339990",
+      "ts": "1791975609"
     },
     {
       "id": "1258954660790665223",
@@ -956,39 +1000,6 @@
       "ts": "1789988400"
     },
     {
-      "id": "1249984950168453120",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "​击退进攻 - 米尔恩湾战役",
-      "cover": "bili-img/cover/633aeb8c5148597d.webp",
-      "url": "https://t.bilibili.com/1249984950168453120",
-      "ts": "1789873200"
-    },
-    {
-      "id": "1249629326880538624",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "​666市场花园尊享上架，全新高级异画！",
-      "cover": "bili-img/cover/a9d60e3a1fe90974.webp",
-      "url": "https://t.bilibili.com/1249629326880538624",
-      "ts": "1789790400"
-    },
-    {
-      "id": "1249613864989884437",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "​本周乱斗锦标赛 —— 铜铁大战",
-      "cover": "bili-img/cover/5111e8a9dfbdc723.webp",
-      "url": "https://t.bilibili.com/1249613864989884437",
-      "ts": "1789786800"
-    },
-    {
       "id": "1248964465923194885",
       "uid": "414149787",
       "author": "Phigros官方",
@@ -998,17 +1009,6 @@
       "cover": "bili-img/cover/0439f7dc2194de18.webp",
       "url": "https://t.bilibili.com/1248964465923194885",
       "ts": "1789635600"
-    },
-    {
-      "id": "1248253219375677446",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "神秘的“地下城市” —— 直布罗陀巨岩",
-      "cover": "bili-img/cover/7764d4a059bc6bd0.webp",
-      "url": "https://t.bilibili.com/1248253219375677446",
-      "ts": "1789470000"
     },
     {
       "id": "1246784454374981763",
