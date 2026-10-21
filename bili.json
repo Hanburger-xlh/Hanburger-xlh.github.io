@@ -1,8 +1,19 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-10-20T23:31:06.211Z",
+  "updatedAt": "2026-10-21T23:32:27.221Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1261509206459023383",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "杭州西湖 TYLOO CS2 分部今日启程前往PGL Masters Bucharest 2026.\n",
+      "cover": "bili-img/cover/df2f53559ddb2c26.webp",
+      "url": "https://t.bilibili.com/1261509206459023383",
+      "ts": "1792556400"
+    },
     {
       "id": "1261426740893319168",
       "uid": "1636034895",
@@ -820,17 +831,6 @@
       "cover": "bili-img/cover/f157bddf4c55c786.webp",
       "url": "https://t.bilibili.com/1253819496954593286",
       "ts": "1790766000"
-    },
-    {
-      "id": "1253804035083862022",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "2026无畏契约上海全球冠军赛 小组赛 | 赛程预告\n\n2026.10.01 17:00 BO3\nTYL vs TL\n\n背水一战，破局求生\n",
-      "cover": "bili-img/cover/005400d7f25a8f04.webp",
-      "url": "https://t.bilibili.com/1253804035083862022",
-      "ts": "1790762400"
     },
     {
       "id": "1253790830214250530",
