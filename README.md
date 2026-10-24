@@ -1,6 +1,6 @@
 # Hanburger-xlh.github.io
 
-个人网站（GitHub Pages），包含 **文章 / 常用网址 / 图片 / B站动态** 四个板块。
+个人网站（GitHub Pages），包含 **文章 / 常用网址 / 图片 / B站动态 / 日常 / 显卡日报** 六个板块。
 
 ## B站动态自动抓取（本地每日方案）
 
@@ -164,6 +164,46 @@ B 站动态的封面与头像按前端实际显示尺寸缩放（`index.html`：
 游戏日常跑完后，由 `daily_loop.py` 自动：抓动态 → 下载图片 → 生成日常摘要 →
 一次提交并推送，网站随之更新（详见下节）。
 
+## 显卡日报（B 站视频 OCR）
+
+网站“显卡”Tab 展示 B 站 UP「芝士华莱士」《显卡日报》里显卡**日低价**的走势，
+数据来自仓库里的 `gpu.json`，由本机脚本 `gpu_daily.py` 每天采集。
+
+- **为什么是 OCR**：视频画面里那张价格表没有任何公开数据接口，UP 只把数字打在画面上。
+  因此流程是：取 1080P DASH 流 → ffmpeg 抽 9 帧（3.0–7.0 s）→ 本机
+  `3rdparty/PaddleOCR-json_v.1.3.1/PaddleOCR-json.exe` 逐帧识别 → 按表头坐标重建表格 →
+  多帧多数投票。
+- **口径**：只取画面左侧「显卡 / 史低价 / 日低价 / 原价」四列，右侧 TSE 跑分与各平台报价一律忽略；
+  四列全部入库，**页面只画「日低价」**。日期取标题里的「X月X日」（该 UP 约 23:00 发布**次日刊**），
+  不取发布时间。
+- **置信度**：每格记录 `conf`（9 帧中被读到的比例）。底行常被片中浮层
+  「其中RTX5080涨至18,199元」盖住，此时仍可能只有 3/9 帧可读；< 0.6 的点在 tooltip 里标 ⚠。
+  低于 `MIN_AGREE`（0.3）的整行丢弃，不猜。
+- **耗时**：单期约 25–40 秒（12–19 MB 下载 + 9 帧 OCR），失败只记日志，不阻断日常结果发布与关机。
+- **数据体积**：只存数值不存图片，保留最近 30 天（`KEEP_DAYS`），`gpu.json` 每期约 4 KB。
+
+`gpu.json` 结构：
+
+```json
+{
+  "updatedAt": "2026-10-25T00:10:54+08:00",
+  "keepDays": 30, "unit": "元",
+  "source": { "up": "芝士华莱士", "uid": 22697887, "space": "https://space.bilibili.com/22697887" },
+  "series": [
+    { "date": "2026-10-25", "bvid": "BV19iHM6KEfg", "url": "…", "frames": 9,
+      "rows": [ { "model": "RTX 5080", "dailyLow": 18199, "historyLow": 7700, "msrp": 8299, "conf": 1.0 } ] }
+  ]
+}
+```
+
+- **SESSDATA**：1080P 需要登录态。凭据只放本机
+  `%LOCALAPPDATA%\m7a-gpu\sessdata.txt`（或环境变量 `BILI_SESSDATA`），**不进仓库、不进 git**。
+  凭据失效时脚本会退回 720P 并在日志里提示。
+- **首次回填**：`python gpu_daily.py --repo <仓库> --backfill 3`
+- **单日重采**：`python gpu_daily.py --repo <仓库> --date 2026-10-25 --force`
+- **前端依赖**：`echarts.min.js` 已 vendor 进仓库（1 MB，取 ECharts 5.5.1），不走 CDN——
+  国内网络对 jsDelivr 不稳，且离线打开本地预览也能出图。
+
 ## 日常日志（三月七小助手）
 
 网站“日常”Tab 展示三月七小助手每天跑游戏日常的结果，数据来自 `daily-log.json`。
@@ -175,11 +215,12 @@ B 站动态的封面与头像按前端实际显示尺寸缩放（`index.html`：
   2. `python bili-daily/fetch-bili-images.py` —— 下载动态图片到 `bili-img/`
   3. ~~`python bili-daily/fetch-bili-videos.py`~~ —— **已关闭**（`web_cache_videos: false`），不再下载视频
   4. `node assistant-logs/parse-and-publish.js --date 今天` —— 生成日常摘要 `daily-log.json`
-  5. `git add -- bili.json daily-log.json bili-img bili-video` → `git commit` → `git pull --rebase --autostash` → `git push origin main`
+  5. `python gpu_daily.py --repo 站点仓库` —— 采集当天《显卡日报》，更新 `gpu.json`（**失败只告警，不影响后续发布**，硬超时 300 s）
+  6. `git add -- bili.json daily-log.json gpu.json bili-img bili-video` → `git commit` → `git pull --rebase --autostash` → `git push origin main`
 
   push 到 `main` 即触发 GitHub Pages 构建，网站当天就能看到结果。
   - 开关与仓库路径在 `daily_loop_settings.yaml`：
-    `web_publish_enable` / `web_crawl_bili` / `web_cache_images` / `web_cache_videos` / `web_repo` / `web_branch`。
+    `web_publish_enable` / `web_crawl_bili` / `web_cache_images` / `web_cache_videos` / `web_gpu_daily` / `web_repo` / `web_branch`。
   - 只想测试发布链路（不跑日常、不关机）：`python daily_loop.py --web-test`
   - 抓取放在**日常跑完之后**，而不是开机登录时。原因：开机瞬间梯子核心
     （`com.vortex.helper` 服务）虽已在 7897 监听，但加载的是 `config.yaml` 的
