@@ -532,32 +532,69 @@
 
   /* ---------- 显卡日报页 ---------- */
   .gpu-status {
-    max-width: 1100px; margin: 0 auto; padding: 4px 20px 14px;
+    max-width: 1240px; margin: 0 auto; padding: 4px 20px 14px;
     color: var(--text-dim); font-size: 12px; letter-spacing: .5px; text-align: center;
   }
-  .gpu-wrap { max-width: 1100px; margin: 0 auto; padding: 4px 20px 60px; }
-  .gpu-card {
+  .gpu-wrap { max-width: 1240px; margin: 0 auto; padding: 4px 20px 60px; }
+
+  /* 第一栏：显卡指数 + 全部型号“今日 vs 昨日” */
+  .gpu-summary {
+    display: grid; grid-template-columns: 268px minmax(0, 1fr); gap: 12px; margin-bottom: 16px;
+  }
+  .gpu-index-card {
     background: var(--panel); border: 1px solid rgba(255,255,255,.08);
-    border-radius: 14px; padding: 14px 16px 10px;
+    border-radius: 14px; padding: 16px 18px;
   }
-  #gpu-chart { width: 100%; height: 560px; }
-  .gpu-toolbar {
-    display: flex; align-items: center; gap: 8px;
-    padding: 4px 4px 10px; border-bottom: 1px solid rgba(255,255,255,.06); margin-bottom: 6px;
+  .gpu-index-label { color: var(--text-dim); font-size: 12px; letter-spacing: .5px; }
+  .gpu-index-value {
+    font-size: 32px; font-weight: 600; line-height: 1.2; margin: 8px 0 2px;
+    font-variant-numeric: tabular-nums;
   }
-  .gpu-toolbar-label { color: var(--text-dim); font-size: 12px; letter-spacing: .5px; }
-  .gpu-toolbar button {
-    appearance: none; border: 1px solid rgba(255,255,255,.08); background: var(--panel-2);
-    color: var(--text-dim); font-size: 12px; padding: 4px 12px; border-radius: 999px; cursor: pointer;
-    transition: all .2s ease;
+  .gpu-index-sub { color: var(--text-dim); font-size: 12px; line-height: 1.8; }
+  .gpu-tiles {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(136px, 1fr)); gap: 8px;
   }
-  .gpu-toolbar button:hover { color: var(--text); border-color: rgba(255,255,255,.25); }
-  .gpu-toolbar button.active { color: #fff; border-color: transparent;
-    background: linear-gradient(120deg, var(--accent), var(--accent-2)); }
+  .gpu-tile {
+    background: var(--panel); border: 1px solid rgba(255,255,255,.06);
+    border-radius: 10px; padding: 8px 10px 9px; min-width: 0;
+  }
+  .gpu-tile-name {
+    color: #aab3c0; font-size: 11px; letter-spacing: .2px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .gpu-tile-price {
+    font-size: 17px; font-weight: 600; margin-top: 3px; color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  .gpu-tile-delta {
+    font-size: 11px; margin-top: 2px; font-variant-numeric: tabular-nums;
+  }
+  .gpu-up   { color: #ff5c6c; }
+  .gpu-down { color: #2fbf8f; }
+  .gpu-flat { color: var(--text-dim); }
+
+  /* 每张显卡一张小折线 */
+  .gpu-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px;
+  }
+  .gpu-mini {
+    background: var(--panel); border: 1px solid rgba(255,255,255,.06);
+    border-radius: 12px; padding: 9px 10px 2px;
+  }
+  .gpu-mini-head {
+    display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
+    font-size: 12px; font-weight: 600; color: var(--text); padding: 0 2px;
+  }
+  .gpu-mini-head .last { font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .gpu-mini-chart { width: 100%; height: 126px; }
+
   .gpu-tip {
-    margin-top: 10px; color: var(--text-dim); font-size: 12px; line-height: 1.8;
+    margin-top: 12px; color: var(--text-dim); font-size: 12px; line-height: 1.8;
   }
-  @media (max-width: 640px) { #gpu-chart { height: 420px; } }
+  @media (max-width: 860px) {
+    .gpu-summary { grid-template-columns: 1fr; }
+    .gpu-grid { grid-template-columns: 1fr; }
+  }
 
   footer {
     text-align: center;
@@ -620,14 +657,19 @@
 <section class="view" id="view-gpu">
   <div class="gpu-status" id="gpu-status"></div>
   <div class="gpu-wrap">
-    <div class="gpu-card"><div class="gpu-toolbar">
-      <span class="gpu-toolbar-label">纵轴</span>
-      <button data-gpu-mode="linear" class="active">线性</button>
-      <button data-gpu-mode="log">对数</button>
-    </div><div id="gpu-chart"></div></div>
+    <div class="gpu-summary">
+      <div class="gpu-index-card">
+        <div class="gpu-index-label">显卡指数</div>
+        <div class="gpu-index-value" id="gpu-index-value">—</div>
+        <div class="gpu-index-sub" id="gpu-index-sub">今日全部显卡日低价之和 ÷ 昨日之和</div>
+      </div>
+      <div class="gpu-tiles" id="gpu-tiles"></div>
+    </div>
+    <div class="gpu-grid" id="gpu-charts"></div>
     <div class="gpu-tip">
-      口径：只取视频左侧表格的「日低价」，单位为元；点击图例可显示/隐藏型号。
-      数据每日由本机脚本从 B 站视频画面识别，标注已失效或识别存疑的点，请以视频原片为准。
+      口径：只取视频左侧表格的「日低价」，单位为元；上栏对比今日与上一期（红涨绿跌），
+      下方每张显卡一张独立的 30 天折线。数据每日由本机脚本从 B 站视频画面识别，
+      识别存疑的点在提示框里标 ⚠，请以视频原片为准。
     </div>
   </div>
 </section>
@@ -668,7 +710,7 @@
     if (name === 'bili' && !biliLoaded) loadBili();
     if (name === 'daily' && !dailyLoaded) loadDaily();
     if (name === 'gpu' && !gpuLoaded) loadGpu();
-    if (name === 'gpu' && gpuChart) setTimeout(() => gpuChart.resize(), 0);
+    if (name === 'gpu' && gpuCharts.length) setTimeout(resizeGpuCharts, 0);
   }
 
   document.querySelectorAll('.tabs button').forEach(btn => {
@@ -1021,7 +1063,7 @@
 
   /* ========== 显卡日报 ========== */
   let gpuLoaded = false;
-  let gpuChart = null;
+  let gpuCharts = [];
 
   function ensureEcharts(timeoutMs = 8000) {
     return new Promise((resolve, reject) => {
@@ -1036,27 +1078,151 @@
 
   const GPU_COLORS = ['#7c9cff', '#b48cff', '#ff8fab', '#ffb066', '#ffd166',
     '#7ee0b8', '#4fd1c5', '#63b3ed', '#f687b3', '#a3e635', '#fbbf24',
-    '#38bdf8', '#c084fc', '#fb7185', '#2dd4bf', '#94a3b8'];
+    '#38bdf8', '#c084fc', '#fb7185', '#2dd4bf', '#94a3b8', '#f97316'];
+
+  const GPU_UP = '#ff5c6c';       // 红涨
+  const GPU_DOWN = '#2fbf8f';     // 绿跌
+  const GPU_MODEL_RE = /^(RTX|RX|ARC)\s/;   // 过滤误识别的“型号”（如把 32195 当成型号）
 
   function fmtAxis(v) {
     if (v >= 10000) return (v / 10000).toFixed(v >= 100000 ? 0 : 1) + '万';
     return v;
   }
 
-  function gpuAxis(mode) {
-    const base = {
-      splitLine: { lineStyle: { color: '#1e2230' } },
-      axisLabel: { color: '#8b93a7', fontSize: 11, formatter: fmtAxis }
-    };
-    if (mode === 'log') {
-      // 对数轴：5090（5 万）与 ARC B570（2 千）相差 25 倍，线性轴会把低端挤成一条线
-      return Object.assign({ type: 'log', logBase: 10, min: 900, max: 70000 }, base);
+  function fmtMoney(v) {
+    return Number(v).toLocaleString('zh-CN');
+  }
+
+  function deltaClass(d) {
+    if (d == null) return 'gpu-flat';
+    return d > 0 ? 'gpu-up' : d < 0 ? 'gpu-down' : 'gpu-flat';
+  }
+
+  function deltaArrow(d) {
+    if (d == null) return '';
+    return d > 0 ? '▲' : d < 0 ? '▼' : '—';
+  }
+
+  /* 第一栏：显卡指数 + 每个型号“今日 vs 上一期” */
+  function renderGpuSummary(series) {
+    const latest = series[series.length - 1];
+    const prev = series.length > 1 ? series[series.length - 2] : null;
+    const prevMap = new Map(((prev && prev.rows) || []).map(r => [r.model, r.dailyLow]));
+    const rows = ((latest && latest.rows) || []).filter(r => r && GPU_MODEL_RE.test(r.model || ''))
+      .slice()
+      .sort((a, b) => (b.dailyLow || 0) - (a.dailyLow || 0));
+
+    // 指数只在两期都出现的型号上求和：某天少读一行时，指数不会被凭空拉低
+    let sumNow = 0, sumPrev = 0, common = 0;
+    rows.forEach(r => {
+      const p = prevMap.get(r.model);
+      if (p != null && r.dailyLow != null) { sumNow += r.dailyLow; sumPrev += p; common++; }
+    });
+    const ratio = sumPrev > 0 ? sumNow / sumPrev : null;
+    const pct = ratio == null ? null : (ratio - 1) * 100;
+    const elVal = document.getElementById('gpu-index-value');
+    const elSub = document.getElementById('gpu-index-sub');
+    if (ratio == null) {
+      elVal.textContent = '—';
+      elVal.className = 'gpu-index-value gpu-flat';
+      elSub.textContent = '暂无上一期可比数据';
+    } else {
+      elVal.textContent = (ratio >= 1 ? '+' : '') + pct.toFixed(2) + '%';
+      elVal.className = 'gpu-index-value ' + deltaClass(ratio - 1);
+      const d0 = prev.date.slice(5), d1 = latest.date.slice(5);
+      elSub.innerHTML = `指数 ${ratio.toFixed(4)} · ${d0} → ${d1}<br>${common} 个型号可比 · 今日合计 ${fmtMoney(sumNow)} 元`;
     }
-    return Object.assign({
-      type: 'value',
-      min: (v) => Math.max(0, Math.floor(v.min * 0.85 / 100) * 100),
-      max: (v) => Math.ceil(v.max * 1.04 / 100) * 100
-    }, base);
+
+    const tiles = document.getElementById('gpu-tiles');
+    tiles.innerHTML = rows.map(r => {
+      const p = prevMap.get(r.model);
+      const d = p == null || r.dailyLow == null ? null : r.dailyLow - p;
+      const delta = d == null
+        ? '较上期 —'
+        : d === 0
+          ? '持平'
+          : `${deltaArrow(d)} ${fmtMoney(Math.abs(d))} 元 (${(d / p * 100).toFixed(2)}%)`;
+      return `<div class="gpu-tile">
+        <div class="gpu-tile-name" title="${esc(r.model)}">${esc(r.model)}</div>
+        <div class="gpu-tile-price">${r.dailyLow == null ? '—' : fmtMoney(r.dailyLow)}</div>
+        <div class="gpu-tile-delta ${deltaClass(d)}">${delta}</div>
+      </div>`;
+    }).join('');
+  }
+
+  /* 每张显卡一张独立折线 */
+  function renderGpuCharts(echarts, series, models, dates) {
+    const wrap = document.getElementById('gpu-charts');
+    gpuCharts.forEach(c => { try { c.dispose(); } catch (e) {} });
+    gpuCharts = [];
+    wrap.innerHTML = '';
+
+    const latest = series[series.length - 1];
+    const prev = series.length > 1 ? series[series.length - 2] : null;
+    const prevMap = new Map(((prev && prev.rows) || []).map(r => [r.model, r.dailyLow]));
+    const labelStep = Math.max(1, Math.ceil(dates.length / 5) - 1);
+
+    models.forEach((m, i) => {
+      const color = GPU_COLORS[i % GPU_COLORS.length];
+      const data = series.map(s => {
+        const row = (s.rows || []).find(r => r.model === m);
+        return row ? { value: row.dailyLow, conf: row.conf, date: s.date } : null;
+      });
+      const now = (latest.rows || []).find(r => r.model === m);
+      const p = prevMap.get(m);
+      const d = now && p != null ? now.dailyLow - p : null;
+
+      const card = document.createElement('div');
+      card.className = 'gpu-mini';
+      card.innerHTML = `<div class="gpu-mini-head">
+          <span title="${esc(m)}">${esc(m)}</span>
+          <span class="last ${deltaClass(d)}">${now ? fmtMoney(now.dailyLow) : '—'}${
+            d == null ? '' : ` ${deltaArrow(d)}${fmtMoney(Math.abs(d))}`}</span>
+        </div><div class="gpu-mini-chart"></div>`;
+      wrap.appendChild(card);
+
+      const chart = echarts.init(card.querySelector('.gpu-mini-chart'));
+      chart.setOption({
+        animation: false,
+        grid: { left: 46, right: 12, top: 12, bottom: 20 },
+        tooltip: {
+          trigger: 'axis',
+          backgroundColor: 'rgba(23,26,34,.94)',
+          borderColor: '#2b3340',
+          textStyle: { color: '#e8eaf0', fontSize: 12 },
+          axisPointer: { type: 'line', lineStyle: { color, opacity: .55 } },
+          formatter: (ps) => {
+            if (!ps.length) return '';
+            const pt = ps[0].data;
+            if (pt == null) return `<div style="font-weight:600">${ps[0].axisValue}</div><div>无数据</div>`;
+            const warn = pt.conf != null && pt.conf < 0.6
+              ? '<div style="color:#ffb066;margin-top:4px">⚠ 该点识别存疑</div>' : '';
+            return `<div style="font-weight:600;margin-bottom:4px">${esc(m)} · ${ps[0].axisValue}</div>
+              <div style="display:flex;gap:16px;justify-content:space-between">
+                <span>日低价</span><span>${fmtMoney(pt.value)} 元</span></div>${warn}`;
+          }
+        },
+        xAxis: {
+          type: 'category', boundaryGap: false, data: dates,
+          axisLine: { lineStyle: { color: '#2b3340' } },
+          axisTick: { show: false },
+          axisLabel: { color: '#8b93a7', fontSize: 10, interval: labelStep, hideOverlap: true }
+        },
+        yAxis: {
+          type: 'value', scale: true, splitNumber: 3,
+          axisLabel: { color: '#8b93a7', fontSize: 10, formatter: fmtAxis },
+          splitLine: { lineStyle: { color: '#1e2230' } }
+        },
+        series: [{
+          type: 'line', data, smooth: false, connectNulls: true,
+          symbol: 'circle', symbolSize: 4, showSymbol: dates.length <= 12,
+          lineStyle: { width: 2, color },
+          itemStyle: { color },
+          areaStyle: { color, opacity: .10 }
+        }]
+      });
+      gpuCharts.push(chart);
+    });
   }
 
   async function loadGpu() {
@@ -1072,88 +1238,23 @@
       gpuLoaded = true;
 
       const dates = series.map(s => (s.date || '').slice(5));
-      // 型号顺序：以最近一期为准，缺失的历史期补充到末尾
+      // 型号顺序：以最近一期为准（按价格降序），只在历史里出现过的补充到末尾
       const models = [];
-      const pushModels = (rows) => (rows || []).forEach(r => {
-        if (r && r.model && !models.includes(r.model)) models.push(r.model);
+      const latestRows = (series[series.length - 1].rows || []).slice()
+        .sort((a, b) => (b.dailyLow || 0) - (a.dailyLow || 0));
+      latestRows.forEach(r => {
+        if (r && GPU_MODEL_RE.test(r.model || '') && !models.includes(r.model)) models.push(r.model);
       });
-      pushModels(series[series.length - 1].rows);
-      series.forEach(s => pushModels(s.rows));
-
-      const chartSeries = models.map((m, i) => ({
-        name: m,
-        type: 'line',
-        smooth: false,
-        connectNulls: true,
-        symbol: 'circle',
-        symbolSize: 5,
-        lineStyle: { width: 2, color: GPU_COLORS[i % GPU_COLORS.length] },
-        itemStyle: { color: GPU_COLORS[i % GPU_COLORS.length] },
-        emphasis: { focus: 'series' },
-        data: series.map(s => {
-          const row = (s.rows || []).find(r => r.model === m);
-          return row ? { value: row.dailyLow, conf: row.conf } : null;
-        })
+      series.forEach(s => (s.rows || []).forEach(r => {
+        if (r && GPU_MODEL_RE.test(r.model || '') && !models.includes(r.model)) models.push(r.model);
       }));
 
-      gpuChart = echarts.init(document.getElementById('gpu-chart'));
-      gpuChart.setOption({
-        backgroundColor: 'transparent',
-        textStyle: { color: '#8b93a7' },
-        title: {
-          text: '显卡日低价走势',
-          subtext: '单位：元 · 数据来源 B 站 @芝士华莱士《显卡日报》· 机器识别',
-          left: 8, top: 4,
-          textStyle: { color: '#e8eaf0', fontSize: 15, fontWeight: 600 },
-          subtextStyle: { color: '#8b93a7', fontSize: 11 }
-        },
-        tooltip: {
-          trigger: 'axis',
-          backgroundColor: 'rgba(23,26,34,.94)',
-          borderColor: '#2b3340',
-          textStyle: { color: '#e8eaf0', fontSize: 12 },
-          axisPointer: { type: 'line', lineStyle: { color: '#7c9cff', opacity: .5 } },
-          formatter: (ps) => {
-            const items = ps.filter(p => p.value != null && p.value !== '-')
-              .sort((a, b) => (b.data && b.data.value) - (a.data && a.data.value));
-            const head = `<div style="font-weight:600;margin-bottom:6px">${ps[0].axisValue}</div>`;
-            const body = items.map(p => {
-              const v = p.data && p.data.value;
-              const conf = p.data && p.data.conf;
-              const flag = conf != null && conf < 0.6 ? ' ⚠' : '';
-              return `<div style="display:flex;gap:14px;justify-content:space-between">
-                <span>${p.marker}${p.seriesName}</span>
-                <span>${Number(v).toLocaleString('zh-CN')} 元${flag}</span></div>`;
-            }).join('');
-            return head + body + (items.some(p => p.data && p.data.conf < 0.6) ? '<div style="color:#ffb066;margin-top:4px">⚠ 该点识别存疑，建议核对原片</div>' : '');
-          }
-        },
-        legend: {
-          type: 'plain',
-          top: 56, left: 10, right: 10,
-          itemWidth: 14, itemHeight: 8, itemGap: 12,
-          textStyle: { color: '#aab3c0', fontSize: 11 }
-        },
-        grid: { left: 58, right: 26, top: 168, bottom: 44 },
-        xAxis: {
-          type: 'category', boundaryGap: false, data: dates,
-          axisLine: { lineStyle: { color: '#2b3340' } },
-          axisLabel: { color: '#8b93a7', fontSize: 11 },
-          axisTick: { show: false }
-        },
-        yAxis: gpuAxis('linear'),
-        series: chartSeries
-      });
+      renderGpuSummary(series);
+      renderGpuCharts(echarts, series, models, dates);
 
-      document.querySelectorAll('.gpu-toolbar button').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.gpuMode === 'linear');
-        btn.addEventListener('click', () => {
-          document.querySelectorAll('.gpu-toolbar button').forEach(b => b.classList.toggle('active', b === btn));
-          gpuChart.setOption({ yAxis: gpuAxis(btn.dataset.gpuMode) });
-        });
-      });
-
-      const upd = data.updatedAt ? new Date(data.updatedAt).toLocaleString('zh-CN', { hour12: false }) : '';      const src = (data.source && data.source.space)
+      const upd = data.updatedAt
+        ? new Date(data.updatedAt).toLocaleString('zh-CN', { hour12: false }) : '';
+      const src = (data.source && data.source.space)
         ? `来源：<a href="${data.source.space}" target="_blank" rel="noopener" style="color:#7c9cff">B站 @${data.source.up}</a> · `
         : '';
       status.innerHTML = `${src}最近一期 ${series[series.length - 1].date} · 共 ${series.length} 期 · ${upd ? '更新于 ' + upd : ''}`;
@@ -1163,7 +1264,11 @@
     }
   }
 
-  window.addEventListener('resize', () => { if (gpuChart) gpuChart.resize(); });
+  function resizeGpuCharts() {
+    gpuCharts.forEach(c => { try { c.resize(); } catch (e) {} });
+  }
+
+  window.addEventListener('resize', resizeGpuCharts);
 
   /* ========== 初始化 ========== */
   renderFilters();

@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-25T11:08:44+08:00",
+ "updatedAt": "2026-10-25T12:36:42+08:00",
  "keepDays": 30,
  "unit": "元",
  "source": {
@@ -106,13 +106,6 @@
      "historyLow": null,
      "msrp": 2899,
      "conf": 1.0
-    },
-    {
-     "model": "32195",
-     "dailyLow": 3349,
-     "historyLow": null,
-     "msrp": 2899,
-     "conf": 0.38
     },
     {
      "model": "RX 9060 XT 8GB",
@@ -747,7 +740,7 @@
    "bvid": "BV1tua663EB7",
    "title": "美光：明年内存产量快订完了｜显卡日报10月2日",
    "url": "https://www.bilibili.com/video/BV1tua663EB7/",
-   "frames": 16,
+   "frames": 14,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -782,6 +775,13 @@
      "dailyLow": 6779,
      "historyLow": 3958,
      "msrp": 4599,
+     "conf": 1.0
+    },
+    {
+     "model": "RTX 5060 Ti 8GB",
+     "dailyLow": 3349,
+     "historyLow": 2528,
+     "msrp": 3199,
      "conf": 1.0
     },
     {
@@ -827,6 +827,13 @@
      "conf": 1.0
     },
     {
+     "model": "RX 9060 XT 16GB",
+     "dailyLow": 3398,
+     "historyLow": 2195,
+     "msrp": 2899,
+     "conf": 1.0
+    },
+    {
      "model": "RX 9060 XT 8GB",
      "dailyLow": 2699,
      "historyLow": 1749,
@@ -854,7 +861,7 @@
    "bvid": "BV15RaD6nE9c",
    "title": "北美RTX5090开启身份证限购：不许带出境｜显卡日报10月3日",
    "url": "https://www.bilibili.com/video/BV15RaD6nE9c/",
-   "frames": 17,
+   "frames": 18,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -941,6 +948,13 @@
      "conf": 1.0
     },
     {
+     "model": "RX 9060 XT 16GB",
+     "dailyLow": 3398,
+     "historyLow": 2195,
+     "msrp": 2899,
+     "conf": 1.0
+    },
+    {
      "model": "RX 9060 XT 8GB",
      "dailyLow": 2699,
      "historyLow": 1749,
@@ -968,7 +982,7 @@
    "bvid": "BV1qFHq6WEZq",
    "title": "第四季度内存固态涨幅大幅收窄｜显卡日报10月4日",
    "url": "https://www.bilibili.com/video/BV1qFHq6WEZq/",
-   "frames": 13,
+   "frames": 11,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -1089,7 +1103,7 @@
    "bvid": "BV1otH76YEKi",
    "title": "东芝计划机械硬盘供应翻倍｜显卡日报10月5日",
    "url": "https://www.bilibili.com/video/BV1otH76YEKi/",
-   "frames": 17,
+   "frames": 21,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -1297,6 +1311,13 @@
      "conf": 1.0
     },
     {
+     "model": "RX 9060 XT 16GB",
+     "dailyLow": 3398,
+     "historyLow": 2195,
+     "msrp": 2899,
+     "conf": 1.0
+    },
+    {
      "model": "RX 9060 XT 8GB",
      "dailyLow": 2699,
      "historyLow": 1749,
@@ -1352,13 +1373,20 @@
      "dailyLow": 9290,
      "historyLow": 5733,
      "msrp": 6299,
-     "conf": 0.94
+     "conf": 1.0
     },
     {
      "model": "RTX 5070",
      "dailyLow": 6761,
      "historyLow": 3958,
      "msrp": 4599,
+     "conf": 1.0
+    },
+    {
+     "model": "RTX 5060 Ti 8GB",
+     "dailyLow": 3349,
+     "historyLow": 2528,
+     "msrp": 3199,
      "conf": 1.0
     },
     {
@@ -1404,6 +1432,13 @@
      "conf": 1.0
     },
     {
+     "model": "RX 9060 XT 16GB",
+     "dailyLow": 3398,
+     "historyLow": 2195,
+     "msrp": 2899,
+     "conf": 1.0
+    },
+    {
      "model": "RX 9060 XT 8GB",
      "dailyLow": 2689,
      "historyLow": 1749,
@@ -1431,7 +1466,7 @@
    "bvid": "BV1APH169E2F",
    "title": "南亚：DRAM合同价继续上调20% ｜显卡日报10月8日",
    "url": "https://www.bilibili.com/video/BV1APH169E2F/",
-   "frames": 17,
+   "frames": 20,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -1473,7 +1508,7 @@
      "dailyLow": 3349,
      "historyLow": 2528,
      "msrp": 3199,
-     "conf": 0.94
+     "conf": 1.0
     },
     {
      "model": "RTX 5060 Ti 16GB",
@@ -1518,6 +1553,13 @@
      "conf": 1.0
     },
     {
+     "model": "RX 9060 XT 16GB",
+     "dailyLow": 3399,
+     "historyLow": 2195,
+     "msrp": 2899,
+     "conf": 1.0
+    },
+    {
      "model": "RX 9060 XT 8GB",
      "dailyLow": 2729,
      "historyLow": 1749,
@@ -1545,7 +1587,7 @@
    "bvid": "BV13JHX6dEQc",
    "title": "矿渣价格普涨：最高涨幅近10倍｜显卡日报10月9日",
    "url": "https://www.bilibili.com/video/BV13JHX6dEQc/",
-   "frames": 15,
+   "frames": 13,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -1632,6 +1674,13 @@
      "conf": 1.0
     },
     {
+     "model": "RX 9060 XT 16GB",
+     "dailyLow": 3399,
+     "historyLow": 2195,
+     "msrp": 2899,
+     "conf": 1.0
+    },
+    {
      "model": "RX 9060 XT 8GB",
      "dailyLow": 2679,
      "historyLow": 1749,
@@ -1659,7 +1708,7 @@
    "bvid": "BV1uvph6FE86",
    "title": "AMD上调显卡建议电商售价｜显卡日报10月10日",
    "url": "https://www.bilibili.com/video/BV1uvph6FE86/",
-   "frames": 1,
+   "frames": 3,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -1694,6 +1743,13 @@
      "dailyLow": 6761,
      "historyLow": 3958,
      "msrp": 4599,
+     "conf": 1.0
+    },
+    {
+     "model": "RTX 5060 Ti 8GB",
+     "dailyLow": 3349,
+     "historyLow": 2528,
+     "msrp": 3199,
      "conf": 1.0
     },
     {
@@ -1759,7 +1815,7 @@
    "bvid": "BV1KKpG6TEyF",
    "title": "RTX5090停产？RTX Pro专业卡将独占GB202｜显卡日报10月11日",
    "url": "https://www.bilibili.com/video/BV1KKpG6TEyF/",
-   "frames": 14,
+   "frames": 12,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -1801,7 +1857,7 @@
      "dailyLow": 3349,
      "historyLow": 2528,
      "msrp": 3199,
-     "conf": 0.93
+     "conf": 1.0
     },
     {
      "model": "RTX 5060 Ti 16GB",
@@ -1846,6 +1902,13 @@
      "conf": 1.0
     },
     {
+     "model": "RX 9060 XT 16GB",
+     "dailyLow": 3449,
+     "historyLow": 2195,
+     "msrp": 2899,
+     "conf": 1.0
+    },
+    {
      "model": "RX 9060 XT 8GB",
      "dailyLow": 2669,
      "historyLow": 1749,
@@ -1873,7 +1936,7 @@
    "bvid": "BV1fopJ6LEWB",
    "title": "RTX 5080 24GB或在明年第一季度发布｜显卡日报10月12日",
    "url": "https://www.bilibili.com/video/BV1fopJ6LEWB/",
-   "frames": 17,
+   "frames": 18,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -1960,6 +2023,13 @@
      "conf": 1.0
     },
     {
+     "model": "RX 9060 XT 16GB",
+     "dailyLow": 3449,
+     "historyLow": 2195,
+     "msrp": 2899,
+     "conf": 1.0
+    },
+    {
      "model": "RX 9060 XT 8GB",
      "dailyLow": 2669,
      "historyLow": 1749,
@@ -1987,7 +2057,7 @@
    "bvid": "BV1d1pR6zEBM",
    "title": "CPU厂家集体调涨价格｜显卡日报10月13日",
    "url": "https://www.bilibili.com/video/BV1d1pR6zEBM/",
-   "frames": 17,
+   "frames": 23,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -2074,6 +2144,13 @@
      "conf": 1.0
     },
     {
+     "model": "RX 9060 XT 16GB",
+     "dailyLow": 3449,
+     "historyLow": 2195,
+     "msrp": 2899,
+     "conf": 1.0
+    },
+    {
      "model": "RX 9060 XT 8GB",
      "dailyLow": 2699,
      "historyLow": 1749,
@@ -2101,7 +2178,7 @@
    "bvid": "BV1qvpz6wExd",
    "title": "南亚科技：DRAM内存短缺持续到2028年｜显卡日报10月14日",
    "url": "https://www.bilibili.com/video/BV1qvpz6wExd/",
-   "frames": 17,
+   "frames": 23,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -2222,7 +2299,7 @@
    "bvid": "BV1yvpm6PEuA",
    "title": "长鑫发布4F²架构：新一代RDIMM年底量产｜显卡日报10月15日",
    "url": "https://www.bilibili.com/video/BV1yvpm6PEuA/",
-   "frames": 17,
+   "frames": 23,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -2250,13 +2327,20 @@
      "dailyLow": 9299,
      "historyLow": 5733,
      "msrp": 6299,
-     "conf": 0.94
+     "conf": 1.0
     },
     {
      "model": "RTX 5070",
      "dailyLow": 6865,
      "historyLow": 3958,
      "msrp": 4599,
+     "conf": 1.0
+    },
+    {
+     "model": "RTX 5060 Ti 8GB",
+     "dailyLow": 3299,
+     "historyLow": 2528,
+     "msrp": 3199,
      "conf": 1.0
     },
     {
@@ -2302,6 +2386,13 @@
      "conf": 1.0
     },
     {
+     "model": "RX 9060 XT 16GB",
+     "dailyLow": 3449,
+     "historyLow": 2195,
+     "msrp": 2899,
+     "conf": 1.0
+    },
+    {
      "model": "RX 9060 XT 8GB",
      "dailyLow": 2668,
      "historyLow": 1749,
@@ -2329,7 +2420,7 @@
    "bvid": "BV1PKJ26sEfn",
    "title": "马斯克：中国将在2028年生产大量内存｜显卡日报10月16日",
    "url": "https://www.bilibili.com/video/BV1PKJ26sEfn/",
-   "frames": 17,
+   "frames": 22,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -2450,7 +2541,7 @@
    "bvid": "BV1vXJ46nETw",
    "title": "英伟达官方商城下架RTX5090｜显卡日报10月17日",
    "url": "https://www.bilibili.com/video/BV1vXJ46nETw/",
-   "frames": 17,
+   "frames": 23,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -2537,6 +2628,13 @@
      "conf": 1.0
     },
     {
+     "model": "RX 9060 XT 16GB",
+     "dailyLow": 3496,
+     "historyLow": 2195,
+     "msrp": 2899,
+     "conf": 1.0
+    },
+    {
      "model": "RX 9060 XT 8GB",
      "dailyLow": 2699,
      "historyLow": 1749,
@@ -2564,7 +2662,7 @@
    "bvid": "BV1VVJB62E8W",
    "title": "10月份显卡价格继续暴涨｜显卡日报10月18日",
    "url": "https://www.bilibili.com/video/BV1VVJB62E8W/",
-   "frames": 17,
+   "frames": 23,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -2799,7 +2897,7 @@
    "bvid": "BV1FDJ96qEMA",
    "title": "英伟达：消费级显卡短缺超出控制范围｜显卡日报10月20日",
    "url": "https://www.bilibili.com/video/BV1FDJ96qEMA/",
-   "frames": 17,
+   "frames": 23,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -2834,6 +2932,13 @@
      "dailyLow": 6800,
      "historyLow": 3958,
      "msrp": 4599,
+     "conf": 1.0
+    },
+    {
+     "model": "RTX 5060 Ti 8GB",
+     "dailyLow": 3609,
+     "historyLow": 2528,
+     "msrp": 3199,
      "conf": 1.0
     },
     {
@@ -2879,6 +2984,13 @@
      "conf": 1.0
     },
     {
+     "model": "RX 9060 XT 16GB",
+     "dailyLow": 3698,
+     "historyLow": 2195,
+     "msrp": 2899,
+     "conf": 1.0
+    },
+    {
      "model": "RX 9060 XT 8GB",
      "dailyLow": 2699,
      "historyLow": 1749,
@@ -2906,7 +3018,7 @@
    "bvid": "BV1nUnN6qEZc",
    "title": "RTX6060或将在2029年发布｜显卡日报10月21日",
    "url": "https://www.bilibili.com/video/BV1nUnN6qEZc/",
-   "frames": 17,
+   "frames": 23,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -3027,7 +3139,7 @@
    "bvid": "BV151n664EJB",
    "title": "英伟达RTX Pro 5500订单暴涨：搭载5090同款核心｜显卡日报10月22日",
    "url": "https://www.bilibili.com/video/BV151n664EJB/",
-   "frames": 17,
+   "frames": 23,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -3111,6 +3223,13 @@
      "dailyLow": 3889,
      "historyLow": 2899,
      "msrp": 4199,
+     "conf": 1.0
+    },
+    {
+     "model": "RX 9060 XT 16GB",
+     "dailyLow": 3549,
+     "historyLow": 2195,
+     "msrp": 2899,
      "conf": 1.0
     },
     {
@@ -3262,7 +3381,7 @@
    "bvid": "BV1Tcn86mEnN",
    "title": "RTX50系中端显卡价格翻倍｜显卡日报10月24日",
    "url": "https://www.bilibili.com/video/BV1Tcn86mEnN/",
-   "frames": 17,
+   "frames": 23,
    "rows": [
     {
      "model": "RTX 5090 / D",
@@ -3383,7 +3502,7 @@
    "bvid": "BV19iHM6KEfg",
    "title": "黄仁勋：内存在2029年之前不会供应过剩｜显卡日报10月25日",
    "url": "https://www.bilibili.com/video/BV19iHM6KEfg/",
-   "frames": 17,
+   "frames": 23,
    "rows": [
     {
      "model": "RTX 5090 / D",
