@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-25T12:36:42+08:00",
+ "updatedAt": "2026-10-26T07:34:37+08:00",
  "keepDays": 30,
  "unit": "元",
  "source": {
@@ -3598,6 +3598,127 @@
     {
      "model": "RX 9060 XT 8GB",
      "dailyLow": 2770,
+     "historyLow": 1749,
+     "msrp": 2499,
+     "conf": 1.0
+    },
+    {
+     "model": "ARC B580",
+     "dailyLow": 2547,
+     "historyLow": 1505,
+     "msrp": 2049,
+     "conf": 1.0
+    },
+    {
+     "model": "ARC B570",
+     "dailyLow": 1998,
+     "historyLow": 1299,
+     "msrp": 1799,
+     "conf": 1.0
+    }
+   ]
+  },
+  {
+   "date": "2026-10-26",
+   "bvid": "BV1MVnS6gEBf",
+   "title": "二手显卡危：RTX显卡隐藏AI算力被破解｜显卡日报10月26日",
+   "url": "https://www.bilibili.com/video/BV1MVnS6gEBf/",
+   "frames": 23,
+   "rows": [
+    {
+     "model": "RTX 5090 / D",
+     "dailyLow": 49464,
+     "historyLow": 17995,
+     "msrp": 16499,
+     "conf": 1.0
+    },
+    {
+     "model": "RTX 5090 D V2",
+     "dailyLow": 32000,
+     "historyLow": 14498,
+     "msrp": 16499,
+     "conf": 1.0
+    },
+    {
+     "model": "RTX 5080",
+     "dailyLow": 19399,
+     "historyLow": 7700,
+     "msrp": 8299,
+     "conf": 1.0
+    },
+    {
+     "model": "RTX 5070 Ti",
+     "dailyLow": 12599,
+     "historyLow": 5733,
+     "msrp": 6299,
+     "conf": 1.0
+    },
+    {
+     "model": "RTX 5070",
+     "dailyLow": 8110,
+     "historyLow": 3958,
+     "msrp": 4599,
+     "conf": 1.0
+    },
+    {
+     "model": "RTX 5060 Ti 8GB",
+     "dailyLow": 4899,
+     "historyLow": 2528,
+     "msrp": 3199,
+     "conf": 1.0
+    },
+    {
+     "model": "RTX 5060 Ti 16GB",
+     "dailyLow": 6699,
+     "historyLow": 2878,
+     "msrp": 3599,
+     "conf": 1.0
+    },
+    {
+     "model": "RTX 5060",
+     "dailyLow": 3889,
+     "historyLow": 2099,
+     "msrp": 2499,
+     "conf": 1.0
+    },
+    {
+     "model": "RTX 5050",
+     "dailyLow": 2899,
+     "historyLow": 1603,
+     "msrp": 2099,
+     "conf": 1.0
+    },
+    {
+     "model": "RX 9070 XT",
+     "dailyLow": 6198,
+     "historyLow": 3848,
+     "msrp": 4999,
+     "conf": 1.0
+    },
+    {
+     "model": "RX 9070",
+     "dailyLow": 5199,
+     "historyLow": 3551,
+     "msrp": 4499,
+     "conf": 1.0
+    },
+    {
+     "model": "RX 9070 GRE",
+     "dailyLow": 4089,
+     "historyLow": 2899,
+     "msrp": 4199,
+     "conf": 1.0
+    },
+    {
+     "model": "RX 9060 XT 16GB",
+     "dailyLow": 3723,
+     "historyLow": 2195,
+     "msrp": 2899,
+     "conf": 1.0
+    },
+    {
+     "model": "RX 9060 XT 8GB",
+     "dailyLow": 2799,
      "historyLow": 1749,
      "msrp": 2499,
      "conf": 1.0
