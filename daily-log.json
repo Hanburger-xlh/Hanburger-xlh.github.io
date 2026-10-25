@@ -1,35 +1,35 @@
 {
-  "updatedAt": "2026-10-25T01:00:25.490Z",
+  "updatedAt": "2026-10-25T03:53:21.619Z",
   "keepDays": 30,
   "logs": [
     {
       "date": "2026-10-25",
-      "success": 0,
-      "fail": 4,
+      "success": 4,
+      "fail": 0,
       "accounts": [
         {
           "uid": "109***660",
-          "ok": false,
+          "ok": true,
           "start": "2026-10-24T23:01:54.000Z",
-          "durSec": 900
+          "durSec": 160
         },
         {
           "uid": "109***350",
-          "ok": false,
+          "ok": true,
           "start": "2026-10-24T23:17:06.000Z",
-          "durSec": 901
+          "durSec": 595
         },
         {
           "uid": "122***671",
-          "ok": false,
+          "ok": true,
           "start": "2026-10-24T23:32:17.000Z",
-          "durSec": 900
+          "durSec": 540
         },
         {
           "uid": "144***532",
-          "ok": false,
+          "ok": true,
           "start": "2026-10-24T23:47:27.000Z",
-          "durSec": 711
+          "durSec": 518
         }
       ]
     },
