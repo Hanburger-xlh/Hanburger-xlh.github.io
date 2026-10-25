@@ -1,8 +1,30 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-10-23T23:31:03.038Z",
+  "updatedAt": "2026-10-25T01:00:20.835Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1262694692552704057",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨PGL Masters Bucharest 2026\n\n✨MAP  NUKE/ANCIENT｜ BO3\n\n✨杭州西湖 TYLOO 0:2 FUT\n",
+      "cover": "bili-img/cover/5e616846b3aaba04.webp",
+      "url": "https://t.bilibili.com/1262694692552704057",
+      "ts": "1792832418"
+    },
+    {
+      "id": "1262612697351979010",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "正在记禄📝｜媒体日拍摄 【20261023】 \n\nPGL定妆照拍摄现场，期待今天的比赛[2025布达佩斯Major TYLOO收藏集_必胜！]\n",
+      "cover": "bili-img/cover/7a7027ee5bbfae60.webp",
+      "url": "https://t.bilibili.com/1262612697351979010",
+      "ts": "1792813327"
+    },
     {
       "id": "1262364413891969060",
       "uid": "373076765",
@@ -72,6 +94,17 @@
       "ts": "1792724430"
     },
     {
+      "id": "1261986113165197321",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "​关于账号信息安全的说明",
+      "cover": "bili-img/cover/b0d601d3a8689195.webp",
+      "url": "https://t.bilibili.com/1261986113165197321",
+      "ts": "1792667439"
+    },
+    {
       "id": "1261875221412970537",
       "uid": "1340190821",
       "author": "崩坏星穹铁道",
@@ -105,6 +138,17 @@
       "cover": "",
       "url": "https://t.bilibili.com/1261859690776625153",
       "ts": "1792638004"
+    },
+    {
+      "id": "1261612906236084224",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "​服务器停机维护预告",
+      "cover": "bili-img/cover/d242fc907ecd42e0.webp",
+      "url": "https://t.bilibili.com/1261612906236084224",
+      "ts": "1792580545"
     },
     {
       "id": "1261511783417380880",
@@ -818,17 +862,6 @@
       "ts": "1790913623"
     },
     {
-      "id": "1254210023320453128",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "2026无畏契约上海全球冠军赛 小组赛 | 今日赛果\n\nTYL 1:2 TL\n\n鏖战落幕，TYLOO遗憾止步2026无畏契约上海全球冠军赛小组赛。喧嚣归于平静，这场失利，为我们本年度VCT赛事的征程画上句号。\n\n回望本赛季，团队以全新的人员架构开启2026无畏巡回的征程。人员更迭带来了磨合的阵痛，也让我们在赛场淬炼出诸多亮眼瞬间。我们始终向着更高峰全力冲刺——从六强、三强，一步步走向联赛总决赛、走向国际赛事的舞台，并最终收获了梦寐以求的花火奖杯。\n\n冠军赛的征程犹如一场梦。在上海，我们经历了很多的第一次：第一次国际赛事的击败，第一次国际赛事分数的获取，再到第一次斩获地图胜利，每一个第一次都是TYLOO队史的突破。虽然结局留有遗憾，但我们会以此为动力，在来年为了能够再次回到这个舞台而奋斗。\n\n2026无畏巡回的旅途，也是天禄所有人共同珍藏的专属记忆，无论是多座城市巡回的线下赛场历练，亦或是与全国各地的观众朋友们近距离互动，都让队伍收获了独一无二的赛场阅历与成长。衷心感谢每一位始终坚守、信任并支持TYLOO的观众，我们深知大家心中的失落与期许，团队也会在未来继续努力，全盘消化本季得失，全方位打磨自身实力。\n\n暂别过往，蓄力新生。我们终将以更坚韧的姿态与更强劲的实力，归来再战！\n",
-      "cover": "bili-img/cover/c909fdcfd103bf3d.webp",
-      "url": "https://t.bilibili.com/1254210023320453128",
-      "ts": "1790856927"
-    },
-    {
       "id": "1254175238406537344",
       "uid": "2127596945",
       "author": "KARDS官方",
@@ -840,19 +873,6 @@
       "ts": "1790848828",
       "bvid": "BV1hEaz6LE4X",
       "durSec": 265
-    },
-    {
-      "id": "1254084928126058549",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·视频",
-      "text": "禄戏厅🕹| 你 画 我 猜 🔍【CS2】",
-      "cover": "bili-img/cover/4adcd0ee785415e4.webp",
-      "url": "https://t.bilibili.com/1254084928126058549",
-      "ts": "1790827801",
-      "bvid": "BV1irad6eEbW",
-      "durSec": 1177
     },
     {
       "id": "1254082348965691396",
@@ -978,28 +998,6 @@
       "cover": "bili-img/cover/25d80384116416ca.webp",
       "url": "https://t.bilibili.com/1251933147362230278",
       "ts": "1790326800"
-    },
-    {
-      "id": "1251074821748424729",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态",
-      "text": "本周末，击剑杯再临，指挥官们，来报名！",
-      "cover": "",
-      "url": "https://t.bilibili.com/1251074821748424729",
-      "ts": "1790126956"
-    },
-    {
-      "id": "1250479730410389511",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "版本更新 - 2026 年 9 月",
-      "cover": "bili-img/cover/ecac003d9fa3954d.webp",
-      "url": "https://t.bilibili.com/1250479730410389511",
-      "ts": "1789988400"
     },
     {
       "id": "1248964465923194885",
