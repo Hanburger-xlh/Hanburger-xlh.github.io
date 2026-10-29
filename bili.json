@@ -1,8 +1,41 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-10-28T23:34:04.778Z",
+  "updatedAt": "2026-10-29T23:35:36.212Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1264596428945096740",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "​🏆 2026 世锦赛冠军 由你预言！",
+      "cover": "bili-img/cover/928ce613b1b7414e.webp",
+      "url": "https://t.bilibili.com/1264596428945096740",
+      "ts": "1793275200"
+    },
+    {
+      "id": "1264591702316810247",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "预约有奖：2026 KARDS世界锦标赛",
+      "cover": "bili-img/cover/9c37cf6aeec1ad4b.webp",
+      "url": "https://t.bilibili.com/1264591702316810247",
+      "ts": "1793274100"
+    },
+    {
+      "id": "1264580967055491078",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "​万圣狂欢来袭 惊变降临战场",
+      "cover": "bili-img/cover/050d3e7cb5d2a902.webp",
+      "url": "https://t.bilibili.com/1264580967055491078",
+      "ts": "1793271600"
+    },
     {
       "id": "1264101749633843254",
       "uid": "1340190821",
@@ -936,28 +969,6 @@
       "ts": "1790766000"
     },
     {
-      "id": "1253790830214250530",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态",
-      "text": "全新社区赛事「征召杯」假期开赛，考验竞技场实力。战略大师们，来报名吧！",
-      "cover": "",
-      "url": "https://t.bilibili.com/1253790830214250530",
-      "ts": "1790759326"
-    },
-    {
-      "id": "1253711263798657065",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "​特别通告：官方周边第二轮，正式开售！",
-      "cover": "bili-img/cover/6f494bf535047666.webp",
-      "url": "https://t.bilibili.com/1253711263798657065",
-      "ts": "1790740800"
-    },
-    {
       "id": "1252350671874687129",
       "uid": "414149787",
       "author": "Phigros官方",
@@ -980,17 +991,6 @@
       "cover": "",
       "url": "https://t.bilibili.com/1252041380545429560",
       "ts": "1790352000"
-    },
-    {
-      "id": "1251988515915300904",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "​本周乱斗更新 —— 精英助力",
-      "cover": "bili-img/cover/7d345d33cba6f1d2.webp",
-      "url": "https://t.bilibili.com/1251988515915300904",
-      "ts": "1790339692"
     },
     {
       "id": "1251933147362230278",
