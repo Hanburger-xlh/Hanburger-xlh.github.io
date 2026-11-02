@@ -1,8 +1,65 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-11-01T23:33:17.296Z",
+  "updatedAt": "2026-11-02T23:37:54.990Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1266136236944261128",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴IEM Beijing 2026\n\n🔴2026 年 11月 3 日 12:30 BO3\n\n🔴杭州西湖 TYLOO vs 9z\n",
+      "cover": "bili-img/cover/b9e244b367254bd8.webp",
+      "url": "https://t.bilibili.com/1266136236944261128",
+      "ts": "1793633715"
+    },
+    {
+      "id": "1266081098192912408",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨IEM Beijing 2026\n\n✨MAP  NUKE/INFERNO｜ BO3\n\n✨杭州西湖 TYLOO 0:2 MOUZ\n",
+      "cover": "bili-img/cover/4668635bf009dc26.webp",
+      "url": "https://t.bilibili.com/1266081098192912408",
+      "ts": "1793620877"
+    },
+    {
+      "id": "1266054508071354404",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "IEM北京首战，TYLOO加油💪",
+      "cover": "bili-img/cover/2170989432b6b62d.webp",
+      "url": "https://t.bilibili.com/1266054508071354404",
+      "ts": "1793614686",
+      "bvid": "BV1DV4w6xETz",
+      "durSec": 22
+    },
+    {
+      "id": "1266039140661592071",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "正在记禄📝｜赛前调试 【20261102】 \n\n比赛时间稍稍延迟，选手们已在台上进行调试准备啦，还请大家多多为我们加油！ [2025布达佩斯Major TYLOO收藏集_必胜！]\n",
+      "cover": "bili-img/cover/c25ad9c71bec974b.webp",
+      "url": "https://t.bilibili.com/1266039140661592071",
+      "ts": "1793611108"
+    },
+    {
+      "id": "1266005279117410308",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "bili-img/avatar/0f01306058505549.webp",
+      "kind": "动态",
+      "text": "恭喜@好运属于我1634@初始10@猫娘大人等10位同学中奖，已私信通知，详情请点击抽奖查看。",
+      "cover": "",
+      "url": "https://t.bilibili.com/1266005279117410308",
+      "ts": "1793603224"
+    },
     {
       "id": "1265666852862820353",
       "uid": "373076765",
@@ -48,6 +105,17 @@
       "ts": "1793505600"
     },
     {
+      "id": "1265585989396463617",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "bili-img/avatar/0f01306058505549.webp",
+      "kind": "动态·图文",
+      "text": "#崩坏星穹铁道# #此刻将群星付之一笑# 「货币战争•入画奇航」全新赛季来袭！\n\n4.7版本更新后，公司和绒绒号漫画的版权所有人达成了合作，将推出全新赛季「货币战争•入画奇航」！快来体验不一样的游玩策略吧！\n",
+      "cover": "bili-img/cover/8532c9f8a60eab78.webp",
+      "url": "https://t.bilibili.com/1265585989396463617",
+      "ts": "1793505600"
+    },
+    {
       "id": "1265585989380734984",
       "uid": "1636034895",
       "author": "绝区零",
@@ -57,6 +125,41 @@
       "cover": "bili-img/cover/3657cf34e6217889.webp",
       "url": "https://t.bilibili.com/1265585989380734984",
       "ts": "1793505600"
+    },
+    {
+      "id": "1265572492473270274",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "​2026年 11月战场通票现已部署！",
+      "cover": "bili-img/cover/2c5dd6a61dd829b0.webp",
+      "url": "https://t.bilibili.com/1265572492473270274",
+      "ts": "1793502458"
+    },
+    {
+      "id": "1265570533913657412",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·视频",
+      "text": "保持联络，一往无前！| 11月全新战场通票物品【KARDS】",
+      "cover": "bili-img/cover/c9906a0df641df24.webp",
+      "url": "https://t.bilibili.com/1265570533913657412",
+      "ts": "1793502002",
+      "bvid": "BV1CDxk6bEWG",
+      "durSec": 57
+    },
+    {
+      "id": "1265389084464906263",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "​2026冬季版本新机制&新卡 超前预览",
+      "cover": "bili-img/cover/3e28917174c8200c.webp",
+      "url": "https://t.bilibili.com/1265389084464906263",
+      "ts": "1793459755"
     },
     {
       "id": "1265230366117986311",
@@ -79,6 +182,17 @@
       "cover": "",
       "url": "https://t.bilibili.com/1265227718219268104",
       "ts": "1793422184"
+    },
+    {
+      "id": "1265224892160147480",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "决赛日 | 六强对决，冠军诞生",
+      "cover": "bili-img/cover/66033370de6750ee.webp",
+      "url": "https://t.bilibili.com/1265224892160147480",
+      "ts": "1793421526"
     },
     {
       "id": "1265222635144347673",
@@ -250,6 +364,17 @@
       "cover": "",
       "url": "https://t.bilibili.com/1264952144575856712",
       "ts": "1793358022"
+    },
+    {
+      "id": "1264952052182679571",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "​本周乱斗锦标赛 —— 强力支援x10",
+      "cover": "bili-img/cover/c3df678232853557.webp",
+      "url": "https://t.bilibili.com/1264952052182679571",
+      "ts": "1793358000"
     },
     {
       "id": "1264938233182027792",
@@ -596,19 +721,6 @@
       "ts": "1792987212"
     },
     {
-      "id": "1263359497681764483",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "bili-img/avatar/0f01306058505549.webp",
-      "kind": "动态·视频",
-      "text": "「乐子神智取米哈游」第六话 | 撤离\n#崩坏星穹铁道#​ #乐子神智取米哈游#​ #星穹铁道星神阿哈#​ \n\n「接下来只要辞职撤退美美抽身，贪饕就输定了！」\n\n欲知后事如何，敬请关注4.7版本前瞻直播。\n\n————————\n▉ 阿哈的赠礼\n\n欢愉嗅觉敏锐的乐子神识别到了独特的风尚——\n\n跨越次元的伴手礼，希望你喜欢！\n\n● 4.7版本登录游戏即可领取开拓穿搭服装「黄紫风尚」。",
-      "cover": "bili-img/cover/5d5716bea2ede1d0.webp",
-      "url": "https://t.bilibili.com/1263359497681764483",
-      "ts": "1792987205",
-      "bvid": "BV1Wxnh6EE1Q",
-      "durSec": 56
-    },
-    {
       "id": "1263347901277405209",
       "uid": "1636034895",
       "author": "绝区零",
@@ -631,17 +743,6 @@
       "ts": "1792983611"
     },
     {
-      "id": "1262988393156968465",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "bili-img/avatar/0f01306058505549.webp",
-      "kind": "动态·图文",
-      "text": "#崩坏星穹铁道# #月升之前与兽共舞# 诚邀您参加「货币战争」年度颁奖典礼 | 趣味数据回顾\n\n「货币战争」第一赛季「零和博弈」即将收官，翡翠女士特邀开拓者出席年度颁奖典礼。现在，请各位入席，晚会即将开始——\n",
-      "cover": "bili-img/cover/089c91a94910cee2.webp",
-      "url": "https://t.bilibili.com/1262988393156968465",
-      "ts": "1792900800"
-    },
-    {
       "id": "1262988393178988551",
       "uid": "1636034895",
       "author": "绝区零",
@@ -651,17 +752,6 @@
       "cover": "bili-img/cover/5c91367c91af796f.webp",
       "url": "https://t.bilibili.com/1262988393178988551",
       "ts": "1792900800"
-    },
-    {
-      "id": "1262694692552704057",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨PGL Masters Bucharest 2026\n\n✨MAP  NUKE/ANCIENT｜ BO3\n\n✨杭州西湖 TYLOO 0:2 FUT\n",
-      "cover": "bili-img/cover/5e616846b3aaba04.webp",
-      "url": "https://t.bilibili.com/1262694692552704057",
-      "ts": "1792832418"
     },
     {
       "id": "1262625045369323542",
@@ -708,41 +798,6 @@
       "cover": "bili-img/cover/32215794f5a68df0.webp",
       "url": "https://t.bilibili.com/1262617327299461124",
       "ts": "1792814405"
-    },
-    {
-      "id": "1262612697351979010",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "正在记禄📝｜媒体日拍摄 【20261023】 \n\nPGL定妆照拍摄现场，期待今天的比赛[2025布达佩斯Major TYLOO收藏集_必胜！]\n",
-      "cover": "bili-img/cover/7a7027ee5bbfae60.webp",
-      "url": "https://t.bilibili.com/1262612697351979010",
-      "ts": "1792813327"
-    },
-    {
-      "id": "1262364413891969060",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·视频",
-      "text": "【卓威硬核玩家日】11月8日，深圳坂田文体中心见",
-      "cover": "bili-img/cover/15534d83ac70ee6a.webp",
-      "url": "https://t.bilibili.com/1262364413891969060",
-      "ts": "1792755519",
-      "bvid": "BV1S7nh69EjK",
-      "durSec": 80
-    },
-    {
-      "id": "1262283331348725781",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴PGL Masters Bucharest 2026\n\n🔴2026 年 10月 24 日 15:00 BO3\n\n🔴杭州西湖 TYLOO vs FUT\n",
-      "cover": "bili-img/cover/9eeffc5225e6735c.webp",
-      "url": "https://t.bilibili.com/1262283331348725781",
-      "ts": "1792736640"
     },
     {
       "id": "1261986113165197321",
@@ -919,65 +974,6 @@
       "cover": "",
       "url": "https://t.bilibili.com/1254498082514534402",
       "ts": "1790923996"
-    },
-    {
-      "id": "1254175238406537344",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·视频",
-      "text": "根本没有这样的冰岛人... | 黄金周假期快乐！【KARDS】",
-      "cover": "bili-img/cover/7e2d6b34511d1358.webp",
-      "url": "https://t.bilibili.com/1254175238406537344",
-      "ts": "1790848828",
-      "bvid": "BV1hEaz6LE4X",
-      "durSec": 265
-    },
-    {
-      "id": "1254082348965691396",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "【猜谜】火山环带 卡牌使用率之最",
-      "cover": "bili-img/cover/05a422ef4973b9d6.webp",
-      "url": "https://t.bilibili.com/1254082348965691396",
-      "ts": "1790827200"
-    },
-    {
-      "id": "1254071364596269060",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "​2026年 10月战场通票现已部署！",
-      "cover": "bili-img/cover/20ff1542b3a9a008.webp",
-      "url": "https://t.bilibili.com/1254071364596269060",
-      "ts": "1790824643"
-    },
-    {
-      "id": "1254069595095957527",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·视频",
-      "text": "扇上牡丹三两朵，一簇火光映牌桌 | 10月全新桌饰【KARDS】",
-      "cover": "bili-img/cover/ff1d934a575c7b8a.webp",
-      "url": "https://t.bilibili.com/1254069595095957527",
-      "ts": "1790824231",
-      "bvid": "BV1xLYN6VEWw",
-      "durSec": 59
-    },
-    {
-      "id": "1253819496954593286",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "​黄金周庆典 现已开启！",
-      "cover": "bili-img/cover/f157bddf4c55c786.webp",
-      "url": "https://t.bilibili.com/1253819496954593286",
-      "ts": "1790766000"
     },
     {
       "id": "1252350671874687129",
