@@ -1,8 +1,41 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-11-03T23:36:05.810Z",
+  "updatedAt": "2026-11-04T23:34:20.746Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1266706995160809489",
+      "uid": "1636034895",
+      "author": "绝区零",
+      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
+      "kind": "动态·图文",
+      "text": "互动抽奖 #绝区零# #重返天空的旅程# #绝区零赛维里安#\n代理人未归档影像丨赛维里安篇\n \n「必要的时候，一点破坏无伤大雅。」\n   \n—— 欢迎来到罗斯凯利法！——\n▼ 关注@绝区零 并转发本条动态，我们将随机抽取10位绳匠送出「立绘系列马口铁徽章 随机款*1」。 \n本次活动将于11月11日上午11:00开奖，请关注官方动态消息。\n \n▼《绝区零》3.3版本「重返天空的旅程」现已上线！\n限定S级代理人「菲欧妮」&「维琳娜」现已加入调频&复刻。\n版本期间，参与活动可免费领取妄想天使时装！\nbilibili安卓端下载地址：https://www.biligame.com/detail/?id=108434\nbilibiliPC端下载地址：https://www.biligame.com/detail/?id=111210\n",
+      "cover": "bili-img/cover/226ae67d09871aa7.webp",
+      "url": "https://t.bilibili.com/1266706995160809489",
+      "ts": "1793766605"
+    },
+    {
+      "id": "1266695991449354240",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨IEM Beijing 2026\n\n✨MAP  MIRAGE/ANUBIS｜ BO3\n\n✨杭州西湖 TYLOO 0:2 Liquid\n",
+      "cover": "bili-img/cover/625759548bb52b11.webp",
+      "url": "https://t.bilibili.com/1266695991449354240",
+      "ts": "1793764043"
+    },
+    {
+      "id": "1266665548769394704",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "正在记禄📝｜赛前准备 【20261104】 \n\n选手们已经准备就绪，比赛加油！\n",
+      "cover": "bili-img/cover/e01a949c1dfe3619.webp",
+      "url": "https://t.bilibili.com/1266665548769394704",
+      "ts": "1793756955"
+    },
     {
       "id": "1266512089556451347",
       "uid": "373076765",
@@ -585,28 +618,6 @@
       "ts": "1793307384"
     },
     {
-      "id": "1264733925880627206",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨HyperX Retake Season 13\n\n✨MAP  INFERNO/NUKE/ANCIENT｜ BO3\n\n✨杭州西湖 TYLOO 1:2 Iberian Soul\n",
-      "cover": "bili-img/cover/46e151752e927a5b.webp",
-      "url": "https://t.bilibili.com/1264733925880627206",
-      "ts": "1793307214"
-    },
-    {
-      "id": "1264695653433344001",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴HyperX Retake Season 13\n\n🔴2026 年 10月 30 日 01:10 BO3\n\n🔴杭州西湖 TYLOO vs Iberian Soul\n",
-      "cover": "bili-img/cover/8871dd6c6ab5387a.webp",
-      "url": "https://t.bilibili.com/1264695653433344001",
-      "ts": "1793298303"
-    },
-    {
       "id": "1264596428945096740",
       "uid": "2127596945",
       "author": "KARDS官方",
@@ -809,17 +820,6 @@
       "cover": "",
       "url": "https://t.bilibili.com/1263344061569302536",
       "ts": "1792983611"
-    },
-    {
-      "id": "1262988393178988551",
-      "uid": "1636034895",
-      "author": "绝区零",
-      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
-      "kind": "动态·图文",
-      "text": "#绝区零# #重返天空的旅程# \n强敌侦察档案丨以太异体·特里薇亚\n \n*本篇内容包含部分剧透，建议绳匠优先完成主线第三季第四章剧情以获得最佳阅览体验~\n以追逐太阳为名，自身却早已被阴影吞噬，当双翼牵坠了太多的罪孽与痴妄，唯一抵达的地方不会是天空，只会是无望的狱火。\n \n—— 欢迎来到罗斯凯利法！——\n▼《绝区零》3.3版本「重返天空的旅程」现已上线！\n限定S级代理人「菲欧妮」&「维琳娜」现已加入调频&复刻。\n版本期间，参与活动可免费领取妄想天使时装！\nbilibili安卓端下载地址：https://www.biligame.com/detail/?id=108434\nbilibiliPC端下载地址：https://www.biligame.com/detail/?id=111210\n",
-      "cover": "bili-img/cover/5c91367c91af796f.webp",
-      "url": "https://t.bilibili.com/1262988393178988551",
-      "ts": "1792900800"
     },
     {
       "id": "1261986113165197321",
