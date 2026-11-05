@@ -1,8 +1,30 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-11-04T23:34:20.746Z",
+  "updatedAt": "2026-11-05T23:35:48.252Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1267101253842763776",
+      "uid": "1636034895",
+      "author": "绝区零",
+      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
+      "kind": "动态·图文",
+      "text": "#绝区零# #重返天空的旅程# \n《绝区零》对iPhone Duo机型的适配说明\n \n亲爱的绳匠：\n《绝区零》现已支持对iPhone Duo机型的适配，有需要的绳匠请前往App Store搜索《绝区零》，手动选择更新至3.3.1版本后即可体验相关适配功能。\n若您已开启App自动更新，且游戏版本已更新至 3.3.1，则无需再次手动更新，可直接体验相关适配功能。\n※《云·绝区零》将在后续版本更新iPhone Duo的适配，请绳匠关注后续官方公告。\n   \n—— 欢迎来到罗斯凯利法！——\n▼《绝区零》3.3版本「重返天空的旅程」现已上线！\n限定S级代理人「菲欧妮」&「维琳娜」现已加入调频&复刻。\n版本期间，参与活动可免费领取妄想天使时装！\nbilibili安卓端下载地址：https://www.biligame.com/detail/?id=108434\nbilibiliPC端下载地址：https://www.biligame.com/detail/?id=111210\n",
+      "cover": "bili-img/cover/903c1a19b6866e22.webp",
+      "url": "https://t.bilibili.com/1267101253842763776",
+      "ts": "1793858400"
+    },
+    {
+      "id": "1267070330092912646",
+      "uid": "1636034895",
+      "author": "绝区零",
+      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
+      "kind": "动态·图文",
+      "text": "#绝区零# #重返天空的旅程# #绝区零赛维里安#\n代理人机制介绍丨赛维里安篇\n  \n更新即将完成…\n资料库中已收录代理人【赛维里安】的战斗相关信息，重点内容解析完毕，请查收。\n \n「我会成为，最后的屏障。」\n   \n—— 欢迎来到罗斯凯利法！——\n▼《绝区零》3.3版本「重返天空的旅程」现已上线！\n限定S级代理人「菲欧妮」&「维琳娜」现已加入调频&复刻。\n版本期间，参与活动可免费领取妄想天使时装！\nbilibili安卓端下载地址：https://www.biligame.com/detail/?id=108434\nbilibiliPC端下载地址：https://www.biligame.com/detail/?id=111210\n",
+      "cover": "bili-img/cover/9332cb0b8b6ecf58.webp",
+      "url": "https://t.bilibili.com/1267070330092912646",
+      "ts": "1793851200"
+    },
     {
       "id": "1266706995160809489",
       "uid": "1636034895",
@@ -798,28 +820,6 @@
       "cover": "bili-img/cover/8910cfe078139c87.webp",
       "url": "https://t.bilibili.com/1263359527711932450",
       "ts": "1792987212"
-    },
-    {
-      "id": "1263347901277405209",
-      "uid": "1636034895",
-      "author": "绝区零",
-      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
-      "kind": "动态",
-      "text": "恭喜@林科琴@应星秋@叶刃艾路雷朵等10位同学中奖，已私信通知，详情请点击抽奖查看。",
-      "cover": "",
-      "url": "https://t.bilibili.com/1263347901277405209",
-      "ts": "1792984505"
-    },
-    {
-      "id": "1263344061569302536",
-      "uid": "1636034895",
-      "author": "绝区零",
-      "avatar": "bili-img/avatar/97329efbfc6004aa.webp",
-      "kind": "动态",
-      "text": "恭喜@木暮夏@bilibililong4@小殿xiaodian等10位同学中奖，已私信通知，详情请点击抽奖查看。",
-      "cover": "",
-      "url": "https://t.bilibili.com/1263344061569302536",
-      "ts": "1792983611"
     },
     {
       "id": "1261986113165197321",
