@@ -1,8 +1,52 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-11-13T23:34:19.240Z",
+  "updatedAt": "2026-11-14T23:36:18.730Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1270157294855782419",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "​USS 沙利文兄弟号",
+      "cover": "bili-img/cover/b13c00e671b99962.webp",
+      "url": "https://t.bilibili.com/1270157294855782419",
+      "ts": "1794569940"
+    },
+    {
+      "id": "1270132652529156099",
+      "uid": "414149787",
+      "author": "Phigros官方",
+      "avatar": "bili-img/avatar/0db4169f82399a5c.webp",
+      "kind": "动态",
+      "text": "律动轨迹的首个 Disc Δ 系列 “篇章 - 边际线” 即将到来！\n鸠鸠下周必须抓弭儿一起来体验！[Phigros第二弹_行][Phigros第二弹_萌][Phigros第二弹_崇拜]\n\n[Phigros动态表情包_惊]",
+      "cover": "",
+      "url": "https://t.bilibili.com/1270132652529156099",
+      "ts": "1794564203"
+    },
+    {
+      "id": "1270124051846660101",
+      "uid": "414149787",
+      "author": "Phigros官方",
+      "avatar": "bili-img/avatar/0db4169f82399a5c.webp",
+      "kind": "动态·图文",
+      "text": "Phigros将于2026年11月20日更新！\n本次更新将为「Rotaeno」精选集的一首曲目追加AT难度谱面。\n\n追加AT的曲目是：\n「Inverted World」 by: ARForest\n\n#Phigros# #Pigeon Games# #鸽游#\n",
+      "cover": "bili-img/cover/9a48a5afc701f53f.webp",
+      "url": "https://t.bilibili.com/1270124051846660101",
+      "ts": "1794562200"
+    },
+    {
+      "id": "1270116320887701529",
+      "uid": "414149787",
+      "author": "Phigros官方",
+      "avatar": "bili-img/avatar/0db4169f82399a5c.webp",
+      "kind": "动态·图文",
+      "text": "Phigros将于2026年11月20日更新！\n本次更新将追加一首来自音乐游戏「TAKUMI³」的联动曲目，与一首来自音乐游戏「vivid/stasis」的联动曲目。\n\n更新的曲目是：\n「OMG」 by: Dopam!ne vs zEnsEn\n「STARGAZERS」 by: proxime()\n\n另外，本次更新将设立「vivid/stasis」精选集，下列曲目将被移动至精选集内：\n「Fixations Toward the Stars」 by: Foodbot\n「valor/starcross」 by: Lundy vs. Wyvren\n\n#Phigros# #Pigeon Games# #鸽游#\n",
+      "cover": "bili-img/cover/16934fb7fc3c0493.webp",
+      "url": "https://t.bilibili.com/1270116320887701529",
+      "ts": "1794560400"
+    },
     {
       "id": "1270087246135951379",
       "uid": "1340190821",
@@ -127,6 +171,28 @@
       "ts": "1794448955"
     },
     {
+      "id": "1269423381571174408",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态",
+      "text": "！？绝密？！",
+      "cover": "",
+      "url": "https://t.bilibili.com/1269423381571174408",
+      "ts": "1794399063"
+    },
+    {
+      "id": "1269415124547928064",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "​双十一礼包现已上架！",
+      "cover": "bili-img/cover/8909676e249e9948.webp",
+      "url": "https://t.bilibili.com/1269415124547928064",
+      "ts": "1794397140"
+    },
+    {
       "id": "1269390091331043337",
       "uid": "1340190821",
       "author": "崩坏星穹铁道",
@@ -136,6 +202,17 @@
       "cover": "",
       "url": "https://t.bilibili.com/1269390091331043337",
       "ts": "1794391312"
+    },
+    {
+      "id": "1269381881466454022",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "本周创作宴席已部署",
+      "cover": "bili-img/cover/317cf707b5dc573b.webp",
+      "url": "https://t.bilibili.com/1269381881466454022",
+      "ts": "1794389400"
     },
     {
       "id": "1269296911989342261",
@@ -912,50 +989,6 @@
       "ts": "1792580545"
     },
     {
-      "id": "1259772321664598019",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "​本周乱斗锦标赛更新：指令为王",
-      "cover": "bili-img/cover/19483fa2b921fbeb.webp",
-      "url": "https://t.bilibili.com/1259772321664598019",
-      "ts": "1792152000"
-    },
-    {
-      "id": "1259757171145441285",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "KARDS 2026年 世界锦标赛 10月30-31日开战！",
-      "cover": "bili-img/cover/831dfbba3dab268d.webp",
-      "url": "https://t.bilibili.com/1259757171145441285",
-      "ts": "1792148473"
-    },
-    {
-      "id": "1259396076079677440",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "​版本更新 —— 2026 年 10 月",
-      "cover": "bili-img/cover/5b15bd7baa42e2c3.webp",
-      "url": "https://t.bilibili.com/1259396076079677440",
-      "ts": "1792064399"
-    },
-    {
-      "id": "1259014725952339990",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "KARDS 2026年10月平衡性调整",
-      "cover": "bili-img/cover/6eebf11104388806.webp",
-      "url": "https://t.bilibili.com/1259014725952339990",
-      "ts": "1791975609"
-    },
-    {
       "id": "1255273324097830932",
       "uid": "414149787",
       "author": "Phigros官方",
@@ -1105,39 +1138,6 @@
       "ts": "1788626278",
       "bvid": "BV1fLbL6EEPM",
       "durSec": 15113
-    },
-    {
-      "id": "1244575868369502212",
-      "uid": "414149787",
-      "author": "Phigros官方",
-      "avatar": "bili-img/avatar/e28cbaefe234b980.webp",
-      "kind": "动态·图文",
-      "text": "Phigros已于2026年09月05日更新！\n本次更新将为「Liminality」精选集的一首曲目追加AT难度谱面。\n\n追加AT的曲目是：\n「Archidoxen」 by: Se_IRA\n\n#Phigros# #Pigeon Games# #鸽游#\n",
-      "cover": "bili-img/cover/50cb61922e7a4a56.webp",
-      "url": "https://t.bilibili.com/1244575868369502212",
-      "ts": "1788613800"
-    },
-    {
-      "id": "1244574579871973377",
-      "uid": "414149787",
-      "author": "Phigros官方",
-      "avatar": "bili-img/avatar/e28cbaefe234b980.webp",
-      "kind": "动态·图文",
-      "text": "Phigros已于2026年09月05日更新！\n本次更新将带来与音乐游戏「Liminality」联动的一首追加曲目。\n\n更新的曲目是：\n「Devastating History」 by: NAMV\n\n#Phigros# #Pigeon Games# #鸽游#\n",
-      "cover": "bili-img/cover/f747721a689fb998.webp",
-      "url": "https://t.bilibili.com/1244574579871973377",
-      "ts": "1788613500"
-    },
-    {
-      "id": "1244573291401707528",
-      "uid": "414149787",
-      "author": "Phigros官方",
-      "avatar": "bili-img/avatar/e28cbaefe234b980.webp",
-      "kind": "动态·图文",
-      "text": "Phigros已于2026年09月05日更新！\n本次更新将带来与音乐游戏「Paradigm: Reboot」联动的一首追加曲目。\n\n更新的曲目是：\n「[NWAD]」 by: Knighthood\n\n#Phigros# #Pigeon Games# #鸽游#\n",
-      "cover": "bili-img/cover/ef8f7ac9caa48863.webp",
-      "url": "https://t.bilibili.com/1244573291401707528",
-      "ts": "1788613200"
     }
   ]
 }
