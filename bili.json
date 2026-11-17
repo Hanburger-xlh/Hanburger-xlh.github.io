@@ -1,8 +1,19 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-11-16T23:33:38.676Z",
+  "updatedAt": "2026-11-17T23:32:55.993Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1271641635586834436",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "​本周创作宴席已部署",
+      "cover": "bili-img/cover/52f373f28f16f9e5.webp",
+      "url": "https://t.bilibili.com/1271641635586834436",
+      "ts": "1794915540"
+    },
     {
       "id": "1271200505944604674",
       "uid": "1340190821",
@@ -974,17 +985,6 @@
       "cover": "bili-img/cover/b0d601d3a8689195.webp",
       "url": "https://t.bilibili.com/1261986113165197321",
       "ts": "1792667439"
-    },
-    {
-      "id": "1261612906236084224",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "​服务器停机维护预告",
-      "cover": "bili-img/cover/d242fc907ecd42e0.webp",
-      "url": "https://t.bilibili.com/1261612906236084224",
-      "ts": "1792580545"
     },
     {
       "id": "1255273324097830932",
