@@ -1,8 +1,43 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-11-17T23:32:55.993Z",
+  "updatedAt": "2026-11-18T23:36:21.672Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1271948410036944901",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "【赛事语禄集】IEM北京 2026 赛事语音",
+      "cover": "bili-img/cover/f9a02003423f750b.webp",
+      "url": "https://t.bilibili.com/1271948410036944901",
+      "ts": "1794986967",
+      "bvid": "BV18zsm6EE2G",
+      "durSec": 439
+    },
+    {
+      "id": "1271942641933615124",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "bili-img/avatar/0f01306058505549.webp",
+      "kind": "动态",
+      "text": "恭喜@星语颩@乔叶萤@ZXYMQYWY等10位同学中奖，已私信通知，详情请点击抽奖查看。",
+      "cover": "",
+      "url": "https://t.bilibili.com/1271942641933615124",
+      "ts": "1794985624"
+    },
+    {
+      "id": "1271942637606141953",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "bili-img/avatar/0f01306058505549.webp",
+      "kind": "动态",
+      "text": "恭喜@゙希望有羽毛和翅膀@-我也要中奖@高木罗等10位同学中奖，已私信通知，详情请点击抽奖查看。",
+      "cover": "",
+      "url": "https://t.bilibili.com/1271942637606141953",
+      "ts": "1794985623"
+    },
     {
       "id": "1271641635586834436",
       "uid": "2127596945",
@@ -13,6 +48,28 @@
       "cover": "bili-img/cover/52f373f28f16f9e5.webp",
       "url": "https://t.bilibili.com/1271641635586834436",
       "ts": "1794915540"
+    },
+    {
+      "id": "1271616499278151728",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "bili-img/avatar/0f01306058505549.webp",
+      "kind": "动态·图文",
+      "text": "互动抽奖 #崩坏星穹铁道# #星穹铁道填色挑战#  #抵达彩色的彼方# #星穹铁道公益第三卷#\n\n这场魔术没有标准答案，每一片彩色的天空下都绽放出了温暖的颜色。\n谢谢每一位落笔的你。\n\n如果你很难过，没关系，我们在这里陪着你~\n\n「群星沉默不语，但我说，要有笑声。」 \n———————————————————\n▉转发抽奖：\n关注并转发本条动态，帕姆将于11月24日抽取10位幸运开拓者各获得「随机角色周边」一份。\n",
+      "cover": "bili-img/cover/7e2b247b7eaee699.webp",
+      "url": "https://t.bilibili.com/1271616499278151728",
+      "ts": "1794909688"
+    },
+    {
+      "id": "1271571552462176260",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "bili-img/avatar/0f01306058505549.webp",
+      "kind": "动态",
+      "text": "恭喜@bili_56067234849@改什么名字好呢96@中二病谛某等10位同学中奖，已私信通知，详情请点击抽奖查看。",
+      "cover": "",
+      "url": "https://t.bilibili.com/1271571552462176260",
+      "ts": "1794899223"
     },
     {
       "id": "1271200505944604674",
@@ -114,6 +171,19 @@
       "ts": "1794560400"
     },
     {
+      "id": "1270116116863123458",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "正在记禄📝 | TYLOO CS2 IEM北京 VLOG",
+      "cover": "bili-img/cover/c03400a4c92dede5.webp",
+      "url": "https://t.bilibili.com/1270116116863123458",
+      "ts": "1794560353",
+      "bvid": "BV1S9Wi6LELK",
+      "durSec": 954
+    },
+    {
       "id": "1270087246135951379",
       "uid": "1340190821",
       "author": "崩坏星穹铁道",
@@ -178,6 +248,19 @@
       "cover": "",
       "url": "https://t.bilibili.com/1269716139429068837",
       "ts": "1794467226"
+    },
+    {
+      "id": "1269695450609352729",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "属于TYLOO的【硬核】时刻！【📹TYLOO卓威硬核玩家日vlog】",
+      "cover": "bili-img/cover/8f60ef544eb499a8.webp",
+      "url": "https://t.bilibili.com/1269695450609352729",
+      "ts": "1794462409",
+      "bvid": "BV1QJW96aEC5",
+      "durSec": 181
     },
     {
       "id": "1269683388183216130",
@@ -259,17 +342,6 @@
       "ts": "1794397140"
     },
     {
-      "id": "1269390091331043337",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "bili-img/avatar/0f01306058505549.webp",
-      "kind": "动态",
-      "text": "「欢愉」的即兴巡演，无处不在[崩坏：星穹铁道_打招呼]",
-      "cover": "",
-      "url": "https://t.bilibili.com/1269390091331043337",
-      "ts": "1794391312"
-    },
-    {
       "id": "1269381881466454022",
       "uid": "2127596945",
       "author": "KARDS官方",
@@ -281,28 +353,6 @@
       "ts": "1794389400"
     },
     {
-      "id": "1269296911989342261",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "bili-img/avatar/0f01306058505549.webp",
-      "kind": "动态·图文",
-      "text": "互动抽奖 #崩坏星穹铁道# #此刻将群星付之一笑# #星穹铁道星神阿哈# \n\n《崩坏：星穹铁道》动画短片：「月下的欢快葬礼」 \nhttps://www.bilibili.com/video/BV1gHWg6GEqj/ \n\n遥遥致意，远道而来的客人，\n \n「何不尝试，再次开始一场游戏，再次品味其中痛苦，再次为其无情而颤动，再次在内心的地狱徘徊，往返多次，然后你终将会将这游戏玩得更好，也终将学会笑。」\n \n不欢迎你的，阿哈\n \n※建议体验4.7版本开拓任务后观看本视频。\n \n中文CV：\n星神★阿哈——子音\n另一个开拓者——秦且歌、陈婷婷\n \n日文CV：\n星神★阿哈——户松遥\n另一个开拓者——榎木淳弥、石川由依\n \n英文CV：\n星神★阿哈——Amber Lee Connors\n另一个开拓者——Shaun Mendum、Chloe Eves\n \n韩文CV：\n星神★阿哈——권다예\n另一个开拓者——김명준、김하루 \n———————————————————\n▉转发抽奖：\n关注并转发本条动态，帕姆将于11月18日抽取10位幸运开拓者各获得「星琼*500」一份。\n",
-      "cover": "bili-img/cover/77c64f30b7501cd2.webp",
-      "url": "https://t.bilibili.com/1269296911989342261",
-      "ts": "1794369617"
-    },
-    {
-      "id": "1269219551040503816",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "bili-img/avatar/0f01306058505549.webp",
-      "kind": "动态·图文",
-      "text": "4.7版本「此刻，将群星付之一笑」版本更新说明",
-      "cover": "bili-img/cover/161453b598f52127.webp",
-      "url": "https://t.bilibili.com/1269219551040503816",
-      "ts": "1794351605"
-    },
-    {
       "id": "1269034167385980929",
       "uid": "2127596945",
       "author": "KARDS官方",
@@ -312,17 +362,6 @@
       "cover": "bili-img/cover/350e95a210430a91.webp",
       "url": "https://t.bilibili.com/1269034167385980929",
       "ts": "1794308442"
-    },
-    {
-      "id": "1269018555181957124",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "bili-img/avatar/0f01306058505549.webp",
-      "kind": "动态·图文",
-      "text": "互动抽奖 #崩坏星穹铁道# #1111开启阿哈时刻# 倒计时1天 |「阿哈全明星」 \n\n《世界净头的美容院》 \n\n绝灭大君「归寂」渴望从骰再来？\n节目或迎来改造史上的最大挑战！\n\n✧ 王牌美容师「星神★阿哈」领衔 ✧\n谒者班底十年磨一剑直面终局考验——\n\n「照了多年镜子，这次他终于不想毁灭世界了。」\n\n11月11日《崩坏：星穹铁道》TV全网独播！\n\n==========\n\n★ 内容纯属虚构，仅供娱乐 ★ \n———————————————————\n▉转发抽奖：\n关注并转发本条动态，帕姆将于11月17日抽取10位幸运开拓者各获得「随机角色周边」一份。\n",
-      "cover": "bili-img/cover/b0ad75d2d5a1923f.webp",
-      "url": "https://t.bilibili.com/1269018555181957124",
-      "ts": "1794304807"
     },
     {
       "id": "1268925755981561865",
@@ -356,6 +395,19 @@
       "cover": "bili-img/cover/c5dcd120d70e0cba.webp",
       "url": "https://t.bilibili.com/1268655172985290753",
       "ts": "1794220200"
+    },
+    {
+      "id": "1268619587036905491",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "禄戏厅🕹| 看demo猜段位 😏【CS2】",
+      "cover": "bili-img/cover/adf888ce54927088.webp",
+      "url": "https://t.bilibili.com/1268619587036905491",
+      "ts": "1794211915",
+      "bvid": "BV15uWb6AEa1",
+      "durSec": 644
     },
     {
       "id": "1268593325489782800",
@@ -880,54 +932,6 @@
       "cover": "bili-img/cover/c3df678232853557.webp",
       "url": "https://t.bilibili.com/1264952052182679571",
       "ts": "1793358000"
-    },
-    {
-      "id": "1264938233182027792",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·视频",
-      "text": "2026 TYLOO 无畏契约上海全球冠军赛纪录片-《志存禄远》预告",
-      "cover": "bili-img/cover/1f431c43d7127b6d.webp",
-      "url": "https://t.bilibili.com/1264938233182027792",
-      "ts": "1793354783",
-      "bvid": "BV1xLxv6gEuQ",
-      "durSec": 88
-    },
-    {
-      "id": "1264775587053961219",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·视频",
-      "text": "赛场风云禄｜勠力同心 齐心协力【HyperX Retake Season 13】",
-      "cover": "bili-img/cover/b3c8611babe93607.webp",
-      "url": "https://t.bilibili.com/1264775587053961219",
-      "ts": "1793316914",
-      "bvid": "BV1BRxP6GEB7",
-      "durSec": 99
-    },
-    {
-      "id": "1264766142415634434",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨HyperX Retake Season 13\n\n✨MAP  MIRAGE/ANUBIS｜ BO3\n\n✨杭州西湖 TYLOO 2:0 ZOTIX\n",
-      "cover": "bili-img/cover/7caeb006d40ed5c2.webp",
-      "url": "https://t.bilibili.com/1264766142415634434",
-      "ts": "1793314715"
-    },
-    {
-      "id": "1264734655985221653",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴HyperX Retake Season 13\n\n🔴2026 年 10 月 30 日 05:15 BO3\n\n🔴杭州西湖 TYLOO vs ZOTIX\n",
-      "cover": "bili-img/cover/262bcfa833c0ce19.webp",
-      "url": "https://t.bilibili.com/1264734655985221653",
-      "ts": "1793307384"
     },
     {
       "id": "1264596428945096740",
