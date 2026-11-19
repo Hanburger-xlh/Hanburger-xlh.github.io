@@ -1,8 +1,43 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-11-18T23:36:21.672Z",
+  "updatedAt": "2026-11-19T23:33:35.612Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1272373809403396165",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "TYL.Erv开箱测试蝶溯零速鼠标垫！",
+      "cover": "bili-img/cover/55ab127cda2495fe.webp",
+      "url": "https://t.bilibili.com/1272373809403396165",
+      "ts": "1795086013",
+      "bvid": "BV17Dst6uEVn",
+      "durSec": 68
+    },
+    {
+      "id": "1272358102707994632",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态",
+      "text": "指挥官们，又到周末击剑时！冲刺[超辉夜姬表情包_飞起来]",
+      "cover": "",
+      "url": "https://t.bilibili.com/1272358102707994632",
+      "ts": "1795082356"
+    },
+    {
+      "id": "1272313722814070793",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "bili-img/avatar/0f01306058505549.webp",
+      "kind": "动态",
+      "text": "恭喜@弄鸦@红豆抹茶波波@一夜不不等10位同学中奖，已私信通知，详情请点击抽奖查看。",
+      "cover": "",
+      "url": "https://t.bilibili.com/1272313722814070793",
+      "ts": "1795072023"
+    },
     {
       "id": "1271948410036944901",
       "uid": "373076765",
@@ -307,17 +342,6 @@
       "cover": "bili-img/cover/8cdcdb3d316d5ced.webp",
       "url": "https://t.bilibili.com/1269655556771020803",
       "ts": "1794453120"
-    },
-    {
-      "id": "1269637666125643779",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "bili-img/avatar/0f01306058505549.webp",
-      "kind": "动态",
-      "text": "#崩坏星穹铁道# #歌曲无中生有# #星穹铁道音乐# \n「二相乐园」全新音乐专辑「神说要有笑（下篇）」现已正式上线。专辑包含与「贪欢的神颅」的战斗背景音乐《无中生有 Ex Nihilo》。\n各位开拓者前往音乐平台搜索「无中生有」即可收听~",
-      "cover": "",
-      "url": "https://t.bilibili.com/1269637666125643779",
-      "ts": "1794448955"
     },
     {
       "id": "1269423381571174408",
@@ -910,19 +934,6 @@
       "ts": "1793421526"
     },
     {
-      "id": "1265215000824250569",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·视频",
-      "text": "【独家记禄】2026 TYLOO 无畏契约上海全球冠军赛纪录片-《志存禄远》",
-      "cover": "bili-img/cover/c2979bef71ffbbfe.webp",
-      "url": "https://t.bilibili.com/1265215000824250569",
-      "ts": "1793419223",
-      "bvid": "BV1h3xz6bEbt",
-      "durSec": 1330
-    },
-    {
       "id": "1264952052182679571",
       "uid": "2127596945",
       "author": "KARDS官方",
@@ -978,17 +989,6 @@
       "ts": "1793102732",
       "bvid": "BV1goxu6jEYj",
       "durSec": 350
-    },
-    {
-      "id": "1261986113165197321",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "​关于账号信息安全的说明",
-      "cover": "bili-img/cover/b0d601d3a8689195.webp",
-      "url": "https://t.bilibili.com/1261986113165197321",
-      "ts": "1792667439"
     },
     {
       "id": "1255273324097830932",
