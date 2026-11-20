@@ -1,8 +1,19 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-11-19T23:33:35.612Z",
+  "updatedAt": "2026-11-20T23:35:14.696Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1272744877366444034",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "KARDS 冬季扩展包“战火号召”预览季开幕！",
+      "cover": "bili-img/cover/0dcde4dbab60772b.webp",
+      "url": "https://t.bilibili.com/1272744877366444034",
+      "ts": "1795172409"
+    },
     {
       "id": "1272373809403396165",
       "uid": "373076765",
@@ -105,6 +116,17 @@
       "cover": "",
       "url": "https://t.bilibili.com/1271571552462176260",
       "ts": "1794899223"
+    },
+    {
+      "id": "1271507890273779712",
+      "uid": "414149787",
+      "author": "Phigros官方",
+      "avatar": "bili-img/avatar/0db4169f82399a5c.webp",
+      "kind": "动态·图文",
+      "text": "亲爱的小鸽子们：\n在灵韵悦声的协助下，我们在各大流媒体平台发行了官方的Phigros主线第九章专辑！\n\n艺人页面：Phigros Official\nPhigros主线第九章专辑：Phigros Main Story Chapter 9\n\n温馨提示：\n1. 由于版权/授权情况复杂，我们可能无法发行部分原创/独占曲目，且无法确定第九章以外曲目是否发行与发行时间，敬请谅解。\n2. 由于发行系统复杂，音乐发行至各大流媒体平台后，可能存在各种问题有待调整，敬请谅解。\n3. 目前部分曲目存在被盗传并获利的现象，请各位小鸽子们注意甄别！\n#Phigros# #Pigeon Games# #鸽游#\n\n\n",
+      "cover": "bili-img/cover/bafcadc421ceb8da.webp",
+      "url": "https://t.bilibili.com/1271507890273779712",
+      "ts": "1794884400"
     },
     {
       "id": "1271200505944604674",
@@ -978,19 +1000,6 @@
       "ts": "1793271600"
     },
     {
-      "id": "1263855682351792137",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·视频",
-      "text": "⚡冰岛人 世界巡演⚡| 2026 世界锦标赛 抽签仪式【KARDS】",
-      "cover": "bili-img/cover/bee3a1376089d153.webp",
-      "url": "https://t.bilibili.com/1263855682351792137",
-      "ts": "1793102732",
-      "bvid": "BV1goxu6jEYj",
-      "durSec": 350
-    },
-    {
       "id": "1255273324097830932",
       "uid": "414149787",
       "author": "Phigros官方",
@@ -1127,19 +1136,6 @@
       "cover": "bili-img/cover/32ebb962ce327aa8.webp",
       "url": "https://t.bilibili.com/1244882529047019543",
       "ts": "1788685200"
-    },
-    {
-      "id": "1244629458829180953",
-      "uid": "414149787",
-      "author": "Phigros官方",
-      "avatar": "bili-img/avatar/e28cbaefe234b980.webp",
-      "kind": "动态·视频",
-      "text": "【直播回放】Phigros 七周年纪念直播 2026年09月05日19点场",
-      "cover": "bili-img/cover/0fd3b4caff7aac00.webp",
-      "url": "https://t.bilibili.com/1244629458829180953",
-      "ts": "1788626278",
-      "bvid": "BV1fLbL6EEPM",
-      "durSec": 15113
     }
   ]
 }
