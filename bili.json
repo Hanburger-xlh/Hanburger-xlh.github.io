@@ -1,8 +1,19 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-11-23T23:36:31.747Z",
+  "updatedAt": "2026-11-24T23:37:54.337Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1274169148675457064",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "bili-img/avatar/0f01306058505549.webp",
+      "kind": "动态",
+      "text": "恭喜@-夏色之影-@诸葛洋芋@知雨律等10位同学中奖，已私信通知，详情请点击抽奖查看。",
+      "cover": "",
+      "url": "https://t.bilibili.com/1274169148675457064",
+      "ts": "1795504023"
+    },
     {
       "id": "1273749863225360393",
       "uid": "1636034895",
@@ -35,6 +46,17 @@
       "cover": "bili-img/cover/b0e7380d57922cc9.webp",
       "url": "https://t.bilibili.com/1273386614183165954",
       "ts": "1795321825"
+    },
+    {
+      "id": "1273378778045743111",
+      "uid": "1340190821",
+      "author": "崩坏星穹铁道",
+      "avatar": "bili-img/avatar/0f01306058505549.webp",
+      "kind": "动态·图文",
+      "text": "#崩坏星穹铁道# #此刻将群星付之一笑# 「位面分裂」活动说明 \n\n亲爱的开拓者：\n\n本期「位面分裂」活动时间为 2026/11/23 04:00 - 2026/12/07 03:59。\n活动期间将获得一定的双倍奖励次数，在「模拟宇宙」中获取沉浸奖励或进行「饰品提取」时，可获得双倍奖励。\n\n※详情可前往游戏内公告查看。\n",
+      "cover": "bili-img/cover/7d9db3f0f7938228.webp",
+      "url": "https://t.bilibili.com/1273378778045743111",
+      "ts": "1795320000"
     },
     {
       "id": "1273100464181739527",
@@ -511,30 +533,6 @@
       "cover": "bili-img/cover/c023c336bc5ccead.webp",
       "url": "https://t.bilibili.com/1269683388183216130",
       "ts": "1794459600"
-    },
-    {
-      "id": "1269668005779865650",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "bili-img/avatar/0f01306058505549.webp",
-      "kind": "动态·图文",
-      "text": "互动抽奖 #崩坏星穹铁道# #此刻将群星付之一笑# #歌曲无中生有#\n\n《崩坏：星穹铁道》EP：「无中生有」 \nhttps://www.bilibili.com/video/BV1nEWu6xEyq/ \n\n当第一声「阿哈」响起，「欢愉」将再度诞生。\n在虚与实的边缘起舞吧，今夜，奇迹将由众生缔造！\n \n《无中生有》\n作词 Lyricist：温菁 Jing.W (HOYO-MiX) / Ruby Qu\n作曲 Composer：温菁 Jing.W (HOYO-MiX)\n编曲 Arranger：温菁 Jing.W (HOYO-MiX) / 张迦南 Duke.Killers (HOYO-MiX)\n制作人 Producer：宫奇Gon (HOYO-MiX) / 温菁 Jing.W (HOYO-MiX)\n人声 Vocal Artist：当山真玲\n制谱 Music Copyist：刘乃齐 Ruri (HOYO-MiX) / 吴泽熙 Jersey Wu (HOYO-MiX)\n和声 Backing Vocal：当山真玲\n电吉他 Electric Guitar：李力 葛金桥\n电贝斯 Electric Bass：努而德科\n架子鼓 Drum Set：李佩莹\n弦乐四重奏 Strings Quartet：刘星弦乐团\n小提琴 Violin：刘星 刘沁妤\n中提琴 Viola：王璐\n大提琴 Cello：王俊凯\n小号 Trumpet：胡丹峰\n萨克斯 Saxophone：李世海\n长号 Trombone：曹侃\n人声录音棚 Vocal Recording Studio：prime sound studio form\n架子鼓录音棚 Drum Set Recording Studio：羊绒工作室 Cashmere Studios\n弦乐录音棚 Strings Recording Studio：奕和录音棚 Yihe Studio\n管乐录音棚 Winds Recording Studio：升赫录音棚 Soundhub Studios\n人声录音师 Vocal Recording Engineer：畠山耕平 (prime sound studio form)\n架子鼓录音师 Drum Set Recording Engineer：沈锦天@Cashmere Studios\n弦乐录音师 Strings Recording Engineer：木木Lnnter @Yihe Studio\n管乐录音师 Winds Recording Engineer：吴身宝@Soundhub Studios / 唐一展@Soundhub Studios\n混音师 Mixing Engineer：宫奇Gon (HOYO-MiX)\n母带制作 Mastering Engineer：宫奇Gon (HOYO-MiX)\n出品 Produced by：HOYO-MiX \n———————————————————\n▉转发抽奖：\n关注并转发本条动态，帕姆将于11月19日抽取10位幸运开拓者各获得「星琼*500」一份。\n",
-      "cover": "bili-img/cover/f7e203baee65add8.webp",
-      "url": "https://t.bilibili.com/1269668005779865650",
-      "ts": "1794456019"
-    },
-    {
-      "id": "1269667949910687785",
-      "uid": "1340190821",
-      "author": "崩坏星穹铁道",
-      "avatar": "bili-img/avatar/0f01306058505549.webp",
-      "kind": "动态·视频",
-      "text": "《崩坏：星穹铁道》EP：「无中生有」\n#崩坏星穹铁道# #此刻将群星付之一笑# #歌曲无中生有# 「音乐」\n\n当第一声「阿哈」响起，「欢愉」将再度诞生。\n在虚与实的边缘起舞吧，今夜，奇迹将由众生缔造！",
-      "cover": "bili-img/cover/cf4b47f3c240543f.webp",
-      "url": "https://t.bilibili.com/1269667949910687785",
-      "ts": "1794456006",
-      "bvid": "BV1nEWu6xEyq",
-      "durSec": 220
     },
     {
       "id": "1269423381571174408",
