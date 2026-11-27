@@ -1,8 +1,102 @@
 {
   "source": "bilibili",
-  "updatedAt": "2026-11-26T23:35:38.495Z",
+  "updatedAt": "2026-11-27T23:35:43.203Z",
   "note": "由 .github/scripts/crawl-bili.js 通过 GitHub Actions 每小时自动生成，勿手工编辑。",
   "items": [
+    {
+      "id": "1275383812647288835",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "【TYLOO无畏契约】一些些联名鼠标垫开箱花絮",
+      "cover": "bili-img/cover/bc7b9465aaf33bf4.webp",
+      "url": "https://t.bilibili.com/1275383812647288835",
+      "ts": "1795786834",
+      "bvid": "BV1Xw1bzYEHZ",
+      "durSec": 47
+    },
+    {
+      "id": "1275349319751303177",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态",
+      "text": "感谢@归雨令zero带来的今日新卡预览[超辉夜姬表情包_气鼓鼓]",
+      "cover": "",
+      "url": "https://t.bilibili.com/1275349319751303177",
+      "ts": "1795778803"
+    },
+    {
+      "id": "1275342520817025029",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·视频",
+      "text": "一来二去，掌控战局 | 冬季版本“战火号召”全新机制 —— 双重指向【KARDS】",
+      "cover": "bili-img/cover/8133c122e23b9e8c.webp",
+      "url": "https://t.bilibili.com/1275342520817025029",
+      "ts": "1795777220",
+      "bvid": "BV1Pt1Wz3ERE",
+      "durSec": 117
+    },
+    {
+      "id": "1275239514669842439",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·视频",
+      "text": "正在记禄📝｜TYLOO. L1haNg 入队采访🎤",
+      "cover": "bili-img/cover/9c975054c8784df4.webp",
+      "url": "https://t.bilibili.com/1275239514669842439",
+      "ts": "1795753237",
+      "bvid": "BV1TTyrzREC8",
+      "durSec": 46
+    },
+    {
+      "id": "1275239312750805026",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "【杭州西湖TYLOO电子竞技俱乐部CS2分部人员变动公告】\n\n我们很高兴地宣布，前 Rare Atom 选手 L1haNg（李宜航） 即日起加入杭州西湖TYLOO电子竞技俱乐部CS2分部，开启试训。\n\n我们期待 L1haNg 在试训期间与队伍充分磨合、彼此了解，也期待这次尝试为队伍带来新的活力。\n\n欢迎 L1haNg 来到杭州西湖TYLOO电子竞技俱乐部。试训及后续安排，请关注俱乐部官方通知。\n\n\n\n\n",
+      "cover": "bili-img/cover/67247c123d47027c.webp",
+      "url": "https://t.bilibili.com/1275239312750805026",
+      "ts": "1795753190"
+    },
+    {
+      "id": "1275218742010183688",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "聚产业之力，竞时代之彩✨ \nTYLOO无畏契约分部将受邀参加2026年度中国电竞产业年会电竞表演赛\n📅时间：2026年12月4日17:40 \n📍地点：北京石景山首钢园香格里拉酒店5楼群明生辉厅\n",
+      "cover": "bili-img/cover/b4a04ebd0aa3d3e9.webp",
+      "url": "https://t.bilibili.com/1275218742010183688",
+      "ts": "1795748400"
+    },
+    {
+      "id": "1274979132235579397",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态",
+      "text": "感谢@白水WhiteH2O带来的今日新卡预览",
+      "cover": "",
+      "url": "https://t.bilibili.com/1274979132235579397",
+      "ts": "1795692612"
+    },
+    {
+      "id": "1274971351912808456",
+      "uid": "2127596945",
+      "author": "KARDS官方",
+      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
+      "kind": "动态·图文",
+      "text": "​冬季版本“战火号召”新卡预览",
+      "cover": "bili-img/cover/33c12e4d39ce88b9.webp",
+      "url": "https://t.bilibili.com/1274971351912808456",
+      "ts": "1795690800"
+    },
     {
       "id": "1274959796308541461",
       "uid": "1636034895",
@@ -13,6 +107,17 @@
       "cover": "bili-img/cover/6400152b8d1788cc.webp",
       "url": "https://t.bilibili.com/1274959796308541461",
       "ts": "1795688110"
+    },
+    {
+      "id": "1274919664134127623",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "2026年也快到尾声啦，我们CS2分部一年一度的AMA（Ask Me Anything）问题征集又开始咯~\n\n从游戏设置到日常训练，赛场内外的一切都可以提问！欢迎粉丝朋友们在评论区留下你们的问题~[2025布达佩斯Major TYLOO收藏集_记笔记]",
+      "cover": "",
+      "url": "https://t.bilibili.com/1274919664134127623",
+      "ts": "1795678766"
     },
     {
       "id": "1274881228482281478",
@@ -70,6 +175,17 @@
       "ts": "1795604405"
     },
     {
+      "id": "1274569342962368548",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "【杭州西湖TYLOO电子竞技俱乐部CS2分部人员变动公告】\n\n经俱乐部与选手充分沟通协商，杭州西湖TYLOO电子竞技俱乐部CS2分部选手 Moseyuh 即日起调整至替补名单。\n\n感谢 Moseyuh 一直以来为队伍付出的努力。后续首发阵容安排，请关注杭州西湖TYLOO电子竞技俱乐部官方通知。",
+      "cover": "",
+      "url": "https://t.bilibili.com/1274569342962368548",
+      "ts": "1795597200"
+    },
+    {
       "id": "1274569343001165828",
       "uid": "2127596945",
       "author": "KARDS官方",
@@ -79,6 +195,17 @@
       "cover": "bili-img/cover/d70719713120c211.webp",
       "url": "https://t.bilibili.com/1274569343001165828",
       "ts": "1795597200"
+    },
+    {
+      "id": "1274538419225100297",
+      "uid": "373076765",
+      "author": "TYLOO电子竞技俱乐部",
+      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
+      "kind": "动态·图文",
+      "text": "PSYCHE GEAR蝶溯携手天禄！\n联名鼠标垫礼盒来啦，每套包含盲盒选手娃娃（12cm）、5张小卡、5个吧唧、一张五人合照[星星眼]\n",
+      "cover": "bili-img/cover/0fba626d5f1269bf.webp",
+      "url": "https://t.bilibili.com/1274538419225100297",
+      "ts": "1795590000"
     },
     {
       "id": "1274507553423753222",
@@ -735,17 +862,6 @@
       "durSec": 644
     },
     {
-      "id": "1267565110318071826",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "世锦赛乱斗现已上线",
-      "cover": "bili-img/cover/f6afd6725d1adde6.webp",
-      "url": "https://t.bilibili.com/1267565110318071826",
-      "ts": "1793966400"
-    },
-    {
       "id": "1267550196030504978",
       "uid": "414149787",
       "author": "Phigros官方",
@@ -766,17 +882,6 @@
       "cover": "",
       "url": "https://t.bilibili.com/1267522622327881751",
       "ts": "1793956508"
-    },
-    {
-      "id": "1267191347238928409",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "KARDS 2026 世锦赛选手卡组分享",
-      "cover": "",
-      "url": "https://t.bilibili.com/1267191347238928409",
-      "ts": "1793879377"
     },
     {
       "id": "1266695991449354240",
@@ -823,17 +928,6 @@
       "ts": "1793721225"
     },
     {
-      "id": "1266482909570662400",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "🏆 恭喜失其本心八幡成为 2026 年 KARDS 世界冠军",
-      "cover": "bili-img/cover/e9fc83f5792c47fd.webp",
-      "url": "https://t.bilibili.com/1266482909570662400",
-      "ts": "1793714431"
-    },
-    {
       "id": "1266408336004218887",
       "uid": "373076765",
       "author": "TYLOO电子竞技俱乐部",
@@ -858,17 +952,6 @@
       "ts": "1793693183",
       "bvid": "BV1sz4g66E9U",
       "durSec": 23
-    },
-    {
-      "id": "1266382192569745411",
-      "uid": "2127596945",
-      "author": "KARDS官方",
-      "avatar": "bili-img/avatar/aa708d19586a18b1.webp",
-      "kind": "动态·图文",
-      "text": "本周创作宴席已部署",
-      "cover": "bili-img/cover/cf13d159179832ac.webp",
-      "url": "https://t.bilibili.com/1266382192569745411",
-      "ts": "1793690981"
     },
     {
       "id": "1266367555321200643",
@@ -904,85 +987,6 @@
       "cover": "bili-img/cover/6d254f94a0a223dc.webp",
       "url": "https://t.bilibili.com/1266335089675993127",
       "ts": "1793680014"
-    },
-    {
-      "id": "1266136236944261128",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴IEM Beijing 2026\n\n🔴2026 年 11月 3 日 12:30 BO3\n\n🔴杭州西湖 TYLOO vs 9z\n",
-      "cover": "bili-img/cover/b9e244b367254bd8.webp",
-      "url": "https://t.bilibili.com/1266136236944261128",
-      "ts": "1793633715"
-    },
-    {
-      "id": "1266081098192912408",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛果」\n\n✨IEM Beijing 2026\n\n✨MAP  NUKE/INFERNO｜ BO3\n\n✨杭州西湖 TYLOO 0:2 MOUZ\n",
-      "cover": "bili-img/cover/4668635bf009dc26.webp",
-      "url": "https://t.bilibili.com/1266081098192912408",
-      "ts": "1793620877"
-    },
-    {
-      "id": "1266054508071354404",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·视频",
-      "text": "IEM北京首战，TYLOO加油💪",
-      "cover": "bili-img/cover/2170989432b6b62d.webp",
-      "url": "https://t.bilibili.com/1266054508071354404",
-      "ts": "1793614686",
-      "bvid": "BV1DV4w6xETz",
-      "durSec": 22
-    },
-    {
-      "id": "1266039140661592071",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "正在记禄📝｜赛前调试 【20261102】 \n\n比赛时间稍稍延迟，选手们已在台上进行调试准备啦，还请大家多多为我们加油！ [2025布达佩斯Major TYLOO收藏集_必胜！]\n",
-      "cover": "bili-img/cover/c25ad9c71bec974b.webp",
-      "url": "https://t.bilibili.com/1266039140661592071",
-      "ts": "1793611108"
-    },
-    {
-      "id": "1265666852862820353",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "正在记禄📝｜媒体日调试 【20261101】 \n\n落地北京后立刻开始的媒体日！调试环节咔嚓两张！末尾奉上大家的显示器参数作为参考[歪嘴]\n",
-      "cover": "bili-img/cover/daab746f7f80e206.webp",
-      "url": "https://t.bilibili.com/1265666852862820353",
-      "ts": "1793524428"
-    },
-    {
-      "id": "1265663210749427729",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "「杭州西湖 TYLOO CS2 分部赛事预告」\n\n🔴IEM Beijing 2026\n\n🔴2026 年 11月 2 日 17:30 BO3\n\n🔴杭州西湖 TYLOO vs MOUZ\n",
-      "cover": "bili-img/cover/8021b61b986e2fba.webp",
-      "url": "https://t.bilibili.com/1265663210749427729",
-      "ts": "1793523580"
-    },
-    {
-      "id": "1265644407399383047",
-      "uid": "373076765",
-      "author": "TYLOO电子竞技俱乐部",
-      "avatar": "bili-img/avatar/eb49e3ffcf3bb316.webp",
-      "kind": "动态·图文",
-      "text": "【TYLOO电子竞技俱乐部CS2 分部 IEM 北京参赛名单公告】\n\n本次 IEM北京2026 TYLOO 参赛名单如下：\n\n【选手阵容】\n▶指挥 Mercury 汪靖翔\n▶步枪手 Zero 苏景深\n▶步枪手 JamYoung 杨易\n▶步枪手 Moseyuh 陈千豪\n▶狙击手 Jee 季冬凯\n\n【赛训团队】\n▶分析师 k4Mi 朱谢霖\n▶教练 Attacker 盛元璋\n▶教练 zhokiNg 钟伟杰\n▶经理 CruSad3 呼斯勒\n\n千人同心，则得千人之力。初心不负，禄在征程。\nLet’s go TYLOO!\n",
-      "cover": "bili-img/cover/d8e194d4d27f5d2f.webp",
-      "url": "https://t.bilibili.com/1265644407399383047",
-      "ts": "1793519202"
     },
     {
       "id": "1265585989416386597",
